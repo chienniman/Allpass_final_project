@@ -8,6 +8,11 @@ use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\NewController;
 use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 
 /*
@@ -21,21 +26,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// 會員管理
-Route::get('/', function () {
-    return view('welcome');
-});
 
-// Route::get('/dashboard', function () {
-//     return view('backend/main');
-// })->middleware(['auth'])->name('dashboard');
+// --------------------------------------------------------- 前端頁面 ------------------------------------------------------------------------------
 
-Route::get('/dashboard',[Controller::class, 'dashboard'] )->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-// --------------------------------------------------------------------------------------------------------------------
-
-// 前端頁面
 Route::prefix('/')->group(function () {
     Route::get('/drink_list', [Controller::class, 'drink_list']);               // 飲品介紹
     Route::get('/mealsindex', [Controller::class, 'mealsindex']);               // 餐點介紹
@@ -54,6 +47,17 @@ Route::prefix('/')->group(function () {
     
 });
 
+// --------------------------------------------------------- 後端頁面 ------------------------------------------------------------------------------
+
+// welcome
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// 後端登入後主頁
+Route::get('/dashboard',[Controller::class, 'dashboard'] )->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
 
 // 餐點管理
 Route::prefix('/meal')->middleware(['auth'])->group(function () {
@@ -101,7 +105,63 @@ Route::prefix('/account')->middleware(['auth','power'])->group(function () {
     // 個人帳號編輯頁面
     Route::get('/personal_edit/{id}', [AccountController::class, 'personal_edit']);
     // 個人帳號設定
-    Route::post('/personal_update/{id}', [AccountController::class, 'personal_update'])->middleware(['auth']);  
+    Route::post('/personal_update/{id}', [AccountController::class, 'personal_update'])->middleware(['auth']); 
+    
+
+// -------------------------------------------------------------- 忘記密碼 ------------------------------------------------------------------------
+// 密碼重製後將在資料表 password_resets 留下資料，可以使用指令 php artisan auth:clear-resets 將其刪除
+
+// 請求重製密碼頁面
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+})->middleware('guest')->name('password.request');
+
+// 請求重製密碼表單提交
+Route::post('/forgot-password', function (Request $request) {
+    $request->validate(['email' => 'required|email']);
+ 
+    $status = Password::sendResetLink(
+        $request->only('email')
+    );
+ 
+    return $status === Password::RESET_LINK_SENT
+                ? back()->with(['status' => __($status)])
+                : back()->withErrors(['email' => __($status)]);
+})->middleware('guest')->name('password.email');
+
+// 收到電子郵件後打開的重製密碼頁面
+Route::get('/reset-password/{token}', function ($token) {
+    return view('auth.reset-password', ['token' => $token]);
+})->middleware('guest')->name('password.reset');
+
+// 重製密碼表單提交
+Route::post('/reset-password', function (Request $request) {
+    $request->validate([
+        'token' => 'required',
+        'email' => 'required|email',
+        'password' => 'required|min:8|confirmed',
+    ]);
+ 
+    $status = Password::reset(
+        $request->only('email', 'password', 'password_confirmation', 'token'),
+        function ($user, $password) {
+            $user->forceFill([
+                'password' => Hash::make($password)
+            ])->setRememberToken(Str::random(60));
+ 
+            $user->save();
+ 
+            event(new PasswordReset($user));
+        }
+    );
+ 
+    return $status === Password::PASSWORD_RESET
+                ? redirect()->route('login')->with('status', __($status))
+                : back()->withErrors(['email' => [__($status)]]);
+})->middleware('guest')->name('password.update');
+
+
+
 
 
 
