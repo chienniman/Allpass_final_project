@@ -150,9 +150,9 @@
           <!-- 餐點項目卡片-->
           @foreach ($mealTag[0]->meal as $item)
                   <div class="project-card">
-                    <div class="project-name">{{$item->tag}}</div>
+                    <div class="project-name">{{$item->tag}}sss</div>
                     <div class="img-box">
-                      <img src="{{ $item->img_path }}" alt="..." width="70%">
+                      <img src="{{ $item->img_path }}" alt="..." width="100%">
                     </div>
                     <div class="project-body">
                       <p class="project-title">{{ $item->meal_name }}</p>
@@ -229,12 +229,12 @@
             </div>
           ` ;
       
-      project.innerHTML =`
-              @foreach ($mealTag[0]->meal as $item)
+      project.innerHTML =`       
+              @foreach ($mealTag[1]->meal as $item)
                     <div class="project-card">
                       <div class="project-name">{{$item->tag}}</div>
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -243,7 +243,114 @@
                         <p class="project-price">{{ '$'.$item->price }}</p>
                       </div>
                     </div>
-              @endforeach      
+              @endforeach
+
+              @foreach ($mealTag[2]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[3]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[4]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[5]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[6]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[7]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[8]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+
               
         `;
     }
@@ -261,9 +368,9 @@
       project.innerHTML =`
               @foreach ($mealTag[1]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -289,9 +396,9 @@
       project.innerHTML = `
               @foreach ($mealTag[2]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -317,9 +424,9 @@
       project.innerHTML =`
               @foreach ($mealTag[3]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -345,9 +452,9 @@
       project.innerHTML =`
               @foreach ($mealTag[4]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -374,9 +481,9 @@
       project.innerHTML =`
               @foreach ($mealTag[5]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -403,9 +510,9 @@
       project.innerHTML =`
               @foreach ($mealTag[6]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -432,9 +539,9 @@
       project.innerHTML =`
               @foreach ($mealTag[7]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -461,9 +568,9 @@
       project.innerHTML =`
               @foreach ($mealTag[8]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -505,11 +612,116 @@
             </div>
             `;
         project.innerHTML =`
-              @foreach ($mealTag[0]->meal as $item)
+        @foreach ($mealTag[1]->meal as $item)
                     <div class="project-card">
                       <div class="project-name">{{$item->tag}}</div>
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[2]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[3]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[4]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[5]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[6]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[7]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
+                      </div>
+                      <div class="project-body">
+                        <p class="project-title">{{ $item->meal_name }}</p>
+                        <p class="project-text">{{ $item->note }}</p>
+                        <p class="project-text">{{ $item->second_note }}</p>
+                        <p class="project-price">{{ '$'.$item->price }}</p>
+                      </div>
+                    </div>
+              @endforeach
+
+              @foreach ($mealTag[8]->meal as $item)
+                    <div class="project-card">
+                      <div class="project-name">{{$item->tag}}</div>
+                      <div class="img-box">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -532,9 +744,9 @@
         project.innerHTML =`
               @foreach ($mealTag[1]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -558,9 +770,9 @@
         project.innerHTML =`
               @foreach ($mealTag[2]->meal as $item)
                         <div class="project-card">
-                          <div class="project-name">{{$item->tag}}</div>
+                          
                           <div class="img-box">
-                            <img src="{{ $item->img_path }}" alt="..." width="70%">
+                            <img src="{{ $item->img_path }}" alt="..." width="100%">
                           </div>
                           <div class="project-body">
                             <p class="project-title">{{ $item->meal_name }}</p>
@@ -584,9 +796,9 @@
         project.innerHTML =`
               @foreach ($mealTag[3]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -611,9 +823,9 @@
         <div class="project">
           @foreach ($mealTag[4]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -638,9 +850,9 @@
         project.innerHTML = `     
           @foreach ($mealTag[5]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -664,9 +876,9 @@
         project.innerHTML = `
               @foreach ($mealTag[6]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -691,9 +903,9 @@
         project.innerHTML = `
               @foreach ($mealTag[7]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
@@ -717,9 +929,9 @@
         project.innerHTML = `
               @foreach ($mealTag[8]->meal as $item)
                     <div class="project-card">
-                      <div class="project-name">{{$item->tag}}</div>
+                      
                       <div class="img-box">
-                        <img src="{{ $item->img_path }}" alt="..." width="70%">
+                        <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
                       <div class="project-body">
                         <p class="project-title">{{ $item->meal_name }}</p>
