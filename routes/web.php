@@ -30,27 +30,33 @@ use Illuminate\Support\Str;
 // --------------------------------------------------------- 前端頁面 ------------------------------------------------------------------------------
 
 Route::prefix('/')->group(function () {
-    Route::get('/drink_list', [Controller::class, 'drink_list']);               // 飲品介紹
-    Route::get('/mealsindex', [Controller::class, 'mealsindex']);               // 餐點介紹
-    Route::get('/position_map', [Controller::class, 'position_map']);           // 門市據點
-    Route::get('/right_of_customer', [Controller::class, 'right_of_customer']); // 顧客權益
-    Route::get('/story', [Controller::class, 'story']);                         // 品牌故事
+    Route::get('/index.html', [Controller::class, 'index']);                         // 主頁
+    Route::get('/drink_list.html', [Controller::class, 'drink_list']);               // 飲品介紹
+    Route::get('/mealsindex.thml', [Controller::class, 'mealsindex']);               // 餐點介紹
+    Route::get('/position_map.html', [Controller::class, 'position_map']);           // 門市據點
+    Route::get('/right_of_customer.html', [Controller::class, 'right_of_customer']); // 顧客權益
+    Route::get('/story.html', [Controller::class, 'story']);                         // 品牌故事
+    Route::get('/feedback.html', [Controller::class, 'feedback']);                   // 顧客留言
+    Route::get('/feedback.html', [Controller::class, 'feedback']);                   // 顧客留言
+
+
     
     // swiper頁面
-    Route::get('/swiper', [Controller::class, 'swiper']);
+    Route::get('/testswiper', [Controller::class, 'testswiper']);
     // 餐點頁面
-    Route::get('/mealpage', [Controller::class, 'meal']);
+    Route::get('/testmeal', [Controller::class, 'testmeal']);
     // 顧客留言頁面
-    Route::get('/feedback', [Controller::class, 'feedback']);
+    Route::get('/testfeedback', [Controller::class, 'testfeedback']);
     // 顧客留言新增
     Route::post('/add_feedback', [Controller::class, 'add_feedback']);
     
 });
 
 // --------------------------------------------------------- 後端頁面 ------------------------------------------------------------------------------
+// 進入後台請先到 welcome 創建帳號並登入
 
 // welcome
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 

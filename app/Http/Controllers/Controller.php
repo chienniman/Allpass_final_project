@@ -16,45 +16,74 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    // 主頁
+    public function index(){
+
+        return view('index');
+    }
+
     // 飲品介紹
     public function drink_list(){
 
-        return view('drink_list');
+        return view('front_end_page.drink_list');
     }
 
     // 餐點介紹
     public function mealsindex(){
 
-        return view('mealsindex');
+        return view('front_end_page.mealsindex');
     }
 
     // 門市據點
     public function position_map(){
 
-        return view('position_map');
+        return view('front_end_page.position_map');
     }
 
     // 顧客權益
     public function right_of_customer(){
 
-        return view('right_of_customer');
+        return view('front_end_page.right_of_customer');
     }
 
     // 品牌故事
     public function story(){
 
-        return view('story');
+        return view('front_end_page.story');
     }
 
-
-    // 顧客留言頁面
+    // 顧客留言
     public function feedback(){
         $feedbacks = Feedback::get();
 
-        return view('feedback' , compact('feedbacks'));
+        return view('front_end_page.feedback' , compact('feedbacks'));
     }
 
-    // 新增留言
+    // 新增顧客留言
+    public function store_feedback(Request $request){
+        // 儲存留言
+        Feedback::insert([
+            'name'=> $request->name,
+            'salutation' => $request->salutation,
+            'date' => $request->date,
+            'period' => $request->period,
+            'suggestion' => $request->suggestion,
+            'phone'=> $request->phone,
+            'email'=> $request->email,
+        ]);
+
+        return redirect('/feedback.html');
+    }
+
+
+    // test顧客留言頁面
+    public function testfeedback(){
+        $feedbacks = Feedback::get();
+
+        return view('testfeedback' , compact('feedbacks'));
+    }
+
+    // test新增留言
     public function add_feedback(Request $request){
         // 儲存留言
         Feedback::insert([
@@ -74,8 +103,8 @@ class Controller extends BaseController
         return $result;
     }
 
-    // 餐點頁面
-    public function meal(){
+    // test餐點頁面
+    public function testmeal(){
         $meal = Meal::get();
         $mealTag = Meal_tag::get();
 
@@ -83,12 +112,12 @@ class Controller extends BaseController
         $salad = $mealTag[2]->meal->take(3);
         $snake = $mealTag[3]->meal->take(3);
         
-        return view('meal', compact('mealTag', 'breakfast', 'salad', 'snake'));
+        return view('testmeal', compact('mealTag', 'breakfast', 'salad', 'snake'));
 
     }
 
     // swiper
-    public function swiper(){
+    public function testswiper(){
         $allFeedbacks = Feedback::get();
 
         // 對留言依權重由小到大排序，包含空值
@@ -98,7 +127,7 @@ class Controller extends BaseController
         $carouselFeedbacks = $keyed->forget('');
         $carouselFeedbacks = $keyed->forget('0');
 
-        return view('swiper', compact("carouselFeedbacks"));
+        return view('testswiper', compact("carouselFeedbacks"));
     }
 
 

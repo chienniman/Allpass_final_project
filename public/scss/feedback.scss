@@ -27,8 +27,32 @@ $secondary_color: #6accbf;
   left: 50%;
   top: 50%;
 }
+// 邊線設定
+@mixin border {
+  border-radius: 5px;
+  border: 1px solid black;
+}
 body {
   background: $primary_color;
+  background-image: url("../pics/feedback/bkgd.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+  &::-webkit-scrollbar-track {
+    background-image: linear-gradient(#afdfd3, #fffdf0, #afdfd3);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #FFAD3D;
+    border-radius: 50px;
+    &:hover {
+      background-image: linear-gradient(#e94619, #ffea00);
+    }
+  }
+  @media(max-width:768px){
+    background-image: url("../pics/feedback/768-bkgd.png");
+  }
 }
 // 頁首固定在視窗上方
 #header {
@@ -185,10 +209,105 @@ body {
     }
   }
 }
+// 表單
+form{
+  width: 80%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  opacity: 70%;
+  margin: 10% auto;
+  padding: 5%;
+  .text_color{
+    color: #878787;
+    letter-spacing:10px;
+    line-height: 30px;
+  }
+  // 標題
+  .form_title{
+    text-align: center;
+    font-size: 35px;
+    padding: 2% 0;
+  }
+  // 內文
+  .form_text{
+    font-size: 25px;
+    line-height: 45px;
+    padding: 2% 0;
+    @media(max-width:1024px){
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media(max-width:768px){
+      font-size: 15px;
+      line-height: 20px;
+    } 
+  }
+  // 表格區塊
+  .forms{
+    margin: 0 auto;
+    padding: 2% 0;
+    //所有單一表格  
+    div{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-between;
+      input{
+        @include border;
+        width:49%;
+        padding: 15px 50px;
+        margin-bottom: 34px;
+        font-size: 20px;
+        @media(max-width:768px){
+          font-size: unset;
+        }
+      }
+      select{
+        @include border;
+        width: 49%;
+        padding: 15px 50px;
+        margin-bottom: 34px;
+        color: #878787;
+        font-size: 20px;
+        @media(max-width:768px){
+          font-size: unset;
+        }
+      }
+    }
+    textarea{
+      @include border;
+      width: 100%;
+      // margin-bottom: 34px;
+      padding: 15px 50px;
+      resize: none;
+      font-size: 20px;
+      @media(max-width:768px){
+        font-size: 16px;
+      }
+    }
+    .btn{
+      display: flex;
+      justify-content: center;
+      button{
+        @include border;
+        width: 70%;
+        padding: 8px;
+        background-color: #ffffff;
+        margin-top: 20px;
+      }
+    } 
+    .error{
+      color:#dc3545;
+    }
+    label.error{
+      @include size(100%, 20px);
+      margin-top: -30px;
+    } 
+  }
+}
 // 頁尾
 #footer {
   height: 220px;
-  background: $primary_color;
+  // background: $primary_color;
   background-image: url("../pics/wave.png");
   @media(max-width:768px){
     height: 250px;
@@ -284,83 +403,5 @@ body {
     right: 10px;
     top: 100px;
     position: absolute;
-  }
-}
-// --------------------------------------------------
-// 邊線設定
-@mixin border {
-  border-radius: 5px;
-  border: 1px solid black;
-}
-
-// 表單
-form{
-  width: 80%;
-  background-color: #ffffff;
-  border-radius: 20px;
-  opacity: 70%;
-  margin: 10% auto;
-  padding: 5%;
-  .text_color{
-    color: #878787;
-    letter-spacing:10px;
-    line-height: 30px;
-  }
-  // 標題
-  .form_title{
-    text-align: center;
-    font-size: 35px;
-    padding: 2% 0;
-  }
-  // 內文
-  .form_text{
-    font-size: 15px;
-    padding: 2% 0;
-  }
-  // 表格區塊
-  .forms{
-    margin: 0 auto;
-    padding: 2% 0;
-    //所有單一表格  
-    div{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content:space-between;
-      input{
-        @include border;
-        width:49%;
-        padding: 15px 50px;
-        margin-bottom: 34px;
-        @media(max-width:768px){
-          width: 100%;
-        }
-      }
-      select{
-        @include border;
-        width: 49%;
-        padding: 15px 50px;
-        margin-bottom: 34px;
-        color: #878787;
-        @media(max-width:768px){
-          width: 100%;
-        }
-      }
-    }
-    textarea{
-      @include border;
-      width: 100%;
-      margin-bottom: 34px;
-      padding: 15px 50px;
-    }
-    .btn{
-      display: flex;
-      justify-content: center;
-      button{
-        @include border;
-        width: 70%;
-        padding: 8px;
-        background-color: #ffffff;
-      }
-    }  
   }
 }

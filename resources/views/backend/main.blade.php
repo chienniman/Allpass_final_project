@@ -733,6 +733,7 @@
             "#009578"
             );
 
+            // 沒有最高權限沒辦法進入管理者頁面
             const adminLink = document.querySelector('.adminLink');
             let userPower = document.getElementById("avatar").dataset.user_power;
             if(userPower == 2){

@@ -335,6 +335,71 @@
             }
         }
 
+        /* 頭像設定帳密 */
+        .avatarBox{
+            position: relative;
+            cursor: pointer;
+        }
+        .avatarBox ul{
+            position: absolute;
+            z-index: 999;
+            transform: translate(-11.5%, 11%);
+            display: none;
+        }
+        .avatarBox:hover ul{
+            display: block;
+        }
+        /* 視窗的角 */
+        .avatarBox > ul:before{
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 99;
+            height: 20px;
+            width: 20px;
+            top: 4px;
+            left: 20px;
+            background-color: #ffffff;
+            transform: rotate(45deg);
+            box-shadow: 1px 1px 5px #0000003a;
+        }
+        /* 用來 hover 時移動到設定視窗時不會消失 */
+        .avatarBox > ul:after{
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 99;
+            height: 25px;
+            transform: translate(-11.5%, 0);
+            width: 80px;
+        }
+        .avatarBox ul li ul{
+            width: 80px;
+            height: 50px;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px #807f7fa6;
+        }
+        .avatarBox ul li ul a{
+            color: #636262;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        .avatarBox ul li ul a:hover{
+            box-shadow: 0px 0px 3px #a3a3a36c;
+            background-color: #4d44b5fa;
+            color: #ffffff;
+        }
+
         /*---------------------------------------------- meal -------------------------------------------------*/
         .border-bottom{
             border-width: 3px !important;
@@ -367,9 +432,9 @@
                         <span class="navList_span">管理介面</span>
                     </div>
                 </a>
-                <a href="/account">
-                    <div class="navList my-1 py-3 ps-4">
-                        <i class="fa-solid fa-user"></i>
+                <a href="/account" class="adminLink">
+                    <div class="navList my-1 py-3 ps-4 adminBox">
+                        <i class="fa-solid fa-user" title="管理者"></i>
                         <span class="navList_span">管理者</span>
                     </div>
                 </a>
@@ -402,7 +467,16 @@
                 <form method="POST" action="{{ route('logout') }}" hidden id="logout_form">
                         @csrf
                     </form>
-                    <div class="avatar rounded-circle ms-3"><img class="rounded-circle" alt="Avatar" id="avatar" title="{{ Auth::user()->name}} &#10 {{ Auth::user()->email}}" data-user_name="{{ Auth::user()->name}}"></div>
+                <div class="ms-3 avatarBox">
+                    <div class="avatar rounded-circle"><img class="rounded-circle" alt="Avatar" id="avatar" title="{{ Auth::user()->name}} &#10 {{ Auth::user()->email}}" data-user_name="{{ Auth::user()->name}}" data-user_power="{{ Auth::user()->power}}"></div>
+                    <ul>
+                        <li>
+                            <ul>
+                                <a href="/personal_edit/{{ Auth::user()->id }}">設定</a>
+                            </ul>  
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         {{---------------------------------------------------------- 餐點列表 --------------------------------------------------}}
@@ -789,6 +863,21 @@
                 })
             }   
         });
+
+        // 沒有最高權限沒辦法進入管理者頁面
+        const adminLink = document.querySelector('.adminLink');
+            let userPower = document.getElementById("avatar").dataset.user_power;
+            if(userPower == 2){
+                adminLink.addEventListener('click', e=>{
+                    e.preventDefault();
+                    // sweetAlert
+                    Swal.fire({
+                        title: '沒有權限訪問此連結',
+                        icon: 'warning',
+                        confirmButtonText: '是',
+                    })
+                }) 
+            }
     </script>
     
 </body>
