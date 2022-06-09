@@ -2,17 +2,20 @@
 // 顏色
 $primary_color: #f4f2e6;
 $secondary_color: #6accbf;
+
 // 排版置中flex
 @mixin flex($justify-content, $align-items) {
   display: flex;
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
 // 長寬設定
 @mixin size($width, $height) {
   width: $width;
   height: $height;
 }
+
 // position top_left
 @mixin position($top, $left, $x, $y) {
   position: absolute;
@@ -20,6 +23,7 @@ $secondary_color: #6accbf;
   left: $left;
   transform: translate($x, $y);
 }
+
 // 排版置中position
 @mixin position_center() {
   position: absolute;
@@ -27,9 +31,10 @@ $secondary_color: #6accbf;
   left: 50%;
   top: 50%;
 }
+
 body {
   background-image: url('../pics/餐飲背景.jpg');
-  background-position:top;
+  background-position: top;
   background-size: 100%;
   // background: $primary_color;
 
@@ -61,41 +66,52 @@ body {
   height: 109px;
   background: #6accbf;
   display: flex;
+
   nav {
     width: 100%;
     position: relative;
+
     .logo {
       @include size(140px, 140px);
       @include position(15px, 125px, 0, 0);
       border-radius: 50%;
       background-color: #6accbf;
-      @media(max-width:768px){
+      z-index: 5;
+
+      @media(max-width:768px) {
         @include size(100px, 100px);
         @include position(35px, 60px, 0, 0);
       }
     }
+
     .logo_img {
       width: 100px;
       @include size(125px, 125px);
       @include position(50%, 50%, -50%, -50%);
       border-radius: 50%;
-      @media(max-width:768px){
+
+      @media(max-width:768px) {
         @include size(85px, 85px);
       }
     }
+
     // 導覽列上的文字連結，品牌故事、商品介紹、門市據點、意見回饋
     .nav_content {
-      @media(max-width:910px){
+      @media(max-width:910px) {
         @include position(50%, 70%, -50%, -50%);
       }
-      @media(max-width:768px){
+
+      @media(max-width:768px) {
         display: none;
       }
+
       @include position(50%, 75%, -50%, -50%);
       position: absolute;
       display: flex;
+
       ul {
         display: flex;
+
         li {
           a {
             font-size: 24px;
@@ -108,26 +124,33 @@ body {
       }
     }
   }
+
   // 折疊下拉巢狀選單
   .burger_link {
     display: none;
     @include size(60px, 60px);
-    @media(max-width:768px){
+
+    @media(max-width:768px) {
       display: block;
     }
-    @media(max-width:576px){
+
+    @media(max-width:576px) {
       margin: 40px 0 0 80%;
       @include size(80px, 80px);
     }
+
     margin: 30px 0 0 85%;
     position: relative;
+
     * {
       transition: 0.5s;
     }
+
     ul,
     li {
       margin-bottom: 25px;
     }
+
     .burger {
       @include size(60px, 60px);
       background-color: #6accbf;
@@ -135,6 +158,7 @@ body {
       justify-content: center;
       align-items: center;
       border: 5px solid #f4bd72;
+      cursor: pointer;
       .line {
         height: 3px;
         width: 20px;
@@ -142,14 +166,17 @@ body {
         margin: 5px;
       }
     }
-    #burger:checked + .list {
+
+    #burger:checked+.list {
       padding: 30px;
       height: 500px;
     }
+
     .list {
-      @media(max-width:576px){
+      @media(max-width:576px) {
         top: 68px;
       }
+
       position: absolute;
       left: -290px;
       top: 76px;
@@ -159,9 +186,11 @@ body {
       overflow: hidden;
       background-color: #f4bd72;
       border-radius: 0px 0px 20px 20px;
-      #commodity:checked + .commodity-box {
+
+      #commodity:checked+.commodity-box {
         height: 180px;
       }
+
       label,
       a {
         border-radius: 10px;
@@ -170,6 +199,7 @@ body {
         text-decoration: none;
         color: white;
       }
+
       .list-project {
         margin: 5px 0px;
         padding: 5px 10px;
@@ -177,6 +207,7 @@ body {
         border: 3px solid white;
         font-size: 30px;
         color: white;
+
         &:hover {
           background-color: white;
           border: 6px solid #6accbf;
@@ -184,22 +215,27 @@ body {
           font-weight: 600;
         }
       }
-      .commodity-box{
+
+      .commodity-box {
         width: 100%;
       }
-      .commodity-box,.commodity_test_box{
+
+      .commodity-box,
+      .commodity_test_box {
         text-align: end;
         width: 100%;
-        height:0;
+        height: 0;
         overflow: hidden;
         font-size: 30px;
         background-color: #f4bd72;
       }
+
       // 陰影特效
       .commodity-list {
-        @include flex(center,center);
+        @include flex(center, center);
         margin: 5px;
         font-weight: 600;
+
         &:hover {
           text-shadow: 0 5px 5px black;
           margin: 10px;
@@ -212,15 +248,16 @@ body {
 
 
 
-#main{
-  *{
+#main {
+  * {
     transition: 0.5s;
   }
-  #Meals-box{
+
+  #Meals-box {
     display: flex;
 
     // 左邊選擇清單的設定與消失斷點
-    .Meals-list{
+    .Meals-list {
       // display: flex;
       // flex-direction: column;
       // align-items: center;
@@ -229,7 +266,8 @@ body {
       border-radius: 0px 0px 50px 50px;
       padding: 50px 25px;
       width: 350px;
-      .list-btn{
+
+      .list-btn {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -239,11 +277,11 @@ body {
         text-align: center;
         padding: 30px 5px;
         // height: 120px;
-        border-bottom:3px solid #2FBFAC;
+        border-bottom: 3px solid #2FBFAC;
         cursor: pointer;
         // transition: 1s;
 
-        &:hover{
+        &:hover {
           padding: 0;
           margin: 10px 0px;
           font-size: 25px;
@@ -252,14 +290,15 @@ body {
           padding: 20px 5px;
           color: white;
           background-color: #2FBFAC;
-          border:5px solid white;
+          border: 5px solid white;
           border-radius: 10px;
           outline: 5px solid #2FBFAC;
           // outline-offset:5px;
         }
-        
+
       }
-      .list-btn-two{
+
+      .list-btn-two {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -269,10 +308,10 @@ body {
         text-align: center;
         // height: 120px;
         padding: 30px 5px;
-        border-bottom:3px solid #FFAD3D;
+        border-bottom: 3px solid #FFAD3D;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
           padding: 0;
           margin: 10px 0px;
           font-size: 25px;
@@ -282,61 +321,66 @@ body {
           padding: 20px 5px;
           color: white;
           background-color: #FFAD3D;
-          border:5px solid white;
+          border: 5px solid white;
           border-radius: 10px;
           outline: 5px solid #FFAD3D;
           // outline-offset:5px;
         }
+
       }
 
-      @media(max-width:810px){
+      @media(max-width:810px) {
         width: 300px;
       }
-      @media(max-width:768px){
+
+      @media(max-width:768px) {
         display: none;
       }
     }
 
 
     // 右邊餐點項目區域
-    .Meals-project-box{
-      padding:0px 5%;
+    .Meals-project-box {
+      padding: 0px 5%;
       width: calc(100vw - 350px);
 
       // 內頁選擇清單的設定與出現斷點
-      .Meals-list-RWD{
+      .Meals-list-RWD {
         display: none;
-        select{
+
+        select {
           display: none;
         }
-        
-        @media(max-width:768px){
+
+        @media(max-width:768px) {
           display: block;
-          select{
+
+          select {
             display: block;
             background-color: rgba(255, 255, 255, 0.500);
             border: 5px solid #FFAD3D;
             font-size: 30px;
-            border-radius:20px;
+            border-radius: 20px;
             width: 100%;
             padding: 10px;
-            margin:20px auto;
+            margin: 20px auto;
             text-align: center;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
               background-color: #fdfee0;
               border: 5px solid #FFAD3D;
               color: #f95223;
-              letter-spacing:5px;
+              letter-spacing: 5px;
               font-weight: 600;
               box-shadow: 0px 0px 20px 7px #f8ca89;
-              option{
+
+              option {
                 color: black;
               }
             }
 
-            option{
+            option {
               color: black;
             }
           }
@@ -345,10 +389,10 @@ body {
       }
 
       // 餐點項目區域
-      .box-inner{
+      .box-inner {
         text-align: center;
 
-        .Remark{
+        .Remark {
           width: 100%;
           border: 5px solid #FFAD3D;
           padding: 30px 20px;
@@ -367,40 +411,47 @@ body {
         }
       }
 
-      .project{
+      .project {
         display: flex;
         flex-wrap: wrap;
-        justify-content:space-between;
+        justify-content: start;
         padding: 3% 0px;
+
+        // flex: 1;
         // 餐點項目卡片
-        .project-card{
+        .project-card {
           // flex: 0 0 auto;
           width: 30%;
           min-width: 0;
           padding: 0.5rem;
+
+          margin: 0px calc(10% / 6) 50px calc(10% / 6);
           display: flex;
           flex-direction: column;
           word-wrap: break-word;
           background-color: #ffffff;
-          margin-bottom: 50px;
-    
+          // margin-bottom: 50px;
+
           // 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。
           background-clip: border-box;
-          border: 1px solid rgba(0,0,0,.125);
+          border: 1px solid rgba(0, 0, 0, .125);
           border-radius: 0.25rem;
 
           // 項目種類
-          .project-name{
-            background-color: #FFAD3D;
+          .project-name {
+            background-color: #2FBFAC;
             font-size: 20px;
             color: #ffffff;
             font-weight: 600;
             text-align: center;
             padding: 10px 6px;
           }
-          .img-box{
+
+          .img-box {
             text-align: center;
+            // border: 5px solid #ffa221;
           }
+
           .project-body {
             flex: 1 1 auto;
             display: flex;
@@ -409,25 +460,25 @@ body {
             align-items: center;
 
             // 項目名稱
-            .project-title{
-              background-color: #fdffcf;
+            .project-title {
+              background-color: #ffa221;
               width: 100%;
               padding: 10px;
               font-size: 18px;
               font-weight: 600;
-              color: #ffa221;
+              color: white;
               // 使文字完美至中，故設 flex和text-align: center
               display: flex;
               justify-content: center;
               align-items: center;
               text-align: center;
-              
+
               border-radius: 0px 0px 10px 10px;
               margin-bottom: 5px;
             }
 
             // 備註和價格
-            .project-text{
+            .project-text {
               padding: 5px 10px;
               font-size: 1rem;
               font-weight: 600;
@@ -438,7 +489,8 @@ body {
               color: #363B45;
               // line-height:5px
             }
-            .project-price{
+
+            .project-price {
               padding: 10px 0px;
               font-size: 18px;
               font-weight: 600;
@@ -448,20 +500,24 @@ body {
             }
           }
 
-          @media(max-width:1100px){
+          @media(max-width:1100px) {
+            margin: 0px calc(20% / 4) 50px calc(20% / 4);
             width: 40%;
           }
-          @media(max-width:910px){
+
+          @media(max-width:910px) {
+            margin: 0px calc(10% / 4) 50px calc(10% / 4);
             width: 45%;
           }
         }
       }
 
       // 右邊餐點項目區域於斷點拉寬100%
-      @media(max-width:810px){
+      @media(max-width:810px) {
         width: calc(100vw - 300px);
       }
-      @media(max-width:768px){
+
+      @media(max-width:768px) {
         width: 100%;
       }
     }
@@ -484,66 +540,83 @@ body {
   height: 220px;
   // background: $primary_color;
   background-image: url("../pics/wave.png");
-  @media(max-width:768px){
+
+  @media(max-width:768px) {
     height: 250px;
     background-image: url('../pics/wave_md.png');
   }
-  @media(max-width:576px){
+
+  @media(max-width:576px) {
     background-image: url('../pics/wave_sm.png');
   }
-  @media(max-width:425px){
+
+  @media(max-width:425px) {
     background-image: url('../pics/wave_ssm.png');
     height: 210px;
   }
+
   background-size: cover;
   // max-width: 1920px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   position: relative;
+
   // 頁尾的內容部分
   .footer_content {
+
     // 頁尾波浪型裝飾
     .wave {
       max-width: 1600px;
     }
   }
+
   // logo跟頁尾連結
   .logo {
     width: 100px;
   }
+
   .logo_and_links {
-    @media(max-width:768px){
+    @media(max-width:768px) {
       padding: 0px 60px;
     }
-    @media(max-width:425px){
+
+    @media(max-width:425px) {
       padding: 10px 30px;
     }
+
     @include position_center();
     background: $secondary_color;
     padding: 10px 60px;
     width: 100%;
     // flex分散
     @include flex(space-between, center);
+
     .links_group {
       // flex置中
       @include flex(center, center);
       flex-wrap: wrap;
+
       // 頁尾的各項連結，顧客權益、聯絡我們、意見回饋、粉專頁等
       .link {
         @include flex(center, center);
+
         @media (max-width: 768px) {
           width: 50%;
           margin: 10px;
         }
-        @media(max-width:425px){
+
+        @media(max-width:425px) {
           margin: 5px;
         }
+
         padding: 0 15px;
+
         a {
-          @media(max-width:576px){
+          @media(max-width:576px) {
             font-size: 20px;
           }
+
           color: white;
           font-weight: bold;
           font-size: 24px;
@@ -552,11 +625,13 @@ body {
       }
     }
   }
+
   .company_and_phone {
     @media (max-width: 768px) {
       display: flex;
       flex-wrap: wrap;
       bottom: -100px;
+
       p {
         display: block;
         text-align: center;
@@ -564,17 +639,20 @@ body {
         padding: 5px;
       }
     }
+
     @include flex(space-between, center);
     width: 100%;
     padding: 20px 16px;
     position: absolute;
     left: 0;
     bottom: 0;
+
     p {
       font-size: 24px;
     }
   }
-  .go_to_top{
+
+  .go_to_top {
     right: 10px;
     top: 100px;
     position: absolute;

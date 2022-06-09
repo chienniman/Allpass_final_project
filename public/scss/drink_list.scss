@@ -89,6 +89,7 @@ body{
       @include position(15px, 125px, 0, 0);
       border-radius: 50%;
       background-color: #6accbf;
+      z-index: 5;
       @media(max-width:768px){
         @include size(100px, 100px);
         @include position(35px, 60px, 0, 0);
@@ -155,6 +156,7 @@ body{
       justify-content: center;
       align-items: center;
       border: 5px solid #f4bd72;
+      cursor: pointer;
       .line {
         height: 3px;
         width: 20px;

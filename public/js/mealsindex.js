@@ -14,7 +14,7 @@
 var all_list = [
     {
         meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
+        meal_img: '../pics/meals_list_img/breakfast/貝果.jpg',
         meal_name: "元氣貝果早餐",
         meal_ex: '※附德式香腸、炒蛋、沙拉、湯品',
         meal_ex2: '',
@@ -22,7 +22,7 @@ var all_list = [
     },
     {
         meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
+        meal_img: '../pics/meals_list_img/breakfast/雙蛋.jpg',
         meal_name: "活力雙蛋套餐",
         meal_ex: '※附沙拉、麵包、湯品',
         meal_ex2: '※雞肉、培根、蔬食(三選一)',
@@ -30,31 +30,16 @@ var all_list = [
     },
     {
         meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
+        meal_img: '../pics/meals_list_img/breakfast/低卡蛋.jpg',
         meal_name: "低卡水煮蛋套餐",
         meal_ex: '※附沙拉、佛卡夏麵包、湯品',
         meal_ex2: '※雞肉、培根、蔬食(三選一)',
         meal_price: '145元',
     },
-    {
-        meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
-        meal_name: "法式蛋捲套餐",
-        meal_ex: '※附沙拉、麵包、湯品',
-        meal_ex2: '※雞肉、培根、蔬食(三選一)',
-        meal_price: '155元',
-    },
-    {
-        meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
-        meal_name: "日式飯糰套餐",
-        meal_ex: '※雞肉、蔬食(二選一)',
-        meal_ex2: '',
-        meal_price: '155元',
-    },
+
     {
         meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
+        meal_img: '../pics/meals_list_img/salad/水果沙拉.jpg',
         meal_name: "綜合沙拉水果佐優格醬",
         meal_ex: '※蛋奶素',
         meal_ex2: '',
@@ -62,7 +47,7 @@ var all_list = [
     },
     {
         meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
+        meal_img: '../pics/meals_list_img/salad/蘑菇沙拉.jpg',
         meal_name: "低卡路里野菇水煮蛋沙拉佐義式油醋",
         meal_ex: '',
         meal_ex2: '',
@@ -70,31 +55,16 @@ var all_list = [
     },
     {
         meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
+        meal_img: '../pics/meals_list_img/salad/雞肉沙拉.jpg',
         meal_name: "活力堅果溫香草嫩雞沙拉",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '180元',
     },
-    {
-        meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
-        meal_name: "日式酥炸透抽溫沙拉佐和風醬",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '200元',
-    },
-    {
-        meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
-        meal_name: "蘿蔓時蔬松阪豬沙拉",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '230元',
-    },
+
     {
         meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
+        meal_img: '../pics/meals_list_img/dessert/薯條.jpg',
         meal_name: "薯條",
         meal_ex: '※蛋奶素',
         meal_ex2: '',
@@ -102,7 +72,7 @@ var all_list = [
     },
     {
         meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
+        meal_img: '../pics/meals_list_img/dessert/雞塊.jpg',
         meal_name: "雞塊",
         meal_ex: '',
         meal_ex2: '',
@@ -110,47 +80,16 @@ var all_list = [
     },
     {
         meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
-        meal_name: "玉米布丁酥",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '60元',
-    },
-    {
-        meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
+        meal_img: '../pics/meals_list_img/dessert/洋蔥圈.jpg',
         meal_name: "洋蔥圈",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '60元',
     },
-    {
-        meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
-        meal_name: "唐揚雞丁",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '85元',
-    },
-    {
-        meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
-        meal_name: "莫扎瑞拉起司棒",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '140元',
-    },
-    {
-        meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
-        meal_name: "綜合拼盤",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '160元',
-    },
+  
     {
         meal_type: "精選下午茶",
-        meal_img: '../pics/meals_list_img/beef.png',
+        meal_img: '../pics/meals_list_img/afternoon_tea/什錦沙拉.jpg',
         meal_name: "歐巴斯綜合什錦沙拉",
         meal_ex: '※限外帶',
         meal_ex2: '',
@@ -158,7 +97,7 @@ var all_list = [
     },
     {
         meal_type: "精選下午茶",
-        meal_img: '../pics/meals_list_img/beef.png',
+        meal_img: '../pics/meals_list_img/afternoon_tea/牛肉捲.jpg',
         meal_name: "乳酪牛肉捲套餐",
         meal_ex: '附沙拉、玉米布丁酥',
         meal_ex2: '',
@@ -166,39 +105,33 @@ var all_list = [
     },
     {
         meal_type: "精選下午茶",
-        meal_img: '../pics/meals_list_img/beef.png',
+        meal_img: '../pics/meals_list_img/afternoon_tea/雞肉捲.jpg',
         meal_name: "松露起司雞肉捲套餐",
         meal_ex: '附沙拉、玉米布丁酥',
         meal_ex2: '',
         meal_price: '160元',
     },
-    {
-        meal_type: "精選下午茶",
-        meal_img: '../pics/meals_list_img/beef.png',
-        meal_name: "雙味可頌堡套餐",
-        meal_ex: '附雞胸肉、鮪魚、沙拉、玉米酥布丁',
-        meal_ex2: '',
-        meal_price: '180元',
-    },
+    
     {
         meal_type: "興大學生優惠特餐",
-        meal_img: '../pics/meals_list_img/Studentmeal.png',
+        meal_img: '../pics/meals_list_img/nchu_student/紅醬義大利麵.jpg',
         meal_name: "鮮番茄肉醬義大利麵",
         meal_ex: '※單數週供應',
         meal_ex2: '',
         meal_price: '85元',
     },
-    {
-        meal_type: "興大學生優惠特餐",
-        meal_img: '../pics/meals_list_img/Studentmeal.png',
-        meal_name: "特製香酥翅腿佐咖哩醬",
-        meal_ex: '※雙數週供應',
-        meal_ex2: '',
-        meal_price: '85元',
-    },
+    // {
+    //     meal_type: "興大學生優惠特餐",
+    //     meal_img: '../pics/meals_list_img/nchu_student/紅醬義大利麵.jpg',
+    //     meal_name: "特製香酥翅腿佐咖哩醬",
+    //     meal_ex: '※雙數週供應',
+    //     meal_ex2: '',
+    //     meal_price: '85元',
+    // },
+
     {
         meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
+        meal_img: '../pics/meals_list_img/curry_jp/起司蛋.jpg',
         meal_name: "起司蛋",
         meal_ex: '',
         meal_ex2: '',
@@ -206,7 +139,7 @@ var all_list = [
     },
     {
         meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
+        meal_img: '../pics/meals_list_img/curry_jp/蛋包與蔬食.jpg',
         meal_name: "蛋包與蔬食",
         meal_ex: '',
         meal_ex2: '',
@@ -214,47 +147,16 @@ var all_list = [
     },
     {
         meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
+        meal_img: '../pics/meals_list_img/curry_jp/嫩煎香草雞.jpg',
         meal_name: "嫩煎香草雞",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '200元',
     },
-    {
-        meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
-        meal_name: "炸嫩里肌豬排",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '240元',
-    },
-    {
-        meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
-        meal_name: "唐揚雞丁",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '240元',
-    },
-    {
-        meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
-        meal_name: "香料風味炸黃金鮮蝦",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '270元',
-    },
-    {
-        meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
-        meal_name: "和風香煎無骨牛小排咖哩飯",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '380元',
-    },
+  
     {
         meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
+        meal_img: '../pics/meals_list_img/exotic_rice/泰式椒麻雞.jpg',
         meal_name: "泰式椒麻雞佐酸甜醬",
         meal_ex: '',
         meal_ex2: '',
@@ -262,7 +164,7 @@ var all_list = [
     },
     {
         meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
+        meal_img: '../pics/meals_list_img/exotic_rice/黑松露蕈菇奶油雞肉.jpg',
         meal_name: "黑松露蕈菇奶油雞肉燉飯",
         meal_ex: '',
         meal_ex2: '',
@@ -270,39 +172,16 @@ var all_list = [
     },
     {
         meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
+        meal_img: '../pics/meals_list_img/exotic_rice/和風蒲燒鯛魚.jpg',
         meal_name: "和風蒲燒鯛魚飯",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '250元',
     },
-    {
-        meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
-        meal_name: "經典勃根地紅酒燉牛肉飯",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '320元',
-    },
-    {
-        meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
-        meal_name: "法式芥末籽奶油松阪豬燉飯",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '360元',
-    },
-    {
-        meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
-        meal_name: "炙燒無骨牛小排飯",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '380元',
-    },
+   
     {
         meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
+        meal_img: '../pics/meals_list_img/pasta/田園鮮蔬野菇.jpg',
         meal_name: "田園鮮蔬野菇義大利麵",
         meal_ex: '',
         meal_ex2: '',
@@ -310,7 +189,7 @@ var all_list = [
     },
     {
         meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
+        meal_img: '../pics/meals_list_img/pasta/清炒塔香蒜片.jpg',
         meal_name: "清炒塔香蒜片培根義大利麵",
         meal_ex: '',
         meal_ex2: '',
@@ -318,59 +197,20 @@ var all_list = [
     },
     {
         meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
+        meal_img: '../pics/meals_list_img/pasta/松露起司奶油雞肉.jpg',
         meal_name: "松露起司奶油雞肉義大利麵",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '230元',
     },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "蒜香蛤蜊義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '260元',
-    },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "牛肝菌野菇白醬松阪豬義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '320元',
-    },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "鮮番茄紅醬香料燉牛腩義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '320元',
-    },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "西西里茄汁海鮮總匯義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '320元',
-    },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "炙燒無骨牛小排紅醬義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '380元',
-    }
+    
 
 ];
 // 1早餐菜單
 var breakfast_list = [
     {
         meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
+        meal_img: '../pics/meals_list_img/breakfast/貝果.jpg',
         meal_name: "元氣貝果早餐",
         meal_ex: '※附德式香腸、炒蛋、沙拉、湯品',
         meal_ex2: '',
@@ -378,7 +218,7 @@ var breakfast_list = [
     },
     {
         meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
+        meal_img: '../pics/meals_list_img/breakfast/雙蛋.jpg',
         meal_name: "活力雙蛋套餐",
         meal_ex: '※附沙拉、麵包、湯品',
         meal_ex2: '※雞肉、培根、蔬食(三選一)',
@@ -386,35 +226,19 @@ var breakfast_list = [
     },
     {
         meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
+        meal_img: '../pics/meals_list_img/breakfast/低卡蛋.jpg',
         meal_name: "低卡水煮蛋套餐",
         meal_ex: '※附沙拉、佛卡夏麵包、湯品',
         meal_ex2: '※雞肉、培根、蔬食(三選一)',
         meal_price: '145元',
     },
-    {
-        meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
-        meal_name: "法式蛋捲套餐",
-        meal_ex: '※附沙拉、麵包、湯品',
-        meal_ex2: '※雞肉、培根、蔬食(三選一)',
-        meal_price: '155元',
-    },
-    {
-        meal_type: "精選早餐",
-        meal_img: '../pics/meals_list_img/breakfast.png',
-        meal_name: "日式飯糰套餐",
-        meal_ex: '※雞肉、蔬食(二選一)',
-        meal_ex2: '',
-        meal_price: '155元',
-    }
 
 ];
 // 2沙拉菜單
 var salad_list = [
     {
         meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
+        meal_img: '../pics/meals_list_img/salad/水果沙拉.jpg',
         meal_name: "綜合沙拉水果佐優格醬",
         meal_ex: '※蛋奶素',
         meal_ex2: '',
@@ -422,7 +246,7 @@ var salad_list = [
     },
     {
         meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
+        meal_img: '../pics/meals_list_img/salad/蘑菇沙拉.jpg',
         meal_name: "低卡路里野菇水煮蛋沙拉佐義式油醋",
         meal_ex: '',
         meal_ex2: '',
@@ -430,34 +254,19 @@ var salad_list = [
     },
     {
         meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
+        meal_img: '../pics/meals_list_img/salad/雞肉沙拉.jpg',
         meal_name: "活力堅果溫香草嫩雞沙拉",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '180元',
     },
-    {
-        meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
-        meal_name: "日式酥炸透抽溫沙拉佐和風醬",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '200元',
-    },
-    {
-        meal_type: "沙拉",
-        meal_img: '../pics/meals_list_img/salad.png',
-        meal_name: "蘿蔓時蔬松阪豬沙拉",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '230元',
-    }
+   
 ]
 // 3點心菜單
 var dessert_list = [
     {
         meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
+        meal_img: '../pics/meals_list_img/dessert/薯條.jpg',
         meal_name: "薯條",
         meal_ex: '※蛋奶素',
         meal_ex2: '',
@@ -465,7 +274,7 @@ var dessert_list = [
     },
     {
         meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
+        meal_img: '../pics/meals_list_img/dessert/雞塊.jpg',
         meal_name: "雞塊",
         meal_ex: '',
         meal_ex2: '',
@@ -473,50 +282,19 @@ var dessert_list = [
     },
     {
         meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
-        meal_name: "玉米布丁酥",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '60元',
-    },
-    {
-        meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
+        meal_img: '../pics/meals_list_img/dessert/洋蔥圈.jpg',
         meal_name: "洋蔥圈",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '60元',
     },
-    {
-        meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
-        meal_name: "唐揚雞丁",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '85元',
-    },
-    {
-        meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
-        meal_name: "莫扎瑞拉起司棒",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '140元',
-    },
-    {
-        meal_type: "點心",
-        meal_img: '../pics/meals_list_img/french-fries.png',
-        meal_name: "綜合拼盤",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '160元',
-    }
+   
 ]
 // 4下午茶菜單
 var afternoon_tea_list = [
     {
         meal_type: "精選下午茶",
-        meal_img: '../pics/meals_list_img/beef.png',
+        meal_img: '../pics/meals_list_img/afternoon_tea/什錦沙拉.jpg',
         meal_name: "歐巴斯綜合什錦沙拉",
         meal_ex: '※限外帶',
         meal_ex2: '',
@@ -524,7 +302,7 @@ var afternoon_tea_list = [
     },
     {
         meal_type: "精選下午茶",
-        meal_img: '../pics/meals_list_img/beef.png',
+        meal_img: '../pics/meals_list_img/afternoon_tea/牛肉捲.jpg',
         meal_name: "乳酪牛肉捲套餐",
         meal_ex: '附沙拉、玉米布丁酥',
         meal_ex2: '',
@@ -532,46 +310,39 @@ var afternoon_tea_list = [
     },
     {
         meal_type: "精選下午茶",
-        meal_img: '../pics/meals_list_img/beef.png',
+        meal_img: '../pics/meals_list_img/afternoon_tea/雞肉捲.jpg',
         meal_name: "松露起司雞肉捲套餐",
         meal_ex: '附沙拉、玉米布丁酥',
         meal_ex2: '',
         meal_price: '160元',
     },
-    {
-        meal_type: "精選下午茶",
-        meal_img: '../pics/meals_list_img/beef.png',
-        meal_name: "雙味可頌堡套餐",
-        meal_ex: '附雞胸肉、鮪魚、沙拉、玉米酥布丁',
-        meal_ex2: '',
-        meal_price: '180元',
-    }
+
 
 ]
 // 5興大學生特餐菜單
 var nchu_student_list = [
     {
         meal_type: "興大學生優惠特餐",
-        meal_img: '../pics/meals_list_img/Studentmeal.png',
+        meal_img: '../pics/meals_list_img/nchu_student/紅醬義大利麵.jpg',
         meal_name: "鮮番茄肉醬義大利麵",
         meal_ex: '※單數週供應',
         meal_ex2: '',
         meal_price: '85元',
     },
-    {
-        meal_type: "興大學生優惠特餐",
-        meal_img: '../pics/meals_list_img/Studentmeal.png',
-        meal_name: "特製香酥翅腿佐咖哩醬",
-        meal_ex: '※雙數週供應',
-        meal_ex2: '',
-        meal_price: '85元',
-    }
+    // {
+    //     meal_type: "興大學生優惠特餐",
+    //     meal_img: '../pics/meals_list_img/nchu_student/紅醬義大利麵.jpg',
+    //     meal_name: "特製香酥翅腿佐咖哩醬",
+    //     meal_ex: '※雙數週供應',
+    //     meal_ex2: '',
+    //     meal_price: '85元',
+    // }
 ]
 // 6日式咖哩飯菜單
 var curry_jp_list = [
     {
         meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
+        meal_img: '../pics/meals_list_img/curry_jp/起司蛋.jpg',
         meal_name: "起司蛋",
         meal_ex: '',
         meal_ex2: '',
@@ -579,7 +350,7 @@ var curry_jp_list = [
     },
     {
         meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
+        meal_img: '../pics/meals_list_img/curry_jp/蛋包與蔬食.jpg',
         meal_name: "蛋包與蔬食",
         meal_ex: '',
         meal_ex2: '',
@@ -587,50 +358,19 @@ var curry_jp_list = [
     },
     {
         meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
+        meal_img: '../pics/meals_list_img/curry_jp/嫩煎香草雞.jpg',
         meal_name: "嫩煎香草雞",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '200元',
     },
-    {
-        meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
-        meal_name: "炸嫩里肌豬排",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '240元',
-    },
-    {
-        meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
-        meal_name: "唐揚雞丁",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '240元',
-    },
-    {
-        meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
-        meal_name: "香料風味炸黃金鮮蝦",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '270元',
-    },
-    {
-        meal_type: "日式咖哩飯",
-        meal_img: '../pics/meals_list_img/curry.png',
-        meal_name: "和風香煎無骨牛小排咖哩飯",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '380元',
-    }
+   
 ]
 // 7異國米飯料理
 var exotic_rice_list = [
     {
         meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
+        meal_img: '../pics/meals_list_img/exotic_rice/泰式椒麻雞.jpg',
         meal_name: "泰式椒麻雞佐酸甜醬",
         meal_ex: '',
         meal_ex2: '',
@@ -638,7 +378,7 @@ var exotic_rice_list = [
     },
     {
         meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
+        meal_img: '../pics/meals_list_img/exotic_rice/黑松露蕈菇奶油雞肉.jpg',
         meal_name: "黑松露蕈菇奶油雞肉燉飯",
         meal_ex: '',
         meal_ex2: '',
@@ -646,42 +386,18 @@ var exotic_rice_list = [
     },
     {
         meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
+        meal_img: '../pics/meals_list_img/exotic_rice/和風蒲燒鯛魚.jpg',
         meal_name: "和風蒲燒鯛魚飯",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '250元',
     },
-    {
-        meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
-        meal_name: "經典勃根地紅酒燉牛肉飯",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '320元',
-    },
-    {
-        meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
-        meal_name: "法式芥末籽奶油松阪豬燉飯",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '360元',
-    },
-    {
-        meal_type: "異國米飯料理",
-        meal_img: '../pics/meals_list_img/meat.png',
-        meal_name: "炙燒無骨牛小排飯",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '380元',
-    }
 ]
 // 8義大利麵
 var pasta_list = [
     {
         meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
+        meal_img: '../pics/meals_list_img/pasta/田園鮮蔬野菇.jpg',
         meal_name: "田園鮮蔬野菇義大利麵",
         meal_ex: '',
         meal_ex2: '',
@@ -689,7 +405,7 @@ var pasta_list = [
     },
     {
         meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
+        meal_img: '../pics/meals_list_img/pasta/清炒塔香蒜片.jpg',
         meal_name: "清炒塔香蒜片培根義大利麵",
         meal_ex: '',
         meal_ex2: '',
@@ -697,56 +413,66 @@ var pasta_list = [
     },
     {
         meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
+        meal_img: '../pics/meals_list_img/pasta/松露起司奶油雞肉.jpg',
         meal_name: "松露起司奶油雞肉義大利麵",
         meal_ex: '',
         meal_ex2: '',
         meal_price: '230元',
     },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "蒜香蛤蜊義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '260元',
-    },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "牛肝菌野菇白醬松阪豬義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '320元',
-    },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "鮮番茄紅醬香料燉牛腩義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '320元',
-    },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "西西里茄汁海鮮總匯義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '320元',
-    },
-    {
-        meal_type: "義大利麵",
-        meal_img: '../pics/meals_list_img/spaguetti.png',
-        meal_name: "炙燒無骨牛小排紅醬義大利麵",
-        meal_ex: '',
-        meal_ex2: '',
-        meal_price: '380元',
-    }
+   
 ]
 // breakfast_list.forEach(function (element, index) {
 //     console.log(element.meal_name);
 // });
+
+   // 引入box-inner的div
+   var Meals_project = document.querySelector('.box-inner');
+   // 引入project的div
+   var project = document.querySelector('.project');
+   // 淨空
+   Meals_project.innerHTML = "";
+   project.innerHTML = "";
+   Meals_project.innerHTML = `
+           <div class="Remark">
+               <div>
+                   <div style="color:#f95223; font-size: 20px;font-weight: 600;">※供餐時間表：</div>
+                   <div style="color:black; font-size: 20px;font-weight: 600;padding-top:0.5rem;">1.早餐－08：00～10：30</div>
+                   <div style="color:black; font-size: 20px;font-weight: 600;padding-top:0.5rem;">2.沙拉－08：00～19：30</div>
+                   <div style="color:black; font-size: 20px;font-weight: 600;padding-top:0.5rem;">3.點心－08：00～19：30</div>
+                   <div style="color:black; font-size: 20px;font-weight: 600;padding-top:0.5rem;">4.精選下午茶－14：00～16：30</div>
+                   <div style="color:black; font-size: 20px;font-weight: 600;padding-top:0.5rem;">5.興大學生特惠餐－11：00～19：30</div>
+                   <div style="color:#f95223; font-size: 12px;font-weight: 600;padding-top:0.5rem; text-align: center;">※學生特惠餐限興大學生憑學生證選用<br>一證一套。</div>
+                   <div style="color:black; font-size: 20px;font-weight: 600;padding-top:0.5rem;">6.日式咖哩－11：00～19：30</div>
+                   <div style="color:#f95223; font-size: 12px;font-weight: 600;padding-top:0.5rem; text-align: center;">※升級套餐可享有濃湯與手工麵包一份</div>
+                   <div style="color:black; font-size: 20px;font-weight: 600;padding-top:0.5rem;">7.異國米飯－11：00～19：30</div>
+                   <div style="color:#f95223; font-size: 12px;font-weight: 600;padding-top:0.5rem;text-align: center;">※升級套餐可享有濃湯與手工麵包一份</div>
+                   <div style="color:black; font-size: 20px;font-weight: 600;padding-top:0.5rem;">8.義大利麵－11：00～19：30</div>
+                   <div style="color:#f95223; font-size: 12px;font-weight: 600;padding-top:0.5rem;text-align: center;">※升級套餐可享有濃湯與手工麵包一份</div>
+               </div>
+           </div>
+       `;
+   //由project的div印出breakfast_list陣列資料
+   all_list.forEach(function (element) {
+       project.innerHTML += `
+                   <div class="project-card">
+                       <div class="project-name">${element.meal_type}</div>
+                           <div class="img-box">
+                               <img src="${element.meal_img}" alt="..." width="100%">
+                           </div>
+                           <div class="project-body">
+                               <p class="project-title">${element.meal_name}</p>
+                               <p class="project-text">${element.meal_ex}</p>
+                               <p class="project-text">${element.meal_ex2}</p>
+                               <p class="project-price">${element.meal_price}</p>
+                           </div>
+                       
+                   </div>
+               `;
+   });
+
+
+
+
 //全部餐點
 function all_Meals() {
     // 引入box-inner的div
@@ -779,9 +505,9 @@ function all_Meals() {
     all_list.forEach(function (element) {
         project.innerHTML += `
                     <div class="project-card">
-                        <div class="project-name">${element.meal_type}</div>
+                            <div class="project-name">${element.meal_type}</div>
                             <div class="img-box">
-                                <img src="${element.meal_img}" alt="..." width="70%">
+                                <img src="${element.meal_img}" alt="..." width="100%">
                             </div>
                             <div class="project-body">
                                 <p class="project-title">${element.meal_name}</p>
@@ -789,7 +515,7 @@ function all_Meals() {
                                 <p class="project-text">${element.meal_ex2}</p>
                                 <p class="project-price">${element.meal_price}</p>
                             </div>
-                        </div>
+                        
                     </div>
                 `;
     });
@@ -813,9 +539,9 @@ function breakfast() {
     breakfast_list.forEach(function (element) {
         project.innerHTML += `
                     <div class="project-card">
-                        <div class="project-name">${element.meal_type}</div>
+                        
                             <div class="img-box">
-                                <img src="${element.meal_img}" alt="..." width="70%">
+                                <img src="${element.meal_img}" alt="..." width="100%">
                             </div>
                             <div class="project-body">
                                 <p class="project-title">${element.meal_name}</p>
@@ -823,7 +549,7 @@ function breakfast() {
                                 <p class="project-text">${element.meal_ex2}</p>
                                 <p class="project-price">${element.meal_price}</p>
                             </div>
-                        </div>
+                        
                     </div>
                 `;
     });
@@ -847,9 +573,9 @@ function salad() {
     salad_list.forEach(function (element) {
         project.innerHTML += `
                     <div class="project-card">
-                        <div class="project-name">${element.meal_type}</div>
+                        
                             <div class="img-box">
-                                <img src="${element.meal_img}" alt="..." width="70%">
+                                <img src="${element.meal_img}" alt="..." width="100%">
                             </div>
                             <div class="project-body">
                                 <p class="project-title">${element.meal_name}</p>
@@ -857,7 +583,7 @@ function salad() {
                                 <p class="project-text">${element.meal_ex2}</p>
                                 <p class="project-price">${element.meal_price}</p>
                             </div>
-                        </div>
+                        
                     </div>
                 `;
     });
@@ -882,9 +608,9 @@ function dessert() {
     dessert_list.forEach(function (element) {
         project.innerHTML += `
                     <div class="project-card">
-                        <div class="project-name">${element.meal_type}</div>
+                        
                             <div class="img-box">
-                                <img src="${element.meal_img}" alt="..." width="70%">
+                                <img src="${element.meal_img}" alt="..." width="100%">
                             </div>
                             <div class="project-body">
                                 <p class="project-title">${element.meal_name}</p>
@@ -892,7 +618,7 @@ function dessert() {
                                 <p class="project-text">${element.meal_ex2}</p>
                                 <p class="project-price">${element.meal_price}</p>
                             </div>
-                        </div>
+                        
                     </div>
                 `;
     });
@@ -916,9 +642,9 @@ function afternoon_tea() {
     afternoon_tea_list.forEach(function (element) {
         project.innerHTML += `
                     <div class="project-card">
-                        <div class="project-name">${element.meal_type}</div>
+                        
                             <div class="img-box">
-                                <img src="${element.meal_img}" alt="..." width="70%">
+                                <img src="${element.meal_img}" alt="..." width="100%">
                             </div>
                             <div class="project-body">
                                 <p class="project-title">${element.meal_name}</p>
@@ -926,7 +652,7 @@ function afternoon_tea() {
                                 <p class="project-text">${element.meal_ex2}</p>
                                 <p class="project-price">${element.meal_price}</p>
                             </div>
-                        </div>
+                        
                     </div>
                 `;
     });
@@ -951,9 +677,9 @@ function nchu_student() {
     nchu_student_list.forEach(function (element) {
         project.innerHTML += `
                     <div class="project-card">
-                        <div class="project-name">${element.meal_type}</div>
+                        
                             <div class="img-box">
-                                <img src="${element.meal_img}" alt="..." width="70%">
+                                <img src="${element.meal_img}" alt="..." width="100%">
                             </div>
                             <div class="project-body">
                                 <p class="project-title">${element.meal_name}</p>
@@ -961,7 +687,7 @@ function nchu_student() {
                                 <p class="project-text">${element.meal_ex2}</p>
                                 <p class="project-price">${element.meal_price}</p>
                             </div>
-                        </div>
+                        
                     </div>
                 `;
     });
@@ -987,9 +713,9 @@ function curry_jp() {
     curry_jp_list.forEach(function (element) {
         project.innerHTML += `
                     <div class="project-card">
-                        <div class="project-name">${element.meal_type}</div>
+                        
                             <div class="img-box">
-                                <img src="${element.meal_img}" alt="..." width="70%">
+                                <img src="${element.meal_img}" alt="..." width="100%">
                             </div>
                             <div class="project-body">
                                 <p class="project-title">${element.meal_name}</p>
@@ -997,7 +723,7 @@ function curry_jp() {
                                 <p class="project-text">${element.meal_ex2}</p>
                                 <p class="project-price">${element.meal_price}</p>
                             </div>
-                        </div>
+                        
                     </div>
                 `;
     });
@@ -1022,9 +748,9 @@ function exotic_rice() {
     exotic_rice_list.forEach(function (element) {
         project.innerHTML += `
                     <div class="project-card">
-                        <div class="project-name">${element.meal_type}</div>
+                        
                             <div class="img-box">
-                                <img src="${element.meal_img}" alt="..." width="70%">
+                                <img src="${element.meal_img}" alt="..." width="100%">
                             </div>
                             <div class="project-body">
                                 <p class="project-title">${element.meal_name}</p>
@@ -1032,7 +758,7 @@ function exotic_rice() {
                                 <p class="project-text">${element.meal_ex2}</p>
                                 <p class="project-price">${element.meal_price}</p>
                             </div>
-                        </div>
+                        
                     </div>
                 `;
     });
@@ -1057,9 +783,9 @@ function pasta() {
     pasta_list.forEach(function (element) {
         project.innerHTML += `
                     <div class="project-card">
-                        <div class="project-name">${element.meal_type}</div>
+                        
                             <div class="img-box">
-                                <img src="${element.meal_img}" alt="..." width="70%">
+                                <img src="${element.meal_img}" alt="..." width="100%">
                             </div>
                             <div class="project-body">
                                 <p class="project-title">${element.meal_name}</p>
@@ -1067,7 +793,7 @@ function pasta() {
                                 <p class="project-text">${element.meal_ex2}</p>
                                 <p class="project-price">${element.meal_price}</p>
                             </div>
-                        </div>
+                        
                     </div>
                 `;
     });
@@ -1108,9 +834,9 @@ function meal() {
         all_list.forEach(function (element) {
             project.innerHTML += `
                         <div class="project-card">
-                            <div class="project-name">${element.meal_type}</div>
+                            
                                 <div class="img-box">
-                                    <img src="${element.meal_img}" alt="..." width="70%">
+                                    <img src="${element.meal_img}" alt="..." width="100%">
                                 </div>
                                 <div class="project-body">
                                     <p class="project-title">${element.meal_name}</p>
@@ -1118,7 +844,7 @@ function meal() {
                                     <p class="project-text">${element.meal_ex2}</p>
                                     <p class="project-price">${element.meal_price}</p>
                                 </div>
-                            </div>
+                            
                         </div>
                     `;
         });
@@ -1137,9 +863,9 @@ function meal() {
         breakfast_list.forEach(function (element) {
             project.innerHTML += `
                         <div class="project-card">
-                            <div class="project-name">${element.meal_type}</div>
+                            
                                 <div class="img-box">
-                                    <img src="${element.meal_img}" alt="..." width="70%">
+                                    <img src="${element.meal_img}" alt="..." width="100%">
                                 </div>
                                 <div class="project-body">
                                     <p class="project-title">${element.meal_name}</p>
@@ -1147,7 +873,7 @@ function meal() {
                                     <p class="project-text">${element.meal_ex2}</p>
                                     <p class="project-price">${element.meal_price}</p>
                                 </div>
-                            </div>
+                            
                         </div>
                     `;
         });
@@ -1166,9 +892,9 @@ function meal() {
         salad_list.forEach(function (element) {
             project.innerHTML += `
                         <div class="project-card">
-                            <div class="project-name">${element.meal_type}</div>
+                            
                                 <div class="img-box">
-                                    <img src="${element.meal_img}" alt="..." width="70%">
+                                    <img src="${element.meal_img}" alt="..." width="100%">
                                 </div>
                                 <div class="project-body">
                                     <p class="project-title">${element.meal_name}</p>
@@ -1176,7 +902,7 @@ function meal() {
                                     <p class="project-text">${element.meal_ex2}</p>
                                     <p class="project-price">${element.meal_price}</p>
                                 </div>
-                            </div>
+                            
                         </div>
                     `;
         });
@@ -1195,9 +921,9 @@ function meal() {
         dessert_list.forEach(function (element) {
             project.innerHTML += `
                         <div class="project-card">
-                            <div class="project-name">${element.meal_type}</div>
+                            
                                 <div class="img-box">
-                                    <img src="${element.meal_img}" alt="..." width="70%">
+                                    <img src="${element.meal_img}" alt="..." width="100%">
                                 </div>
                                 <div class="project-body">
                                     <p class="project-title">${element.meal_name}</p>
@@ -1205,7 +931,7 @@ function meal() {
                                     <p class="project-text">${element.meal_ex2}</p>
                                     <p class="project-price">${element.meal_price}</p>
                                 </div>
-                            </div>
+                            
                         </div>
                     `;
         });
@@ -1224,9 +950,9 @@ function meal() {
         afternoon_tea_list.forEach(function (element) {
             project.innerHTML += `
                         <div class="project-card">
-                            <div class="project-name">${element.meal_type}</div>
+                            
                                 <div class="img-box">
-                                    <img src="${element.meal_img}" alt="..." width="70%">
+                                    <img src="${element.meal_img}" alt="..." width="100%">
                                 </div>
                                 <div class="project-body">
                                     <p class="project-title">${element.meal_name}</p>
@@ -1234,7 +960,7 @@ function meal() {
                                     <p class="project-text">${element.meal_ex2}</p>
                                     <p class="project-price">${element.meal_price}</p>
                                 </div>
-                            </div>
+                            
                         </div>
                     `;
         });
@@ -1254,9 +980,9 @@ function meal() {
         nchu_student_list.forEach(function (element) {
             project.innerHTML += `
                         <div class="project-card">
-                            <div class="project-name">${element.meal_type}</div>
+                            
                                 <div class="img-box">
-                                    <img src="${element.meal_img}" alt="..." width="70%">
+                                    <img src="${element.meal_img}" alt="..." width="100%">
                                 </div>
                                 <div class="project-body">
                                     <p class="project-title">${element.meal_name}</p>
@@ -1264,7 +990,7 @@ function meal() {
                                     <p class="project-text">${element.meal_ex2}</p>
                                     <p class="project-price">${element.meal_price}</p>
                                 </div>
-                            </div>
+                            
                         </div>
                     `;
         });
@@ -1283,9 +1009,9 @@ function meal() {
         curry_jp_list.forEach(function (element) {
             project.innerHTML += `
                         <div class="project-card">
-                            <div class="project-name">${element.meal_type}</div>
+                            
                                 <div class="img-box">
-                                    <img src="${element.meal_img}" alt="..." width="70%">
+                                    <img src="${element.meal_img}" alt="..." width="100%">
                                 </div>
                                 <div class="project-body">
                                     <p class="project-title">${element.meal_name}</p>
@@ -1293,7 +1019,7 @@ function meal() {
                                     <p class="project-text">${element.meal_ex2}</p>
                                     <p class="project-price">${element.meal_price}</p>
                                 </div>
-                            </div>
+                            
                         </div>
                     `;
         });
@@ -1312,9 +1038,9 @@ function meal() {
         exotic_rice_list.forEach(function (element) {
             project.innerHTML += `
                         <div class="project-card">
-                            <div class="project-name">${element.meal_type}</div>
+                            
                                 <div class="img-box">
-                                    <img src="${element.meal_img}" alt="..." width="70%">
+                                    <img src="${element.meal_img}" alt="..." width="100%">
                                 </div>
                                 <div class="project-body">
                                     <p class="project-title">${element.meal_name}</p>
@@ -1322,7 +1048,7 @@ function meal() {
                                     <p class="project-text">${element.meal_ex2}</p>
                                     <p class="project-price">${element.meal_price}</p>
                                 </div>
-                            </div>
+                            
                         </div>
                     `;
         });
@@ -1341,9 +1067,9 @@ function meal() {
         pasta_list.forEach(function (element) {
             project.innerHTML += `
                         <div class="project-card">
-                            <div class="project-name">${element.meal_type}</div>
+                            
                                 <div class="img-box">
-                                    <img src="${element.meal_img}" alt="..." width="70%">
+                                    <img src="${element.meal_img}" alt="..." width="100%">
                                 </div>
                                 <div class="project-body">
                                     <p class="project-title">${element.meal_name}</p>
@@ -1351,7 +1077,7 @@ function meal() {
                                     <p class="project-text">${element.meal_ex2}</p>
                                     <p class="project-price">${element.meal_price}</p>
                                 </div>
-                            </div>
+                            
                         </div>
                     `;
         });

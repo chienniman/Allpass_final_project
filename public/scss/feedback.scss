@@ -37,6 +37,7 @@ body {
   background-image: url("../pics/feedback/bkgd.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0%;
   &::-webkit-scrollbar {
     width: 20px;
   }
@@ -49,9 +50,6 @@ body {
     &:hover {
       background-image: linear-gradient(#e94619, #ffea00);
     }
-  }
-  @media(max-width:768px){
-    background-image: url("../pics/feedback/768-bkgd.png");
   }
 }
 // 頁首固定在視窗上方
@@ -70,6 +68,7 @@ body {
       @include position(15px, 125px, 0, 0);
       border-radius: 50%;
       background-color: #6accbf;
+      z-index: 5;
       @media(max-width:768px){
         @include size(100px, 100px);
         @include position(35px, 60px, 0, 0);
@@ -136,6 +135,7 @@ body {
       justify-content: center;
       align-items: center;
       border: 5px solid #f4bd72;
+      cursor: pointer;
       .line {
         height: 3px;
         width: 20px;

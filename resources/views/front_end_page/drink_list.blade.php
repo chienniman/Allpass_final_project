@@ -112,19 +112,19 @@
               <ul class="dropdown-menu w-100 bg-main" aria-labelledby="dropdownMenuButton1" >
                 <li class="d-flex justify-content-around align-items-center bg-main-hover" @click="showColdDrink()">
                   <button class="btn btn-ic d-flex">
-                    選擇冷飲{{cold_length}}
+                    選擇冷飲@{{cold_length}}
                   </button>
                   <div class="cold rounded-circle"></div>      
                 </li>
                 <li class="d-flex justify-content-around align-items-center bg-main-hover" @click="showHotDrink()">
                   <button class="btn btn-hot d-flex justify-content-around">
-                     選擇熱飲{{hot_length}}
+                     選擇熱飲@{{hot_length}}
                   </button>  
                   <div class="hot rounded-circle"></div>
                 </li>
                 <li class="d-flex justify-content-around align-items-center bg-main-hover" @click="show_cold_and_Hot_Drink()">
                   <button class="btn btn-ice-hot d-flex">
-                    冷熱皆可{{cold_and_hot_length}}
+                    冷熱皆可@{{cold_and_hot_length}}
                   </button>
                   <div class="d-flex">
                     <div class="cold rounded-circle"></div>
@@ -137,59 +137,59 @@
           <div class="btn_groups col-md-9  p-0 row d-flex justify-content-center align-items-center">
             <div class="btn_selector d-none d-md-flex justify-content-around flex-wrap">
               <button class="btn btn-all me-3" @click="showAllMenu()">
-                全部飲品{{all_length}}
+                全部飲品@{{all_length}}
               </button>
               <button class="btn btn-fresh-tea me-3" @click="showFreshTea()">
-                調茶飲{{fresh_length}}
+                調茶飲@{{fresh_length}}
               </button>
               <button class="btn btn-handpicked-tea  me-3" @click="showHandPick_Tea()">
-                嚴選茶品{{HandPick_Tea_length}}
+                嚴選茶品@{{HandPick_Tea_length}}
               </button>
               <button class="btn btn-milk-juice me-3" @click="showMilk_and_Juice()">
-                牛奶跟果汁{{Milk_and_Juice_length}}
+                牛奶跟果汁@{{Milk_and_Juice_length}}
               </button>
               <button class="btn btn-tea-latte me-3" @click="showTeaLatte()">
-                茶拿鐵{{TeaLatte_length}}
+                茶拿鐵@{{TeaLatte_length}}
               </button>
               <button class="btn btn-coffee-latte me-3" @click="showCoffee_and_Latte()">
-                咖啡跟拿鐵{{Coffee_and_Latte_length}}
+                咖啡跟拿鐵@{{Coffee_and_Latte_length}}
               </button>  
             </div>
             <div class="d-flex justify-content-center d-md-none" style="min-width: 155px;">
               <div class="dropdown  mt-3 mb-3 w-100 bg-main">
                 <button @click="showAllMenu()"  
                 class="btn btn-secondary dropdown-toggle w-100 pe-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                全部飲品{{all_length}}
+                全部飲品@{{all_length}}
                 </button>
                 <ul class="dropdown-menu w-100 ps-3 pe-3 bg-main" aria-labelledby="dropdownMenuButton1">
                   <li class="bg-main-hover">
                     <button class="btn btn-all btn-lg me-3 mb-3 mt-3 w-100" @click="showAllMenu()">
-                      全部飲品{{all_length}}
+                      全部飲品@{{all_length}}
                     </button>
                   </li>
                   <li class="bg-main-hover">
                     <button class="btn btn-fresh-tea btn-lg me-3 mb-3 mt-3 w-100" @click="showFreshTea()">
-                      調茶飲{{fresh_length}}
+                      調茶飲@{{fresh_length}}
                     </button>
                   </li>
                   <li class="bg-main-hover">
                     <button class="btn btn-handpicked-tea btn-lg me-3 mb-3 mt-3 w-100" @click="showHandPick_Tea()">
-                      嚴選茶品{{HandPick_Tea_length}}
+                      嚴選茶品@{{HandPick_Tea_length}}
                     </button>
                   </li>
                   <li class="bg-main-hover">
                     <button class="btn btn-milk-juice btn-lg me-3 mb-3 mt-3 w-100" @click="showMilk_and_Juice()">
-                      牛奶跟果汁{{Milk_and_Juice_length}}
+                      牛奶跟果汁@{{Milk_and_Juice_length}}
                     </button>
                   </li>
                   <li class="bg-main-hover">
                     <button class="btn btn-tea-latte btn-lg me-3 mb-3 mt-3 w-100" @click="showTeaLatte()">
-                      茶拿鐵{{TeaLatte_length}}
+                      茶拿鐵@{{TeaLatte_length}}
                     </button>
                   </li>
                   <li class="bg-main-hover">
                     <button class="btn btn-coffee-latte btn-lg me-3 w-100" @click="showCoffee_and_Latte()">
-                      咖啡跟拿鐵{{Coffee_and_Latte_length}}
+                      咖啡跟拿鐵@{{Coffee_and_Latte_length}}
                     </button> 
                   </li>
                 </ul>
@@ -200,10 +200,10 @@
         <div class="card border-3 rounded-3">
           <div class="card-body p-0">
             <div class="item d-flex justify-content-between mb-3 rounded" v-for="(i,index) in tempMenu">
-              {{index+1}}.{{i.teaname}}<br>{{i.EngName}}
+              @{{index+1}}.@{{i.teaname}}<br>@{{i.EngName}}
               <div class="row info">
                 <div class="item_price col-6">
-                  ${{i.price}}元
+                  $@{{i.price}}元
                 </div>
                 <div class="col-6 d-flex">
                   <div v-if="i.hot==true">
@@ -237,7 +237,7 @@
                       <br>
                       <div class="d-flex">
                         <div>
-                          <p class="recommended-text">{{teaname}}&nbsp&nbsp&nbsp{{EngName}}&nbsp&nbsp&nbsp{{price}}元</p>
+                          <p class="recommended-text">@{{teaname}}&nbsp&nbsp&nbsp@{{EngName}}&nbsp&nbsp&nbsp@{{price}}元</p>
                         </div>
                         <div class="hot-ice col-2 d-flex pb-3 ps-3">
                           <div v-if="hot==true">
@@ -263,7 +263,7 @@
                       </span>  
                     </div>
                     <div v-if="predicted_result_show" class="result_text">
-                      {{predicted_result_text}}
+                      @{{predicted_result_text}}
                       <br>
                       <a class="go_to_allpass_meals text-nowrap" v-if="predicted_result" href="./mealsindex_original.html">
                         前往歐巴斯餐點區逛逛
