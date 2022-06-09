@@ -600,6 +600,14 @@
                                                 <div class="mb-3">
                                                     <label for="CarouselNumInput{{ $index }}" class="col-form-label">輸入輪播順序:</label>
                                                     <input type="number" name='carouselNum' class="form-control carouselNumInput" id="carouselNumInput{{ $index }}" placeholder="輪播順序" value="{{$item->weight}}" min="1" >
+
+                                                    {{-- <select name="carouselNum" id="" class="form-select carouselNumInput" placeholder="輪播順序">
+                                                        <option value="1" @if ( $item->weight == 1 ) selected @endif>第一張</option>
+                                                        <option value="2" @if ( $item->weight == 2 ) selected @endif>第二張</option>
+                                                        <option value="3" @if ( $item->weight == 3 ) selected @endif>第三張</option>
+                                                        <option value="4" @if ( $item->weight == 4 ) selected @endif>第四張</option>
+                                                        <option value="5" @if ( $item->weight == 5 ) selected @endif>第五張</option>
+                                                    </select> --}}
                                                 </div>
                                                       
                                                 <div class="modal-footer">
@@ -808,27 +816,30 @@
                         title: '編輯完成',
                         icon: 'success',
                         confirmButtonText: 'OK',
-                    }).then(function(){
-                        window.location.reload();
                     })
+                    // .then(function(){
+                    //     window.location.reload();
+                    // })
                 })
             }   
         });
         
         // 沒有最高權限沒辦法進入管理者頁面
         const adminLink = document.querySelector('.adminLink');
-            let userPower = document.getElementById("avatar").dataset.user_power;
-            if(userPower == 2){
-                adminLink.addEventListener('click', e=>{
-                    e.preventDefault();
-                    // sweetAlert
-                    Swal.fire({
-                        title: '沒有權限訪問此連結',
-                        icon: 'warning',
-                        confirmButtonText: '是',
-                    })
-                }) 
-            }
+        let userPower = document.getElementById("avatar").dataset.user_power;
+        if(userPower == 2){
+            adminLink.addEventListener('click', e=>{
+                e.preventDefault();
+                // sweetAlert
+                Swal.fire({
+                    title: '沒有權限訪問此連結',
+                    icon: 'warning',
+                    confirmButtonText: '是',
+                })
+            }) 
+        }
+
+
     </script>
 
 

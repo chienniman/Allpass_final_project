@@ -98,7 +98,7 @@ Route::prefix('/new')->middleware(['auth'])->group(function () {
     Route::post('/upload/new_img/{id}', [UploadController::class, 'new_img_update'])->middleware(['auth']); // Upload 消息圖片用
 
     // 刪除歷史紀錄
-    Route::delete('/delete_history/{id}', [Controller::class, 'delete_history'])->middleware(['auth']); // Upload 餐點圖片用
+    Route::delete('/delete_history/{id}', [Controller::class, 'delete_history'])->middleware(['auth']);
 
 // 帳號管理
 Route::prefix('/account')->middleware(['auth','power'])->group(function () {
