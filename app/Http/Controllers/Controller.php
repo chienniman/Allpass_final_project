@@ -19,7 +19,17 @@ class Controller extends BaseController
     // 主頁
     public function index(){
 
-        return view('index');
+        // 留言輪播
+        $allFeedbacks = Feedback::get();
+
+        // 對留言依權重由小到大排序，包含空值
+        $sorted = $allFeedbacks->sortBy('weight');
+        // 將權重給key值，再過濾掉空值與0的key
+        $keyed = $sorted->keyBy('weight');
+        $carouselFeedbacks = $keyed->forget('');
+        $carouselFeedbacks = $keyed->forget('0');
+
+        return view('index', compact('carouselFeedbacks'));
     }
 
     // 飲品介紹
@@ -31,13 +41,27 @@ class Controller extends BaseController
     // 餐點介紹
     public function mealsindex(){
 
-        return view('front_end_page.mealsindex');
+        $mealTag = Meal_tag::get();
+        $breakfast = $mealTag[1]->meal->take(3); 
+        $salad = $mealTag[2]->meal->take(3);
+        $dessert = $mealTag[3]->meal->take(3);
+
+        $afternoonTea = $mealTag[4]->meal->take(3);
+        $nchuStudent = $mealTag[5]->meal->take(3);
+        $curryJp = $mealTag[6]->meal->take(3);
+        $exoticRice = $mealTag[7]->meal->take(3);
+        $pasta = $mealTag[8]->meal->take(3);
+
+
+        return view('front_end_page.mealsindex_fin', compact('mealTag', 'breakfast', 'salad', 'dessert', 'afternoonTea', 'nchuStudent', 'curryJp', 'exoticRice', 'pasta'));
     }
 
     // 門市據點
     public function position_map(){
+        $mealTag = Meal_tag::get();
 
-        return view('front_end_page.position_map');
+
+        return view('front_end_page.position_map', compact('mealTag'));
     }
 
     // 顧客權益

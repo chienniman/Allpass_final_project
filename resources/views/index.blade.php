@@ -36,22 +36,22 @@
                     <!-- 1440px 選單列 -->
                     <ul class="nav_content_pc">
                         <li>
-                            <a href="./front_end_page/story.html">
+                            <a href="/story.html">
                               品牌故事
                             </a>
                         </li>
                         <li>
-                            <a href="./front_end_page/mealsindex_original.html">
+                            <a href="/mealsindex_original.html">
                               餐點介紹
                             </a>
                         </li>
                         <li>
-                            <a href="./front_end_page/drink_list.html">
+                            <a href="/drink_list.html">
                               飲品介紹
                             </a>
                         </li>
                         <li>
-                            <a href="./front_end_page/position_map.html">
+                            <a href="/position_map.html">
                               門市據點
                             </a>
                         </li>
@@ -300,7 +300,7 @@
                 <div class="swiper-wrapper">
                     
                     <!-- 串資料時下面這個範例DIV請註解 -->
-                    <div class="swiper-slide">
+                    {{-- <div class="swiper-slide">
                         <div class="user-chat-box">
                             <div class="user-name">
                                 <p>A</p>
@@ -316,10 +316,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- 串資料時下面這個串聯@foreachDIV請解開註解 -->
-                    <!-- @foreach ($carouselFeedbacks as $item)
+                    @foreach ($carouselFeedbacks as $item)
                     <div class="swiper-slide">
                         <div class="user-chat-box">
                             <div class="user-name">
@@ -334,7 +334,7 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach -->
+                    @endforeach
 
                 </div>
                 <div class="swiper-button-next"></div>

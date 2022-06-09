@@ -32,7 +32,7 @@ use Illuminate\Support\Str;
 Route::prefix('/')->group(function () {
     Route::get('/index.html', [Controller::class, 'index']);                         // 主頁
     Route::get('/drink_list.html', [Controller::class, 'drink_list']);               // 飲品介紹
-    Route::get('/mealsindex.thml', [Controller::class, 'mealsindex']);               // 餐點介紹
+    Route::get('/mealsindex_original.html', [Controller::class, 'mealsindex']);      // 餐點介紹
     Route::get('/position_map.html', [Controller::class, 'position_map']);           // 門市據點
     Route::get('/right_of_customer.html', [Controller::class, 'right_of_customer']); // 顧客權益
     Route::get('/story.html', [Controller::class, 'story']);                         // 品牌故事
