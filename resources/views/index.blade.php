@@ -286,7 +286,6 @@
                             </div>
                         </div>
                     </div> --}}
-
                     <!-- 串資料時下面這個串聯@foreachDIV請解開註解 -->
                     @foreach ($carouselFeedbacks as $item)
                     <div class="swiper-slide">
