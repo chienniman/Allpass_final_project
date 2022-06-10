@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Document</title>
+    <title></title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
@@ -414,7 +414,7 @@
         }
 
         /* scrollbar */
-       
+
         /* Demonstrate a "mostly customized" scrollbar
         * (won't be visible otherwise if width/height is specified) */
         .scrollbar::-webkit-scrollbar {
@@ -505,7 +505,7 @@
                         <li>
                             <ul>
                                 <a href="/personal_edit/{{ Auth::user()->id }}">設定</a>
-                            </ul>  
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -514,7 +514,7 @@
         {{---------------------------------------------------------- 餐點列表 --------------------------------------------------}}
         <div class="container-fluid">
             <div class="list-detail">
-                <div id="section1" class="container-xxl mt-3 mb-5">    
+                <div id="section1" class="container-xxl mt-3 mb-5">
                     <table class="table table-striped table-bordered dt-responsive wrap" style="width:100%" id="information">
                         <thead>
                             <tr>
@@ -569,11 +569,11 @@
                                     @elseif ( $item->weight == 2 )
                                         第二張
                                     @elseif ( $item->weight == 3 )
-                                        第三張 
+                                        第三張
                                     @elseif ( $item->weight == 4 )
                                         第四張
                                     @elseif ( $item->weight == 5 )
-                                        第五張 
+                                        第五張
                                     @else
                                         無
                                     @endif
@@ -581,7 +581,7 @@
 
                                 <td>
                                     <button id="editBtn{{ $item->id }}" data-meal_id="{{ $item->id }}" type="button" class="btn btn-success editBtn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $index }}">輪播順序</button>
-                                    
+
                                     <div class="modal fade" id="exampleModal{{ $index }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                         <div class="modal-content">
@@ -594,18 +594,18 @@
                                             <form id='updateMealForm{{ $index }}' method='POST' enctype='multipart/form-data'>
                                                 @csrf
                                                 <div class="d-flex">
-                                   
+
                                                     <div class="mb-3 w-50">
                                                         <input type="radio" name='carousel' class="notCarouselInput" id="notCarouselInput{{ $index }}" value="0">
                                                         <label for="notCarouselInput{{ $index }}" class="col-form-label">留言不加入輪播</label>
                                                     </div>
-    
+
                                                     <div class="mb-3 w-50">
                                                         <input type="radio" name='carousel' class="carouselInput" id="CarouselInput{{ $index }}" value="1">
                                                         <label for="CarouselInput{{ $index }}" class="col-form-label">留言加入輪播</label>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="mb-3">
                                                     <label for="CarouselNumInput{{ $index }}" class="col-form-label">輸入輪播順序:</label>
                                                     {{-- <input type="number" name='carouselNum' class="form-control carouselNumInput" id="carouselNumInput{{ $index }}" placeholder="輪播順序" value="{{$item->weight}}" min="1" > --}}
@@ -618,7 +618,7 @@
                                                         <option value="5" @if ( $item->weight == 5 ) selected @endif>第五張</option>
                                                     </select>
                                                 </div>
-                                                      
+
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
                                                     <button type="button" class="btn btn-primary update_carousel_btn">編輯完成</button>
@@ -627,7 +627,7 @@
                                             </form>
 
                                             </div>
-                                            
+
                                         </div>
                                         </div>
                                     </div>
@@ -643,7 +643,7 @@
                             @endforeach
                             </tbody>
                     </table>
-                
+
                 </div>
             </div>
         </div>
@@ -657,11 +657,11 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>        
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
 
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>        
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 
 
     <script>
@@ -704,7 +704,7 @@
                     },
                 },
             })
-                
+
         })
 
         // ---------------------------------- 使用者頭像 --------------------------------------------------------
@@ -755,7 +755,7 @@
         for(let i = 0; i < data.length; i++){
 
             if( data[i].dataset.weight == '' | data[i].dataset.weight == 0 ){
-                
+
                 notCarouselInput[i].checked = true;
                 carouselNumInput[i].value = '';
                 carouselNumInput[i].disabled = true;
@@ -768,7 +768,7 @@
         editBtn.forEach( (e, i)=> {
             e.onclick = ()=>{
                 if( data[i].dataset.weight == '' | data[i].dataset.weight == 0 ){
-                
+
                     notCarouselInput[i].checked = true;
                     carouselNumInput[i].value = '';
                     carouselNumInput[i].disabled = true;
@@ -797,7 +797,7 @@
         const updateCarouselBtn = document.querySelectorAll('.update_carousel_btn');
 
         updateCarouselBtn.forEach((e, index) => {
-            
+
             e.onclick = ()=>{
                 var formData = new FormData();
 
@@ -829,9 +829,9 @@
                         window.location.reload();
                     })
                 })
-            }   
+            }
         });
-        
+
         // 沒有最高權限沒辦法進入管理者頁面
         const adminLink = document.querySelector('.adminLink');
         let userPower = document.getElementById("avatar").dataset.user_power;
@@ -844,7 +844,7 @@
                     icon: 'warning',
                     confirmButtonText: '是',
                 })
-            }) 
+            })
         }
 
 
