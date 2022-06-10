@@ -71,15 +71,14 @@ class FeedbackController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // 要修順序的留言
-        $feedback = Feedback::where('id', $id)->get();
+        // 要修改順序的留言: 取得權重
+        $feedbackWeight = Feedback::where('id', $id)->value('weight');
+        // 重複輪播順序的留言: 取得id
+        $repeatFeedbackId = Feedback::where('weight', '=', $request->weight)->value('id');
 
-        // 重複輪播順序的留言
-        $repeatFeedback = Feedback::where('weight', '=', $request->weight)->select('weight')->get();
-        // dd($repeatFeedback->id);
-        // 替換兩個的輪播順序
-        Feedback::where('id', $repeatFeedback->id)->update([
-            'weight'=> $feedback->weight,
+        // 替換兩個留言的輪播順序
+        Feedback::where('id', $repeatFeedbackId)->update([
+            'weight'=> $feedbackWeight,
         ]);
         Feedback::where('id', $id)->update([
             'weight'=> $request->weight,
