@@ -37,7 +37,7 @@ Route::prefix('/')->group(function () {
     Route::get('/right_of_customer', [Controller::class, 'right_of_customer']); // 顧客權益
     Route::get('/story', [Controller::class, 'story']);                         // 品牌故事
     Route::get('/feedback', [Controller::class, 'feedback']);                   // 顧客留言
-    Route::get('/store_feedback', [Controller::class, 'store_feedback']);            // 顧客留言新增
+    Route::get('/store_feedback', [Controller::class, 'store_feedback']);       // 顧客留言新增
 
 
 
