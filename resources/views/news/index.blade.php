@@ -571,7 +571,15 @@
                                                 
                                                 <div class="mb-1">
                                                     <label for="CarouselNumInput{{ $index }}" class="col-form-label">輸入輪播順序:</label>
-                                                    <input type="number" name='carouselNum' class="form-control carouselNumInput" id="carouselNumInput{{ $index }}" placeholder="輪播順序" value="{{$item->weight}}" min="1" >
+                                                    {{-- <input type="number" name='carouselNum' class="form-control carouselNumInput" id="carouselNumInput{{ $index }}" placeholder="輪播順序" value="{{$item->weight}}" min="1" > --}}
+                                                    <select name="carouselNum" id="" class="form-select carouselNumInput" placeholder="請選擇">
+                                                        <option value="1" @if ( $item->weight == 1 ) selected @endif>第一張</option>
+                                                        <option value="2" @if ( $item->weight == 2 ) selected @endif>第二張</option>
+                                                        <option value="3" @if ( $item->weight == 3 ) selected @endif>第三張</option>
+                                                        <option value="4" @if ( $item->weight == 4 ) selected @endif>第四張</option>
+                                                        <option value="5" @if ( $item->weight == 5 ) selected @endif>第五張</option>
+                                                        <option value="6" @if ( $item->weight == 6 ) selected @endif>第六張</option>
+                                                    </select>
                                                 </div>
 
                                                 <div class="mb-3">
