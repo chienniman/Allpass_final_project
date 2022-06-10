@@ -14,7 +14,7 @@
   <header id="header">
     <nav>
       <!-- 導覽列上的店家logo -->
-      <a href="../index.html" class="nav_logo">
+      <a href="/" class="nav_logo">
         <div class="logo">
           <img class="logo_img" src="../pics/logo.jpeg" alt="" />
         </div>
@@ -24,22 +24,22 @@
         <!-- 1440px 選單列 -->
         <ul class="nav_content_pc">
           <li>
-            <a href="story.html">
+            <a href="/story">
               品牌故事
             </a>
           </li>
           <li>
-            <a href="mealsindex_fin.html">
+            <a href="/mealsindex_original">
               餐點介紹
             </a>
           </li>
           <li>
-            <a href="drink_list.html">
+            <a href="/drink_list">
               飲品介紹
             </a>
           </li>
           <li>
-            <a href="position_map.html">
+            <a href="/position_map">
               門市據點
             </a>
           </li>
@@ -57,7 +57,7 @@
         <input type="checkbox" id="burger" hidden />
         <ul class="list">
           <li>
-            <a href="./story.html" class="list-project">品牌故事</a>
+            <a href="/story" class="list-project">品牌故事</a>
           </li>
           <li>
             <label class="list-project" for="commodity" for="commodity">
@@ -66,7 +66,7 @@
             <input type="checkbox" id="commodity" hidden />
             <ul class="commodity-box">
               <li>
-                <a class="commodity-list" href="./drink_list.html">
+                <a class="commodity-list" href="/drink_list">
                   <p>
                     飲料列表
                   </p>
@@ -74,7 +74,7 @@
                 </a>
               </li>
               <li>
-                <a class="commodity-list" href="./mealsindex_fin.html">
+                <a class="commodity-list" href="/mealsindex_original">
                   <p>
                     餐點列表
                   </p>
@@ -84,10 +84,10 @@
             </ul>
           </li>
           <li>
-            <a href="./position_map.html" class="list-project">門市據點</a>
+            <a href="/position_map" class="list-project">門市據點</a>
           </li>
           <li>
-            <a href="./feedback.html" class="list-project">意見回饋</a>
+            <a href="/feedback" class="list-project">意見回饋</a>
           </li>
         </ul>
       </div>
@@ -288,16 +288,16 @@
   <footer id="footer">
     <div class="footer_content">
       <div class="logo_and_links">
-        <a href="../index.html" class="logo">
+        <a href="/" class="logo">
           <img src="../pics/logo.png" alt="logo" />
         </a href="#">
         <div class="links_group_wrapper">
           <ul class="links_group">
             <li class="link">
-              <a href="./right_of_customer.html"> 顧客權益 </a>
+              <a href="/right_of_customer"> 顧客權益 </a>
             </li>
             <li class="link">
-              <a href="./feedback.html"> 意見回饋 </a>
+              <a href="/feedback"> 意見回饋 </a>
             </li>
             <li class="link">
               <a href="https://www.facebook.com/nchuallpass/"> FB粉絲專頁 </a>
@@ -347,8 +347,8 @@
               </div>
             </div>
           ` ;
-      
-      project.innerHTML =`       
+
+      project.innerHTML =`
               @foreach ( $breakfast as $item)
                     <div class="project-card">
                       <div class="project-name">{{$item->tag}}</div>
@@ -470,7 +470,7 @@
               @endforeach
 
 
-              
+
         `;
     }
     //早餐
@@ -487,7 +487,7 @@
       project.innerHTML =`
               @foreach ($breakfast as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -515,7 +515,7 @@
       project.innerHTML = `
               @foreach ($salad as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -543,7 +543,7 @@
       project.innerHTML =`
               @foreach ($dessert as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -571,7 +571,7 @@
       project.innerHTML =`
               @foreach ($afternoonTea as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -600,7 +600,7 @@
       project.innerHTML =`
               @foreach ($nchuStudent as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -629,7 +629,7 @@
       project.innerHTML =`
               @foreach ($curryJp as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -658,7 +658,7 @@
       project.innerHTML =`
               @foreach ($exoticRice as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -687,7 +687,7 @@
       project.innerHTML =`
               @foreach ($pasta as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -863,7 +863,7 @@
         project.innerHTML =`
               @foreach ($breakfast as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -889,7 +889,7 @@
         project.innerHTML =`
               @foreach ($salad as $item)
                         <div class="project-card">
-                          
+
                           <div class="img-box">
                             <img src="{{ $item->img_path }}" alt="..." width="100%">
                           </div>
@@ -915,7 +915,7 @@
         project.innerHTML =`
               @foreach ($dessert as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -942,7 +942,7 @@
         <div class="project">
           @foreach ($afternoonTea as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -966,10 +966,10 @@
             <div style="color:#f95223; font-size: 30px;font-weight: 600;padding-top:30px ;">※限興大學生憑學生證選用<br>一證一套。</div>
         </div>
         `;
-        project.innerHTML = `     
+        project.innerHTML = `
           @foreach ($nchuStudent as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -995,7 +995,7 @@
         project.innerHTML = `
               @foreach ($curryJp as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -1022,7 +1022,7 @@
         project.innerHTML = `
               @foreach ($exoticRice as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>
@@ -1048,7 +1048,7 @@
         project.innerHTML = `
               @foreach ($pasta as $item)
                     <div class="project-card">
-                      
+
                       <div class="img-box">
                         <img src="{{ $item->img_path }}" alt="..." width="100%">
                       </div>

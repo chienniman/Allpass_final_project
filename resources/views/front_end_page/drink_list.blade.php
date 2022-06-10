@@ -20,32 +20,32 @@
     <header id="header">
       <nav>
         <!-- 導覽列上的店家logo -->
-        <a href="../index.html" class="nav_logo">
+        <a href="/" class="nav_logo">
           <div class="logo">
             <img class="logo_img" src="../pics/logo.png" alt="歐巴斯複合式餐飲" />
           </div>
-        </a> 
+        </a>
         <!-- 選單列 -->
         <div class="nav_content">
           <!-- 1440px 選單列 -->
           <ul class="nav_content_pc">
             <li>
-              <a href="story.html">
+              <a href="/story">
                 品牌故事
               </a>
             </li>
             <li>
-              <a href="mealsindex_original.html">
+              <a href="/mealsindex_original">
                 餐點介紹
               </a>
             </li>
             <li>
-              <a href="drink_list.html">
+              <a href="/drink_list">
                 飲品介紹
               </a>
             </li>
             <li>
-              <a href="position_map.html">
+              <a href="/position_map">
                 門市據點
               </a>
             </li>
@@ -63,7 +63,7 @@
             <input type="checkbox" id="burger" hidden/>
             <ul class="list">
               <li>
-                <a href="story.html" class="list-project">品牌故事</a>
+                <a href="/story" class="list-project">品牌故事</a>
               </li>
               <li>
                 <label class="list-project" for="commodity" for="commodity">
@@ -72,16 +72,16 @@
                 <input type="checkbox" id="commodity" hidden />
                 <ul class="commodity-box">
                   <li>
-                    <a href="drink_list.html" class="commodity-list">
+                    <a href="/drink_list" class="commodity-list">
                       <!-- <a href="https://www.flaticon.com/free-icons/drink" title="drink icons">Drink icons created by Freepik - Flaticon</a> -->
                         <p>
                           飲料列表
                         </p>
                         <img src="../pics/drink_icon.png" alt="drink_icon" style="width: 60px;">
                     </a>
-                  </li>  
+                  </li>
                   <li>
-                    <a href="mealsindex_original.html" class="commodity-list">
+                    <a href="/mealsindex_original" class="commodity-list">
                       <!-- <a href="https://www.flaticon.com/free-icons/spaghetti" title="spaghetti icons">Spaghetti icons created by photo3idea_studio - Flaticon</a> -->
                         <p>
                           餐點列表
@@ -92,16 +92,16 @@
                 </ul>
               </li>
               <li>
-                <a href="position_map.html" class="list-project">門市據點</a>
+                <a href="/position_map" class="list-project">門市據點</a>
               </li>
               <li>
-                <a href="feedback.html" class="list-project">意見回饋</a>
+                <a href="/feedback" class="list-project">意見回饋</a>
               </li>
             </ul>
         </div>
       </nav>
     </header>
-    <main id="main"> 
+    <main id="main">
       <div id="vue_menu">
         <div class="btns row justify-content-center">
           <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
@@ -114,12 +114,12 @@
                   <button class="btn btn-ic d-flex">
                     選擇冷飲@{{cold_length}}
                   </button>
-                  <div class="cold rounded-circle"></div>      
+                  <div class="cold rounded-circle"></div>
                 </li>
                 <li class="d-flex justify-content-around align-items-center bg-main-hover" @click="showHotDrink()">
                   <button class="btn btn-hot d-flex justify-content-around">
                      選擇熱飲@{{hot_length}}
-                  </button>  
+                  </button>
                   <div class="hot rounded-circle"></div>
                 </li>
                 <li class="d-flex justify-content-around align-items-center bg-main-hover" @click="show_cold_and_Hot_Drink()">
@@ -153,11 +153,11 @@
               </button>
               <button class="btn btn-coffee-latte me-3" @click="showCoffee_and_Latte()">
                 咖啡跟拿鐵@{{Coffee_and_Latte_length}}
-              </button>  
+              </button>
             </div>
             <div class="d-flex justify-content-center d-md-none" style="min-width: 155px;">
               <div class="dropdown  mt-3 mb-3 w-100 bg-main">
-                <button @click="showAllMenu()"  
+                <button @click="showAllMenu()"
                 class="btn btn-secondary dropdown-toggle w-100 pe-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 全部飲品@{{all_length}}
                 </button>
@@ -190,10 +190,10 @@
                   <li class="bg-main-hover">
                     <button class="btn btn-coffee-latte btn-lg me-3 w-100" @click="showCoffee_and_Latte()">
                       咖啡跟拿鐵@{{Coffee_and_Latte_length}}
-                    </button> 
+                    </button>
                   </li>
                 </ul>
-              </div>  
+              </div>
             </div>
           </div>
         </div>
@@ -213,8 +213,8 @@
                   <div v-if="i.ice==true">
                     冷飲
                     <div class="cold rounded-circle"></div>
-                  </div>  
-                </div>   
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -222,8 +222,8 @@
         <section id="recommend">
           <div class="alert alert-success border-0 text-center" role="alert">
             <p class="fs-3">
-              想不到應該喝什麼嗎?請讓歐巴斯為您推薦一杯好喝的飲品吧! 
-            </p>   
+              想不到應該喝什麼嗎?請讓歐巴斯為您推薦一杯好喝的飲品吧!
+            </p>
           </div>
           <div class="d-flex justify-content-center mt-5 pt-3">
             <div class="recommend_drink row">
@@ -245,7 +245,7 @@
                           </div>
                           <div v-if="ice==true">
                             <div class="cold rounded-circle"></div>
-                          </div>  
+                          </div>
                         </div>
                       </div>
                     </h3>
@@ -260,7 +260,7 @@
                       <span @click="result_is_not_accurate()" class="d-block pe-3">
                         <!-- <a href="https://www.flaticon.com/free-icons/delete" title="delete icons">Delete icons created by Pixel perfect - Flaticon</a> -->
                         <img src="../pics/drink_list_icons/remove.png" alt="錯誤">
-                      </span>  
+                      </span>
                     </div>
                     <div v-if="predicted_result_show" class="result_text">
                       @{{predicted_result_text}}
@@ -269,13 +269,13 @@
                         前往歐巴斯餐點區逛逛
                       </a>
                     </div>
-                  </div>  
-                </div>    
+                  </div>
+                </div>
               </div>
               <button v-if="predicted_button" @click="show_recommended_drink()" class="recommend-btn rounded-pill border-0">
                 推薦飲品
               </button>
-            </div>  
+            </div>
           </div>
         </section>
       </div>
@@ -283,16 +283,16 @@
     <footer id="footer">
       <div class="footer_content">
         <div class="logo_and_links">
-          <a href="../index.html" class="logo">
+          <a href="./" class="logo">
             <img src="../pics/logo.png" alt="logo"/>
           </a>
           <div class="links_group_wrapper">
             <ul class="links_group">
               <li class="link">
-                <a href="right_of_customer.html">顧客權益</a>
+                <a href="/right_of_customer">顧客權益</a>
               </li>
               <li class="link">
-                <a href="feedback.html">意見回饋</a>
+                <a href="/feedback">意見回饋</a>
               </li>
               <li class="link">
                 <a href="https://www.facebook.com/nchuallpass/" target="_blank">FB粉絲專頁</a>
