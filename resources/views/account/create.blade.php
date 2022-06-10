@@ -549,22 +549,22 @@
                             @csrf
                             <div>
                                 <label for="name">使用者名稱:</label>
-                                <input class="w-100 form-control" type="text" name="name" id="name">
+                                <input class="w-100 form-control" type="text" name="name" id="name" required>
                             </div>
 
                             <div class="pt-3">
                                 <label for="email">使用者信箱:</label>
-                                <input  class="w-100 form-control" type="email" name="email" id="email">
+                                <input  class="w-100 form-control" type="email" name="email" id="email" required>
                             </div>
                             
                             <div class="pt-3">
                                 <label for="password">使用者密碼:</label>
-                                <input class="form-control w-100" type="password" name="password" id="password">
+                                <input class="form-control w-100" type="password" name="password" id="password" required minlength="8">
                             </div>
                             
                             <div class="pt-3">
                                 <label for="password_confirmation">確認密碼:</label>
-                                <input class="w-100 form-control"  type="password" name="password_confirmation" id="password_confirmation">
+                                <input class="w-100 form-control"  type="password" name="password_confirmation" id="password_confirmation" required minlength="8">
                             </div>
                            
                             <div class="pt-3 w-100 d-flex justify-content-center">

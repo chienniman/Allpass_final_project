@@ -27,6 +27,20 @@ class Controller extends BaseController
         // $endDate = $allnews[5]->take(5);
 
         // dd($allnews->all());
+
+
+        // 最新消息輪播
+        $allnews = Notification::get();
+
+        // 對留言依權重由小到大排序，包含空值
+        $sortedNews = $allnews->sortBy('weight');
+        // 將權重給key值，再過濾掉空值與0的key
+        $keyedNews = $sortedNews->keyBy('weight');
+        $carouselNews = $keyedNews->forget('');
+        $carouselNews = $keyedNews->forget('0');
+
+
+
         // 留言輪播
         $allFeedbacks = Feedback::get();
 
@@ -37,7 +51,7 @@ class Controller extends BaseController
         $carouselFeedbacks = $keyed->forget('');
         $carouselFeedbacks = $keyed->forget('0');
 
-        return view('index', compact('carouselFeedbacks','allnews'));
+        return view('index', compact('carouselFeedbacks','allnews', 'carouselNews'));
     }
 
     // 飲品介紹

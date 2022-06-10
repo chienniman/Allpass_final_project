@@ -571,11 +571,6 @@
                                 <label for="">活動圖片</label>
                                 <input class="w-100 form-control"  type="file" name="img" required accept="image/*">
                             </div>
-
-                            <div class="pt-3">
-                                <label for="">輪播順序:</label>
-                                <input class="w-100 form-control"  type="number" name="weight">
-                            </div>
                            
                             <div class="pt-3 w-100 d-flex justify-content-center">
                                 <button class="btn btn-primary mx-2" type="submit">新增消息</button>

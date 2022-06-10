@@ -532,7 +532,7 @@
                                                 @csrf
                                                 <div class="mb-3">
                                                 <label for="recipient-name" class="col-form-label">使用者名稱:</label>
-                                                <input type="text" name='name' class="form-control name" value="{{$item->name}}">
+                                                <input type="text" name='name' class="form-control name" value="{{$item->name}}" required >
                                                 </div>
 
                                                 <div class="mb-3">
@@ -542,7 +542,7 @@
 
                                                 <div class="mb-3">
                                                     <label for="recipient-name" class="col-form-label">密碼:</label>
-                                                    <input type="password" name='passwoerd' class="form-control password" value="{{$item->password}}">
+                                                    <input type="password" name='passwoerd' class="form-control password" value="{{$item->password}}" required minlength="8">
                                                 </div>
 
                                                 <div class="mb-3">

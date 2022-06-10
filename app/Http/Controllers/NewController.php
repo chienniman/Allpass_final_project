@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Notification;
 use App\Http\Controllers\FilesController;
 use App\Models\History;
 use DB;
 use Carbon\Carbon;
+use App\Models\Notification;
 
 
 class NewController extends Controller
@@ -19,7 +19,7 @@ class NewController extends Controller
      */
     public function index()
     {
-        $news = DB::table('news')->get();
+        $news = Notification::get();
 
         return view('news.index', compact('news'));
     }
@@ -44,12 +44,12 @@ class NewController extends Controller
     {
         $path = FilesController::imgUpload($request->img, 'new');
 
-        DB::table('news')->insert([
+        Notification::insert([
             'title'=> $request-> title,
             'img_path'=> $path,
             'start_date'=> $request-> startDate,
             'end_date'=> $request-> endDate,
-            'weight'=> $request-> weight,
+            // 'weight'=> $request-> weight,
         ]);
 
         return redirect('/new');
@@ -87,25 +87,21 @@ class NewController extends Controller
     public function update(Request $request, $id)
     {
         // 要修改順序的消息: 取得權重
-        $newWeight = DB::table('news')::where('id', $id)->value('weight');
+        $newWeight = Notification::where('id', $id)->value('weight');
         // 重複輪播順序的消息: 取得id
-        // $repeatNewId = DB::table('news')::where('weight', '=', $request->weight)->value('id');
+        $repeatNewId = Notification::where('weight', '=', $request->weight)->value('id');
 
         // 替換兩個消息的輪播順序
-        // DB::table('news')::where('id', $repeatNewId)->update([
-        //     'weight'=> $newWeight,
-        // ]);
+        Notification::where('id', $repeatNewId)->update([
+            'weight'=> $newWeight,
+        ]);
 
-        // DB::table('news')->where('id', $id)->update([
-        //     'weight'=> $request->weight,
-        // ]);
-
-        // DB::table('news')->where('id', $id)->update([
-        //     'title'=> $request->title,
-        //     'start_date'=> $request->startDate,
-        //     'end_date'=> $request->endDate,
-        //     'weight'=> $request->weight,
-        // ]);
+        Notification::where('id', $id)->update([
+            'title'=> $request->title,
+            'start_date'=> $request->startDate,
+            'end_date'=> $request->endDate,
+            'weight'=> $request->weight,
+        ]);
 
         // 編輯消息歷史
         History::insert([
@@ -128,7 +124,7 @@ class NewController extends Controller
     public function delete($id)
     {
         // 刪除後端圖檔
-        $new = DB::table('news')->find($id);
+        $new = Notification::find($id);
         FilesController::deleteUpload($new->img_path);
         // 刪除餐點歷史
         History::insert([
@@ -137,7 +133,7 @@ class NewController extends Controller
         ]);
 
         // 刪除資料庫資料
-        DB::table('news')->where('id', $id)->delete();
+        Notification::where('id', $id)->delete();
 
         return redirect('/new');
     }

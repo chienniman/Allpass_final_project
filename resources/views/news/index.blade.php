@@ -510,10 +510,18 @@
                                     {{-- <div class='data' data-meal_id="{{ $item->id }}" data-meals="{{ $meals }}" hidden></div> --}}
                                 </td>
                                 <td class="data" data-weight="{{$item->weight}}" data-new_id="{{$item->id}}">
-                                    @if ( $item->weight == 0 | $item->weight == "")
-                                        沒有輪播 
+                                    @if ( $item->weight == 1)
+                                        第一張
+                                    @elseif ( $item->weight == 2)
+                                        第二張
+                                    @elseif ( $item->weight == 3)
+                                        第三張 
+                                    @elseif ( $item->weight == 4)
+                                        第四張
+                                    @elseif ( $item->weight == 5)
+                                        第五張 
                                     @else
-                                        {{$item->weight}}
+                                        無
                                     @endif
                                     
                                 </td>
@@ -551,10 +559,6 @@
                                                     <input type="date" name='mealPrice' class="form-control end_date" value="{{$item->end_date}}">
                                                 </div>
 
-                                                {{-- <div class="mb-3">
-                                                    <label for="recipient-name" class="col-form-label">輪播順序:</label>
-                                                    <input type="text" name='mealNote' class="form-control meal_note" value="{{$item->weight}}" placeholder="輪播順序">
-                                                </div> --}}
                                                 <div class="mb-3">輪播:</div>
                                                 <div class="d-flex">
                                    
@@ -578,7 +582,6 @@
                                                         <option value="3" @if ( $item->weight == 3 ) selected @endif>第三張</option>
                                                         <option value="4" @if ( $item->weight == 4 ) selected @endif>第四張</option>
                                                         <option value="5" @if ( $item->weight == 5 ) selected @endif>第五張</option>
-                                                        <option value="6" @if ( $item->weight == 6 ) selected @endif>第六張</option>
                                                     </select>
                                                 </div>
 

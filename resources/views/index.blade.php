@@ -114,7 +114,8 @@
             <!-- Swiper -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    @foreach ( $allnews as $news)
+                    {{-- @foreach ( $allnews as $news) --}}
+                    @foreach ( $carouselNews as $news )
                     <div class="swiper-slide">
                         <img src="{{$news->img_path}}" alt="welcome">
                     </div>
@@ -124,7 +125,8 @@
             </div>
             <!-- 公告消息 -->
             <div id="noticias">
-                @foreach ( $allnews as $news )
+                {{-- @foreach ( $allnews as $news ) --}}
+                @foreach ( $carouselNews as $news )
                 <div class="noticia">
                     <div class="title_of_noticia">
                         <a href="#">
