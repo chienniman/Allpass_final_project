@@ -164,11 +164,11 @@
                                             營養性:營養均衡
                                         </li>
                                         <li>
-                                            故事性:充滿故事
+                                            故事:來自黑森林的鑽石
                                         </li>
                                     </ul>
                                 </div>
-                                <img src="./pics/popular_meals/black_truffles_ori.jpg"/>
+                                <img src="./pics/popular_meals/black_truffles.png"/>
                             </div>
                             <div class="swiper-slide">
                                 <div class="bg-text">
@@ -187,11 +187,11 @@
                                             營養性:營養均衡
                                         </li>
                                         <li>
-                                            故事性:充滿故事
+                                            故事:雞翅掉進咖哩
                                         </li>
                                     </ul>
                                 </div>
-                                <img src="./pics/popular_meals/friedchicken_curry_ori.jpg"/>
+                                <img src="./pics/popular_meals/friedchicken_curry.png"/>
                             </div>
                             <div class="swiper-slide">
                                 <div class="bg-text">
@@ -200,9 +200,8 @@
                                             香酥翅腿咖哩飯
                                         </li>
                                         <li class="story">
-                                            掌握完美油溫酥炸出來的雞肉，濃郁的肉汁被金黃酥脆的雞皮鎖住，南洋咖哩獨特辛香料香濃卻
-                                            不刺激，雞肉、咖哩醬、米飯，最樸素簡單的食材，最濃郁完美的組合
-                                        </li>
+                                            地中海料理的經典，融合了義大利菜的精華，佐以台灣產豬肉醬，濃郁的番茄醬汁配著
+                                            Q彈的麵條，每一口都是最大的滿足
                                         <li>
                                             美味性:十分美味
                                         </li>
@@ -210,14 +209,31 @@
                                             營養性:營養均衡
                                         </li>
                                         <li>
-                                            故事性:充滿故事
+                                            故事性:義大利與台灣食材的邂逅
                                         </li>
                                     </ul>
                                 </div>
-                                <img src="./pics/popular_meals/spaghetti_ori.jpg"/>
+                                <img src="./pics/popular_meals/spaghetti.png"/>
                             </div>
                             <div class="swiper-slide">
-                                <div class="bg-text"></div>
+                                <div class="bg-text">
+                                    <ul class="text">
+                                        <li>
+                                            鮮嫩歐姆蛋包飯
+                                        </li>
+                                        <li class="story">
+                                            台灣草飼養土雞蛋，小農栽種番茄醬，最簡約的搭配，最完美的組合
+                                        <li>
+                                            美味性:十分美味
+                                        </li>
+                                        <li>
+                                            營養性:營養均衡
+                                        </li>
+                                        <li>
+                                            故事:番茄遇到蛋
+                                        </li>
+                                    </ul>
+                                </div>
                                 <img src="./pics/popular_meals/omelete_rice.png"/>
                             </div>
                         </div>
@@ -250,7 +266,6 @@
             <div id="swiper">
               <div class="swiper mySwiper3">
                 <div class="swiper-wrapper">
-
                     <!-- 串資料時下面這個範例DIV請註解 -->
                     {{-- <div class="swiper-slide">
                         <div class="user-chat-box">
