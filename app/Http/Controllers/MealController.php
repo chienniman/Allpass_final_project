@@ -97,64 +97,50 @@ class MealController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {   
+        // 防止 名稱、類別與價格沒填
+        if( $request->mealName == "" ){
+            
+            $result = response()->json([
+                    'result'=>'error',
+                    'message'=> '請輸入餐點名稱',
+            ]);
+        }elseif ( $request->mealTag == "" ){
+            
+            $result = response()->json([
+                    'result'=>'error',
+                    'message'=> '請輸入餐點類別',
+            ]);
+        }elseif ( $request->mealPrice == "" ) {
+             
+            $result = response()->json([
+                    'result'=>'error',
+                    'message'=> '請輸入餐點價格',
+            ]);
+       }else {
         
-        Meal::where('id', $id)->update([
-            'meal_name'=> $request->mealName,
-            'tag'=> $request->mealTag,
-            'price'=> $request->mealPrice,
-            'note'=> $request->mealNote,
-            'second_note'=> $request->mealSecondNote,
-        ]);
-        // 編輯餐點歷史
-        History::insert([
-            'created_at'=> Carbon::now(),
-            'change_history'=> '已編輯餐點-'.$request->mealName,
-        ]);
+        // 填寫格式正確存取資料
+            Meal::where('id', $id)->update([
+                'meal_name'=> $request->mealName,
+                'tag'=> $request->mealTag,
+                'price'=> $request->mealPrice,
+                'note'=> $request->mealNote,
+                'second_note'=> $request->mealSecondNote,
+            ]);
+            // 編輯餐點歷史
+            History::insert([
+                'created_at'=> Carbon::now(),
+                'change_history'=> '已編輯餐點-'.$request->mealName,
+            ]);
+    
+            
+            $result = response()->json([
+                'result'=>'success',
+                'message'=> '編輯完成',
+            ]);
+        }
 
-        return response()->json([
-            'status'=>200,
-            'message'=> '圖片檔新增成功',
-        ]);
-
-        // fetch 寫法
-        // // 防呆: 防止表單資料未填-------------------------
-        // if($request->meal_name == "" || $request->meal_tag == "" || $request->meal_price == ""){
-        //     $result = [
-        //         'result' => 'error',
-        //         'message' => '請確認餐點資訊都已填入',
-        //     ];
-
-        // // 如果維持原圖片，不上傳新圖-----------------------------
-        // }elseif ($request->meal_New_img == "") {
-        //     // 修改餐點詳情
-        //     Meal::where('id', $id)->update([
-        //         'meal_name'=> $request->meal_name,
-        //         'tag'=> $request->meal_tag,
-        //         'price'=> $request->meal_price,
-        //     ]);
-        //     // 修改成功結果
-        //     $result = [
-        //         'result' => 'success',
-        //     ];
-
-        // // 表單資料都已填入----------------------------------------
-        // }else {
-        //     // 修改餐點詳情
-        //     Meal::where('id', $id)->update([
-        //         'meal_name'=> $request->meal_name,
-        //         'tag'=> $request->meal_tag,
-        //         'price'=> $request->meal_price,
-        //         'img_path'=> $request->meal_img,
-        //     ]);
-        //     // 修改成功結果
-        //     $result = [
-        //         'result' => 'success',
-        //     ];
-        // }
-
-        // // 回傳結果
-        // return $result;
+        return $result;
     }
 
     /**

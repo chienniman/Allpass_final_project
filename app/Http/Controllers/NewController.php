@@ -86,32 +86,57 @@ class NewController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // 要修改順序的消息: 取得權重
-        $newWeight = Notification::where('id', $id)->value('weight');
-        // 重複輪播順序的消息: 取得id
-        $repeatNewId = Notification::where('weight', '=', $request->weight)->value('id');
+        // 防止 消息名稱、時間未填
+        if( $request->title == "" ){       
+            $result = [
+                'result'=>'error',
+                'message'=> '請輸入消息名稱',
+            ];
 
-        // 替換兩個消息的輪播順序
-        Notification::where('id', $repeatNewId)->update([
-            'weight'=> $newWeight,
-        ]);
+        }elseif ( $request->startDate == "" ){
+            $result = [
+                'result'=>'error',
+                'message'=> '請選擇開始日期',
+            ];
 
-        Notification::where('id', $id)->update([
-            'title'=> $request->title,
-            'start_date'=> $request->startDate,
-            'end_date'=> $request->endDate,
-            'weight'=> $request->weight,
-        ]);
+        }elseif ( $request->endDate == "" ) {
+            $result = [
+                'result'=>'error',
+                'message'=> '請選擇結束日期',
+            ];
 
-        // 編輯消息歷史
-        History::insert([
-            'created_at'=> Carbon::now(),
-            'change_history'=> '已編輯一筆消息',
-        ]);
+        }else {
+        // 填寫格式正確存取資料
 
-        $result = [
-            'result' => 'success',
-        ];
+           // 要修改順序的消息: 取得權重
+            $newWeight = Notification::where('id', $id)->value('weight');
+            // 重複輪播順序的消息: 取得id
+            $repeatNewId = Notification::where('weight', '=', $request->weight)->value('id');
+
+            // 替換兩個消息的輪播順序
+            Notification::where('id', $repeatNewId)->update([
+                'weight'=> $newWeight,
+            ]);
+
+            Notification::where('id', $id)->update([
+                'title'=> $request->title,
+                'start_date'=> $request->startDate,
+                'end_date'=> $request->endDate,
+                'weight'=> $request->weight,
+            ]);
+
+            // 編輯消息歷史
+            History::insert([
+                'created_at'=> Carbon::now(),
+                'change_history'=> '已編輯一筆消息',
+            ]);
+
+            $result = [
+                'result' => 'success',
+                'message' => '編輯完成'
+            ];
+        }
+
         return $result;
     }
 
