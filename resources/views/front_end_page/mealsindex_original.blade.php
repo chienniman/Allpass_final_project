@@ -15,7 +15,7 @@
   <header id="header">
     <nav>
       <!-- 導覽列上的店家logo -->
-      <a href="../index.html" class="nav_logo">
+      <a href="/" class="nav_logo">
         <div class="logo">
           <img class="logo_img" src="../pics/logo.jpeg" alt="" />
         </div>
@@ -25,22 +25,22 @@
         <!-- 1440px 選單列 -->
         <ul class="nav_content_pc">
           <li>
-            <a href="story.html">
+            <a href="/story">
               品牌故事
             </a>
           </li>
           <li>
-            <a href="mealsindex_original.html">
+            <a href="/mealsindex_original">
               餐點介紹
             </a>
           </li>
           <li>
-            <a href="drink_list.html">
+            <a href="/drink_list">
               飲品介紹
             </a>
           </li>
           <li>
-            <a href="position_map.html">
+            <a href="/position_map">
               門市據點
             </a>
           </li>
@@ -58,7 +58,7 @@
         <input type="checkbox" id="burger" hidden />
         <ul class="list">
           <li>
-            <a href="story.html" class="list-project">品牌故事</a>
+            <a href="/story" class="list-project">品牌故事</a>
           </li>
           <li>
             <label class="list-project" for="commodity" for="commodity">
@@ -67,7 +67,7 @@
             <input type="checkbox" id="commodity" hidden />
             <ul class="commodity-box">
               <li>
-                <a class="commodity-list" href="drink_list.html">
+                <a class="commodity-list" href="/drink_list">
                   <p>
                     飲料列表
                   </p>
@@ -75,7 +75,7 @@
                 </a>
               </li>
               <li>
-                <a class="commodity-list" href="mealsindex_original.html">
+                <a class="commodity-list" href="/mealsindex_original">
                   <p>
                     餐點列表
                   </p>
@@ -85,10 +85,10 @@
             </ul>
           </li>
           <li>
-            <a href="position_map.html" class="list-project">門市據點</a>
+            <a href="/position_map" class="list-project">門市據點</a>
           </li>
           <li>
-            <a href="feedback.html" class="list-project">意見回饋</a>
+            <a href="/feedback" class="list-project">意見回饋</a>
           </li>
         </ul>
       </div>
@@ -157,16 +157,16 @@
   <footer id="footer">
     <div class="footer_content">
       <div class="logo_and_links">
-        <a href="../index.html" class="logo">
+        <a href="/" class="logo">
           <img src="../pics/logo.png" alt="logo" />
         </a href="#">
         <div class="links_group_wrapper">
           <ul class="links_group">
             <li class="link">
-              <a href="right_of_customer.html"> 顧客權益 </a>
+              <a href="/right_of_customer"> 顧客權益 </a>
             </li>
             <li class="link">
-              <a href="feedback.html"> 意見回饋 </a>
+              <a href="/feedback"> 意見回饋 </a>
             </li>
             <li class="link">
               <a href="https://www.facebook.com/nchuallpass/"  target="_blank"> FB粉絲專頁 </a>

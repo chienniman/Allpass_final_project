@@ -16,32 +16,32 @@
     <header id="header">
       <nav>
         <!-- 導覽列上的店家logo -->
-        <a href="../index.html" class="nav_logo">
+        <a href="/" class="nav_logo">
           <div class="logo">
             <img class="logo_img" src="../pics/logo.jpeg" alt="" />
           </div>
-        </a> 
+        </a>
         <!-- 選單列 -->
         <div class="nav_content">
           <!-- 1440px 選單列 -->
           <ul class="nav_content_pc">
             <li>
-              <a href="story.html">
+              <a href="/story">
                 品牌故事
               </a>
             </li>
             <li>
-              <a href="mealsindex_fin.html">
+              <a href="/mealsindex_original">
                 餐點介紹
               </a>
             </li>
             <li>
-              <a href="drink_list.html">
+              <a href="/drink_list">
                 飲品介紹
               </a>
             </li>
             <li>
-              <a href="position_map.html">
+              <a href="/position_map">
                 門市據點
               </a>
             </li>
@@ -59,7 +59,7 @@
             <input type="checkbox" id="burger" hidden/>
             <ul class="list">
               <li>
-                <a href="story.html" class="list-project">品牌故事</a>
+                <a href="/story" class="list-project">品牌故事</a>
               </li>
               <li>
                 <label class="list-project" for="commodity" for="commodity">
@@ -68,15 +68,15 @@
                 <input type="checkbox" id="commodity" hidden />
                 <ul class="commodity-box">
                   <li>
-                    <a class="commodity-list" href="drink_list.html">
+                    <a class="commodity-list" href="/drink_list">
                         <p>
                             飲料列表
                         </p>
                         <img src="../pics/drink_icon.png" alt="drink_icon" style="width: 60px;">
                     </a>
-                  </li>  
+                  </li>
                   <li>
-                    <a class="commodity-list" href="mealsindex_original.html">
+                    <a class="commodity-list" href="/mealsindex_original">
                         <p>
                           餐點列表
                         </p>
@@ -86,10 +86,10 @@
                 </ul>
               </li>
               <li>
-                <a href="position_map.html" class="list-project">門市據點</a>
+                <a href="/position_map" class="list-project">門市據點</a>
               </li>
               <li>
-                <a href="feedback.html" class="list-project">意見回饋</a>
+                <a href="/feedback" class="list-project">意見回饋</a>
               </li>
             </ul>
         </div>
@@ -113,17 +113,17 @@
               <option value="2" >中午</option>
               <option value="3" >下午</option>
             </select>
-            
-            <input id="feedback_name" type="text" name="name" placeholder="聯絡人姓名 *" required style="width: 100%;"> 
+
+            <input id="feedback_name" type="text" name="name" placeholder="聯絡人姓名 *" required style="width: 100%;">
             <!-- <span class="error1">333</span> -->
             <select id="feedback_name" name="salutation" style="width: 100%;">
               <option value="1">先生</option>
               <option value="2">小姐</option>
               <option value="3">其他</option>
             </select>
-            
-      
-            <input id="feedback_phone" type="text" name="phone" placeholder="聯絡電話 *" required style="width: 100%;">   
+
+
+            <input id="feedback_phone" type="text" name="phone" placeholder="聯絡電話 *" required style="width: 100%;">
             <input id="feedback_email" type="text" name="email" placeholder="Email" style="width: 100%;">
           </div>
           <textarea id="feedback_suggestion" name="suggestion" cols="30" rows="10" placeholder="建議內容 *" required></textarea>
@@ -137,16 +137,16 @@
     <footer id="footer">
       <div class="footer_content">
         <div class="logo_and_links">
-          <a href="../index.html" class="logo">
+          <a href="/" class="logo">
             <img src="../pics/logo.png" alt="logo" />
           </a href="#">
           <div class="links_group_wrapper">
             <ul class="links_group">
               <li class="link">
-                <a href="right_of_customer.html"> 顧客權益 </a>
+                <a href="/right_of_customer"> 顧客權益 </a>
               </li>
               <li class="link">
-                <a href="feedback.html"> 意見回饋 </a>
+                <a href="/feedback"> 意見回饋 </a>
               </li>
               <li class="link">
                 <a href="https://www.facebook.com/nchuallpass/" target="_blank"> FB粉絲專頁 </a>

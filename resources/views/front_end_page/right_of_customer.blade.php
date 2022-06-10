@@ -14,32 +14,32 @@
     <header id="header">
       <nav>
         <!-- 導覽列上的店家logo -->
-        <a href="../index.html" class="nav_logo">
+        <a href="/" class="nav_logo">
           <div class="logo">
             <img class="logo_img" src="../pics/logo.jpeg" alt="" />
           </div>
-        </a> 
+        </a>
         <!-- 選單列 -->
         <div class="nav_content">
           <!-- 1440px 選單列 -->
           <ul class="nav_content_pc">
             <li>
-              <a href="story.html">
+              <a href="/story">
                 品牌故事
               </a>
             </li>
             <li>
-              <a href="mealsindex_fin.html">
+              <a href="/mealsindex_original">
                 餐點介紹
               </a>
             </li>
             <li>
-              <a href="drink_list.html">
+              <a href="/drink_list">
                 飲品介紹
               </a>
             </li>
             <li>
-              <a href="position_map.html">
+              <a href="/position_map">
                 門市據點
               </a>
             </li>
@@ -57,7 +57,7 @@
             <input type="checkbox" id="burger" hidden/>
             <ul class="list">
               <li>
-                <a href="story.html" class="list-project">品牌故事</a>
+                <a href="/story" class="list-project">品牌故事</a>
               </li>
               <li>
                 <label class="list-project" for="commodity" for="commodity">
@@ -66,15 +66,15 @@
                 <input type="checkbox" id="commodity" hidden />
                 <ul class="commodity-box">
                   <li>
-                    <a class="commodity-list" href="drink_list.html">
+                    <a class="commodity-list" href="/drink_list">
                         <p>
                           飲料列表
                         </p>
                         <img src="../pics/drink_icon.png" alt="drink_icon" style="width: 60px;">
                     </a>
-                  </li>  
+                  </li>
                   <li>
-                    <a class="commodity-list" href="mealsindex_original.html">
+                    <a class="commodity-list" href="/mealsindex_original">
                         <p>
                           餐點列表
                         </p>
@@ -84,10 +84,10 @@
                 </ul>
               </li>
               <li>
-                <a href="position_map.html" class="list-project">門市據點</a>
+                <a href="/position_map" class="list-project">門市據點</a>
               </li>
               <li>
-                <a href="feedback.html" class="list-project">意見回饋</a>
+                <a href="/feedback" class="list-project">意見回饋</a>
               </li>
             </ul>
         </div>
@@ -138,7 +138,7 @@
         <div class="right_of_inner_text text_color">
           歐巴斯依所提供之服務需要，可能需請您提供的個人資料，包括基本資料帳務資料、分類標準如下：
           </br></br>
-          （ㄧ）基本資料：包括姓名、電話及電子郵件信箱等資料。 
+          （ㄧ）基本資料：包括姓名、電話及電子郵件信箱等資料。
         </div>
         <div class="right_of_inner_text_title text_color">
           客戶資料儲存及保管方式
@@ -171,16 +171,16 @@
     <footer id="footer">
       <div class="footer_content">
         <div class="logo_and_links">
-          <a href="../index.html" class="logo">
+          <a href="/" class="logo">
             <img src="../pics/logo.png" alt="logo" />
           </a href="#">
           <div class="links_group_wrapper">
             <ul class="links_group">
               <li class="link">
-                <a href="right_of_customer.html"> 顧客權益 </a>
+                <a href="/right_of_customer"> 顧客權益 </a>
               </li>
               <li class="link">
-                <a href="feedback.html"> 意見回饋 </a>
+                <a href="/feedback"> 意見回饋 </a>
               </li>
               <li class="link">
                 <a href="https://www.facebook.com/nchuallpass/"> FB粉絲專頁 </a>
