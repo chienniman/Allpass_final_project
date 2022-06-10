@@ -32,6 +32,14 @@ $( "#form" ).validate({
 	},
 
 	submitHandler: function (form) {
-		alert('成功送出！');
+		// sweetAlert
+		Swal.fire({
+			title: '謝謝您的留言',
+			icon: 'success',
+			confirmButtonText: '是',
+		}).then(function(){
+			// 送出表單
+			form.submit();
+		})
 	}
 });

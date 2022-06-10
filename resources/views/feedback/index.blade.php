@@ -34,6 +34,7 @@
 
         body {
             display: flex;
+            overflow-x: hidden;
         }
 
         p,
@@ -563,10 +564,18 @@
                                 </td>
 
                                 <td style="max-width: 100px" class="data" data-weight="{{$item->weight}}" data-feedback_id="{{$item->id}}">
-                                    @if ( $item->weight == 0)
-                                        沒有輪播
+                                    @if ( $item->weight == 1)
+                                        第一張
+                                    @elseif ( $item->weight == 2 )
+                                        第二張
+                                    @elseif ( $item->weight == 3 )
+                                        第三張 
+                                    @elseif ( $item->weight == 4 )
+                                        第四張
+                                    @elseif ( $item->weight == 5 )
+                                        第五張 
                                     @else
-                                        {{$item->weight}}
+                                        無
                                     @endif
                                 </td>
 
@@ -599,15 +608,15 @@
                                                 
                                                 <div class="mb-3">
                                                     <label for="CarouselNumInput{{ $index }}" class="col-form-label">輸入輪播順序:</label>
-                                                    <input type="number" name='carouselNum' class="form-control carouselNumInput" id="carouselNumInput{{ $index }}" placeholder="輪播順序" value="{{$item->weight}}" min="1" >
+                                                    {{-- <input type="number" name='carouselNum' class="form-control carouselNumInput" id="carouselNumInput{{ $index }}" placeholder="輪播順序" value="{{$item->weight}}" min="1" > --}}
 
-                                                    {{-- <select name="carouselNum" id="" class="form-select carouselNumInput" placeholder="輪播順序">
+                                                    <select name="carouselNum" id="" class="form-select carouselNumInput" placeholder="輪播順序">
                                                         <option value="1" @if ( $item->weight == 1 ) selected @endif>第一張</option>
                                                         <option value="2" @if ( $item->weight == 2 ) selected @endif>第二張</option>
                                                         <option value="3" @if ( $item->weight == 3 ) selected @endif>第三張</option>
                                                         <option value="4" @if ( $item->weight == 4 ) selected @endif>第四張</option>
                                                         <option value="5" @if ( $item->weight == 5 ) selected @endif>第五張</option>
-                                                    </select> --}}
+                                                    </select>
                                                 </div>
                                                       
                                                 <div class="modal-footer">
@@ -816,10 +825,9 @@
                         title: '編輯完成',
                         icon: 'success',
                         confirmButtonText: 'OK',
+                    }).then(function(){
+                        window.location.reload();
                     })
-                    // .then(function(){
-                    //     window.location.reload();
-                    // })
                 })
             }   
         });
