@@ -86,12 +86,26 @@ class NewController extends Controller
      */
     public function update(Request $request, $id)
     {
-        DB::table('news')->where('id', $id)->update([
-            'title'=> $request->title,
-            'start_date'=> $request->startDate,
-            'end_date'=> $request->endDate,
-            'weight'=> $request->weight,
-        ]);
+        // 要修改順序的消息: 取得權重
+        $newWeight = DB::table('news')::where('id', $id)->value('weight');
+        // 重複輪播順序的消息: 取得id
+        // $repeatNewId = DB::table('news')::where('weight', '=', $request->weight)->value('id');
+
+        // 替換兩個消息的輪播順序
+        // DB::table('news')::where('id', $repeatNewId)->update([
+        //     'weight'=> $newWeight,
+        // ]);
+
+        // DB::table('news')->where('id', $id)->update([
+        //     'weight'=> $request->weight,
+        // ]);
+
+        // DB::table('news')->where('id', $id)->update([
+        //     'title'=> $request->title,
+        //     'start_date'=> $request->startDate,
+        //     'end_date'=> $request->endDate,
+        //     'weight'=> $request->weight,
+        // ]);
 
         // 編輯消息歷史
         History::insert([
