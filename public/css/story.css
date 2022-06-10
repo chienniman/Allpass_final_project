@@ -1,6 +1,15 @@
 @charset "UTF-8";
+* a {
+  cursor: url("../pics/APmouse2.svg"), auto;
+}
+
+* button {
+  cursor: url("../pics/APmouse2.svg"), auto !important;
+}
+
 body {
   background: #f4f2e6;
+  cursor: url("../pics/APmouse.svg"), auto;
 }
 
 body::-webkit-scrollbar {
@@ -171,7 +180,7 @@ body::-webkit-scrollbar-thumb:hover {
       -ms-flex-align: center;
           align-items: center;
   border: 5px solid #f4bd72;
-  cursor: pointer;
+  cursor: url("../pics/APmouse2.svg"), auto;
 }
 
 #header .burger_link .burger .line {
@@ -224,6 +233,7 @@ body::-webkit-scrollbar-thumb:hover {
   border: 3px solid white;
   font-size: 30px;
   color: white;
+  cursor: url("../pics/APmouse2.svg"), auto;
 }
 
 #header .burger_link .list .list-project:hover {

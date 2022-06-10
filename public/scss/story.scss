@@ -27,9 +27,17 @@ $secondary_color: #6accbf;
   left: 50%;
   top: 50%;
 }
-
+*{
+    a{
+      cursor: url("../pics/APmouse2.svg") , auto;
+    }
+    button{
+        cursor: url("../pics/APmouse2.svg") , auto !important;
+    }
+}
 body {
   background: $primary_color;
+  cursor: url("../pics/APmouse.svg") , auto;
   &::-webkit-scrollbar {
     width: 20px;
   }
@@ -127,7 +135,7 @@ body {
       justify-content: center;
       align-items: center;
       border: 5px solid #f4bd72;
-      cursor: pointer;
+      cursor: url("../pics/APmouse2.svg") , auto;
       .line {
         height: 3px;
         width: 20px;
@@ -170,6 +178,7 @@ body {
         border: 3px solid white;
         font-size: 30px;
         color: white;
+        cursor: url("../pics/APmouse2.svg") , auto;
         &:hover {
           background-color: white;
           border: 6px solid #6accbf;
@@ -242,7 +251,7 @@ ul{
         }
         @media(max-width:380px){
           font-size: 20px;
-        } 
+        }
       }
       .title::after{
         @include size(100%, 2px);
@@ -250,7 +259,7 @@ ul{
         display:block;
         background-color: #FEAD3B;
         margin: 3% auto;
-          
+
       }
       .show{
         font-size: 35px;
@@ -268,8 +277,8 @@ ul{
         }
         @media(max-width:400px){
           font-size: 10px;
-        } 
-      
+        }
+
         .inner_text{
           font-size: 43px;
           padding: 2% 2% 0 2%;
@@ -345,43 +354,43 @@ ul{
       text-align: end;
       @media(max-width:1700px){
         font-size: 70px;
-      } 
+      }
       @media(max-width:1610px){
         @include size(30%, 30%);
         top: 3%;
         left: 15%;
         font-size: 45px;
-      } 
+      }
       @media(max-width:1580px){
         left: 10%;
-      } 
+      }
       @media(max-width:1300px){
         top: 4%;
-      } 
+      }
       @media(max-width:1200px){
         top: 1%;
         left: 10%;
-      } 
+      }
       @media(max-width:950px){
         @include size(40%, 30%);
         font-size: 40px;
         top: -5%;
         left: 5%;
-      } 
+      }
       @media(max-width:768px){
         @include size(50%, 30%);
         text-align: center;
         left: 25%;
         top: 17%;
         font-size: 25px;
-      } 
+      }
       @media(max-width:625px){
         @include size(40%, 30%);
         left: 30%;
-      } 
+      }
       @media(max-width:540px){
         font-size: 20px;
-      } 
+      }
       .text{
         font-size: 40px;
         text-align: end;
@@ -397,37 +406,37 @@ ul{
         }
         @media(max-width:768px){
           text-align: center;
-        } 
+        }
         @media(max-width:625px){
           font-size: 15px;
           line-height: 30px;
-        } 
+        }
         @media(max-width:540px){
           line-height: 25px;
-        } 
+        }
         @media(max-width:485px){
           font-size: 12px;
           line-height: 24px;
-        } 
+        }
         @media(max-width:425px){
           line-height: 20px;
         }
         @media(max-width:385px){
           line-height: 18px;
-        } 
+        }
         @media(max-width:360px){
           line-height: 15px;
-        } 
+        }
         @media(max-width:335px){
           line-height: 13px;
-        } 
+        }
       }
     }
   }
   .item2{
     margin: 0 auto;
     position: relative;
-    
+
     img{
       @include size(45%, 45%);
       position: relative;
@@ -471,19 +480,19 @@ ul{
         text-align: center;
         left: 35%;
         top: 18%;
-      } 
+      }
       @media(max-width:620px){
         font-size: 15px;
         line-height: 30px;
-      } 
+      }
       @media(max-width:460px){
         font-size: 13px;
         line-height: 25px;
-      } 
+      }
       @media(max-width:385px){
         font-size: 11px;
         line-height: 20px;
-      } 
+      }
     }
     .type::before{
       content:" 餐點種類";
@@ -504,11 +513,11 @@ ul{
       }
       @media(max-width:768px){
         text-align: center;
-      } 
+      }
       @media(max-width:620px){
         font-size: 20px;
         font-weight: bold;
-      } 
+      }
 
     }
     .type::after{
@@ -518,10 +527,10 @@ ul{
       padding-top: 5%;
       @media(max-width:768px){
         display: none;
-      } 
+      }
       @media(max-width:620px){
         font-size: 15px;
-      } 
+      }
     }
   }
   .item4{

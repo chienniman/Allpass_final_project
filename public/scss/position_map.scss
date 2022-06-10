@@ -31,13 +31,21 @@ $secondary_color: #6accbf;
   left: 50%;
   top: 50%;
 }
+*{
+    a{
+      cursor: url("../pics/APmouse2.svg") , auto;
+    }
+    button{
+        cursor: url("../pics/APmouse2.svg") , auto !important;
+    }
+}
 
 body {
   background-image: url('../pics/餐飲背景.jpg');
   background-position: top;
   background-size: 100%;
   // background: $primary_color;
-
+  cursor: url("../pics/APmouse.svg") , auto;
   // 更改設計實驗
   &::-webkit-scrollbar {
     width: 20px;
@@ -206,6 +214,7 @@ body {
         border: 3px solid white;
         font-size: 30px;
         color: white;
+        cursor: url("../pics/APmouse2.svg") , auto;
 
         &:hover {
           background-color: white;
@@ -315,7 +324,7 @@ body {
           }
         }
 
-        
+
       }
     }
 
@@ -380,7 +389,7 @@ body {
           }
         }
       }
-      
+
     }
     @media (max-width:1920px){
       background-image: url('../pics/posiback1920.png');

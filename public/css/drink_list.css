@@ -22,11 +22,20 @@
   height: 20px;
 }
 
+* a {
+  cursor: url("../pics/APmouse2.svg"), auto;
+}
+
+* button {
+  cursor: url("../pics/APmouse2.svg"), auto !important;
+}
+
 body {
   overflow-x: hidden;
   background-image: url("../pics/bg-lg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: url("../pics/APmouse.svg"), auto;
   min-height: 1000px;
 }
 
@@ -202,7 +211,7 @@ body::-webkit-scrollbar-thumb:hover {
       -ms-flex-align: center;
           align-items: center;
   border: 5px solid #f4bd72;
-  cursor: pointer;
+  cursor: url("../pics/APmouse2.svg"), auto;
 }
 
 #header .burger_link .burger .line {
@@ -255,6 +264,7 @@ body::-webkit-scrollbar-thumb:hover {
   border: 3px solid white;
   font-size: 30px;
   color: white;
+  cursor: url("../pics/APmouse2.svg"), auto;
 }
 
 #header .burger_link .list .list-project:hover {
@@ -517,7 +527,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #recommend .predicted_results span {
-  cursor: pointer;
+  cursor: url("../pics/APmouse2.svg"), auto;
 }
 
 #recommend .result_text {
