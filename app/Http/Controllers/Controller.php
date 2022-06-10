@@ -21,15 +21,6 @@ class Controller extends BaseController
     public function index(){
 
         // 最新消息輪播
-        $allnews = Notification::take(5)->get();
-        // $newsTitle = $allnews[2]->take(5);
-        // $startDate = $allnews[4]->take(5);
-        // $endDate = $allnews[5]->take(5);
-
-        // dd($allnews->all());
-
-
-        // 最新消息輪播
         $allnews = Notification::get();
 
         // 對留言依權重由小到大排序，包含空值
@@ -38,8 +29,6 @@ class Controller extends BaseController
         $keyedNews = $sortedNews->keyBy('weight');
         $carouselNews = $keyedNews->forget('');
         $carouselNews = $keyedNews->forget('0');
-
-
 
         // 留言輪播
         $allFeedbacks = Feedback::get();

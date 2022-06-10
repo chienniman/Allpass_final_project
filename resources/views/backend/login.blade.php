@@ -124,9 +124,6 @@
                     <input id="password" class="bar form-control" name="password" type="password" placeholder="********" required>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <div class="smallwords px-3">
-                        <a href="">忘記密碼</a>
-                    </div>
                     <div class="smallwords">
                         <input id="remember_me" name="remember" type="checkbox"  name="" >
                         <label id="remember_me" for="remember_me">記住我?</label>

@@ -620,7 +620,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <select class="form-select" name="tag" id="">
+                                    <select class="form-select" name="tag" id="" required>
                                         <option value="" disabled>請選擇</option>
                                         @foreach ($meal_tags as $item)
                                             <option value="{{ $item->tag }}">{{ $item->tag }}</option>
