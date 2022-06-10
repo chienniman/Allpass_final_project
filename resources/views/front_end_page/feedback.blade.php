@@ -96,7 +96,8 @@
       </nav>
     </header>
     <main id="main">
-      <form action="" method="" id="form">
+      <form action="/store_feedback" method="POST" id="form">
+        @csrf
         <div class="form_title text_color">意見回饋</div>
         <div class="form_text text_color">
           為了使每位顧客都有一個美好的消費體驗，提供一個更舒適的環境、更優良的服務來努力。</br>
@@ -106,7 +107,6 @@
         </div>
         <div class="forms">
           <div>
-            <!-- @csrf -->
             <input id="feedback_date" type="text" name="date" placeholder="消費日期" onfocus="(this.type='date')">
             <select id="feedback_period" name="period"  placeholder="消費時段">
               <option value="1" >早上</option>
@@ -173,6 +173,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   </body>
 </html>

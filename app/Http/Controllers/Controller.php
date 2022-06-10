@@ -45,13 +45,11 @@ class Controller extends BaseController
         $breakfast = $mealTag[1]->meal->take(3); 
         $salad = $mealTag[2]->meal->take(3);
         $dessert = $mealTag[3]->meal->take(3);
-
         $afternoonTea = $mealTag[4]->meal->take(3);
         $nchuStudent = $mealTag[5]->meal->take(3);
         $curryJp = $mealTag[6]->meal->take(3);
         $exoticRice = $mealTag[7]->meal->take(3);
         $pasta = $mealTag[8]->meal->take(3);
-
 
         return view('front_end_page.mealsindex_fin', compact('mealTag', 'breakfast', 'salad', 'dessert', 'afternoonTea', 'nchuStudent', 'curryJp', 'exoticRice', 'pasta'));
     }

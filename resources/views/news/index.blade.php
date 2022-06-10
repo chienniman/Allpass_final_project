@@ -34,6 +34,7 @@
 
         body {
             display: flex;
+            overflow-x: hidden;
         }
 
         p,
