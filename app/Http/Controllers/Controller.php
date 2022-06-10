@@ -11,6 +11,7 @@ use App\Models\Feedback;
 use App\Models\Meal_tag;
 use App\Models\History;
 use App\Models\Meal;
+use App\Models\Notification;
 
 class Controller extends BaseController
 {
@@ -19,6 +20,13 @@ class Controller extends BaseController
     // 主頁
     public function index(){
 
+        // 最新消息輪播
+        $allnews = Notification::take(5)->get();
+        // $newsTitle = $allnews[2]->take(5);
+        // $startDate = $allnews[4]->take(5);
+        // $endDate = $allnews[5]->take(5);
+
+        // dd($allnews->all());
         // 留言輪播
         $allFeedbacks = Feedback::get();
 
@@ -29,7 +37,7 @@ class Controller extends BaseController
         $carouselFeedbacks = $keyed->forget('');
         $carouselFeedbacks = $keyed->forget('0');
 
-        return view('index', compact('carouselFeedbacks'));
+        return view('index', compact('carouselFeedbacks','allnews'));
     }
 
     // 飲品介紹
@@ -42,7 +50,7 @@ class Controller extends BaseController
     public function mealsindex(){
 
         $mealTag = Meal_tag::get();
-        $breakfast = $mealTag[1]->meal->take(3); 
+        $breakfast = $mealTag[1]->meal->take(3);
         $salad = $mealTag[2]->meal->take(3);
         $dessert = $mealTag[3]->meal->take(3);
 
@@ -132,10 +140,10 @@ class Controller extends BaseController
         $meal = Meal::get();
         $mealTag = Meal_tag::get();
 
-        $breakfast = $mealTag[1]->meal->take(3); 
+        $breakfast = $mealTag[1]->meal->take(3);
         $salad = $mealTag[2]->meal->take(3);
         $snake = $mealTag[3]->meal->take(3);
-        
+
         return view('testmeal', compact('mealTag', 'breakfast', 'salad', 'snake'));
 
     }

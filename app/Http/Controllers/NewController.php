@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\New;
+use App\Models\Notification;
 use App\Http\Controllers\FilesController;
 use App\Models\History;
 use DB;
@@ -98,11 +98,11 @@ class NewController extends Controller
             'created_at'=> Carbon::now(),
             'change_history'=> '已編輯一筆消息',
         ]);
-        
+
         $result = [
             'result' => 'success',
         ];
-        return $result; 
+        return $result;
     }
 
     /**

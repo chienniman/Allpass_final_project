@@ -14,14 +14,15 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $end_date
  * @property integer $weight
  */
-class New extends Model
+class Notification extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
-    protected $keyType = 'integer';
+    // protected $keyType = 'integer';
+    protected $table = 'news';
 
     /**
      * @var array
