@@ -637,6 +637,7 @@
     <script src="https://kit.fontawesome.com/1b22cb82e7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
     <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -735,12 +736,20 @@
         // const data = document.querySelectorAll('.data');
         const editBtn = document.querySelectorAll('.editBtn');
 
-        // 上傳圖片預覽
-        FilePond.registerPlugin(FilePondPluginImagePreview);
+        // 上傳圖片預覽、限制檔案類型 插件
+        FilePond.registerPlugin(FilePondPluginImagePreview, FilePondPluginFileValidateType);// 上傳圖片預覽
 
         newImgInput.forEach( (element)=> {
+
             // 產生 filePond 的上傳效果
-            const pond = FilePond.create(element);     
+            const pond = FilePond.create(element, {
+                // 自訂filpond的提示文字
+                labelIdle: 	'拖曳或 <span class="filepond--label-action"> 點擊 </span> 上傳新圖片',
+                // 限制檔案數
+                maxFiles: 1,
+                // 限制只有圖檔
+                acceptedFileTypes: ['image/*'],
+            });     
         });
 
         // 設定 filepond serve
