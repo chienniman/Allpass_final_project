@@ -695,6 +695,7 @@ body {
   height: calc(5px + (100vw / 70));
   background-color: #FEAD3B;
   margin: 0px 5px;
+  cursor: url("../pics/APmouse2.svg"), auto !important;
 }
 
 #main #evaluation-area #swiper .swiper .swiper-button-next {
@@ -704,6 +705,7 @@ body {
 #main #evaluation-area #swiper .swiper .swiper-button-next::after {
   font-size: calc(20px + ((100vw / 90) * 2));
   color: #2fbfac;
+  cursor: url("../pics/APmouse2.svg"), auto;
 }
 
 #main #evaluation-area #swiper .swiper .swiper-button-prev {
@@ -713,6 +715,7 @@ body {
 #main #evaluation-area #swiper .swiper .swiper-button-prev::after {
   font-size: calc(20px + ((100vw / 90) * 2));
   color: #2fbfac;
+  cursor: url("../pics/APmouse2.svg"), auto;
 }
 
 #main #social_feedback {
