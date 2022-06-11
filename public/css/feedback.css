@@ -6,6 +6,18 @@
   cursor: url("../pics/APmouse2.svg"), auto !important;
 }
 
+* select {
+  cursor: url("../pics/APmouse2.svg"), auto;
+}
+
+* input {
+  cursor: url("../pics/APmouse2.svg"), auto;
+}
+
+* textarea {
+  cursor: url("../pics/APmouse2.svg"), auto;
+}
+
 body {
   background: #f4f2e6;
   background-image: url("../pics/feedback/bkgd.png");
