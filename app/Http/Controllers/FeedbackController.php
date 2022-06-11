@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Feedback;
+use App\Models\History;
+use Carbon\Carbon;
 
 class FeedbackController extends Controller
 {
@@ -99,6 +101,19 @@ class FeedbackController extends Controller
      */
     public function delete($id)
     {
+        $feedback = Feedback::find($id);
+
+        // 刪除留言歷史
+        if ( mb_strlen($feedback->suggestion, 'utf-8') > 10 ){
+            $shortFeedback = mb_substr($feedback->suggestion, 0, 10, 'utf-8').'......';
+        }else{
+            $shortFeedback = $feedback->suggestion;
+        }
+        History::insert([
+            'created_at'=> Carbon::now(),
+            'change_history'=> '已刪除留言 - '.$shortFeedback,
+        ]);
+
         Feedback::where('id', $id)->delete();
 
         return redirect('/backend/feedback');

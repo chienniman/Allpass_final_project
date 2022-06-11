@@ -57,6 +57,17 @@ class MealController extends Controller
             'note'=> $request->note,
             'second_note'=> $request->secondNote,
         ]);
+
+        // 編輯消息歷史
+        if ( mb_strlen($request->title, 'utf-8') > 10 ){
+            $shortTitle = mb_substr($request->title, 0, 10, 'utf-8').'......';
+        }else{
+            $shortTitle = $request->title;
+        }
+        History::insert([
+            'created_at'=> Carbon::now(),
+            'change_history'=> '已新增消息 - '.$shortTitle,
+        ]);
         // 新增餐點歷史
         History::insert([
             'created_at'=> Carbon::now(),
@@ -133,7 +144,6 @@ class MealController extends Controller
                 'change_history'=> '已編輯餐點-'.$request->mealName,
             ]);
     
-            
             $result = response()->json([
                 'result'=>'success',
                 'message'=> '編輯完成',

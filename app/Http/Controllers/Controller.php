@@ -40,7 +40,7 @@ class Controller extends BaseController
         $carouselFeedbacks = $keyed->forget('');
         $carouselFeedbacks = $keyed->forget('0');
 
-        return view('index', compact('carouselFeedbacks','allnews', 'carouselNews'));
+        return view('index', compact('carouselFeedbacks', 'carouselNews'));
     }
 
     // 飲品介紹
@@ -105,7 +105,7 @@ class Controller extends BaseController
             'email'=> $request->email,
         ]);
 
-        return redirect('/feedback.html');
+        return redirect('/feedback');
     }
 
 

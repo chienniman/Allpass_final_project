@@ -52,6 +52,17 @@ class NewController extends Controller
             // 'weight'=> $request-> weight,
         ]);
 
+        // 編輯消息歷史
+        if ( mb_strlen($request->title, 'utf-8') > 10 ){
+            $shortTitle = mb_substr($request->title, 0, 10, 'utf-8').'......';
+        }else{
+            $shortTitle = $request->title;
+        }
+        History::insert([
+            'created_at'=> Carbon::now(),
+            'change_history'=> '已新增消息 - '.$shortTitle,
+        ]);
+
         return redirect('/new');
     }
 
@@ -125,10 +136,15 @@ class NewController extends Controller
                 'weight'=> $request->weight,
             ]);
 
+            if ( mb_strlen($request->title, 'utf-8') > 10 ){
+                $shortTitle = mb_substr($request->title, 0, 10, 'utf-8').'......';
+            }else{
+                $shortTitle = $request->title;
+            }
             // 編輯消息歷史
             History::insert([
                 'created_at'=> Carbon::now(),
-                'change_history'=> '已編輯一筆消息',
+                'change_history'=> '已編輯消息 - '.$shortTitle,
             ]);
 
             $result = [
@@ -151,10 +167,16 @@ class NewController extends Controller
         // 刪除後端圖檔
         $new = Notification::find($id);
         FilesController::deleteUpload($new->img_path);
-        // 刪除餐點歷史
+
+        // 刪除消息歷史
+        if ( mb_strlen($new->title, 'utf-8') > 10 ){
+            $shortTitle = mb_substr($new->title, 0, 10, 'utf-8').'......';
+        }else{
+            $shortTitle = $new->title;
+        }
         History::insert([
             'created_at'=> Carbon::now(),
-            'change_history'=> '已刪除一則消息'
+            'change_history'=> '已刪除消息 - '.$shortTitle,
         ]);
 
         // 刪除資料庫資料

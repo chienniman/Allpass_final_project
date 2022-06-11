@@ -465,6 +465,8 @@
            max-height: 560px;
            background-color: #d0c8ff34;
            border: 1px solid #4d44b528; 
+
+           cursor: grab;
         }
         /* .historyContent:after{
             content: '';
@@ -491,6 +493,7 @@
             
             padding: 0 15px 0 15px;
         }
+
         /* scrollbar */
        
         /* Demonstrate a "mostly customized" scrollbar
@@ -668,7 +671,7 @@
                     編輯歷史
                 </div>
                 <div class="scrollbar px-3 pb-3 historyContent" style="overflow: scroll;">
-                    <div >
+                    <div>
                         @foreach ($histories as $index =>$item)
                             <div class="historyList d-flex justify-content-between" style="min-width: 660px;">
                                 <span class="middlesize mt-3 d-flex" style="white-space:nowrap;">
@@ -756,6 +759,59 @@
                     }) 
                 })     
             }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                
+                // 拖動xy軸效果
+                const ele = document.querySelector('.historyContent');
+                ele.style.cursor = 'grab';
+                
+                let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+                const mouseDownHandler = function (e) {
+                    ele.style.cursor = 'grabbing';
+                    ele.style.userSelect = 'none';
+
+                    // 滑鼠點擊後，取得鼠標 xy 位置與內容上方與左方隱藏多少長度
+                    pos = {
+                        // The current scroll
+                        left: ele.scrollLeft,
+                        top: ele.scrollTop,
+                        // Get the current mouse position
+                        x: e.clientX,
+                        y: e.clientY,
+                    };
+
+                    // 接續執行滑鼠拖動與滑鼠放開
+                    document.addEventListener('mousemove', mouseMoveHandler);
+                    document.addEventListener('mouseup', mouseUpHandler);
+                };
+
+                // 滑鼠移動後，取得滑鼠移動距離，接著取得內容上方與左方應該隱藏多少內容的結果
+                const mouseMoveHandler = function (e) {
+                    // How far the mouse has been moved
+                    const dx = e.clientX - pos.x;
+                    const dy = e.clientY - pos.y;
+
+                    // Scroll the element
+                    ele.scrollTop = pos.top - dy;
+                    ele.scrollLeft = pos.left - dx;
+                };
+
+                const mouseUpHandler = function () {
+                    document.removeEventListener('mousemove', mouseMoveHandler);
+                    document.removeEventListener('mouseup', mouseUpHandler);
+
+                    ele.style.cursor = 'grab';
+                    ele.style.removeProperty('user-select');
+                };
+
+                // Attach the handler
+                ele.addEventListener('mousedown', mouseDownHandler);
+
+            });
+
+            
     </script>
 </body>
 

@@ -127,12 +127,6 @@ class AccountController extends Controller
 
             $user->save();
 
-            // 編輯帳號歷史
-            History::insert([
-                'created_at'=> Carbon::now(),
-                'change_history'=> '已編輯帳號: '.$request->name,
-            ]);
-
             $result = [
                 'result' => 'success',
                 'message' => '編輯完成'
