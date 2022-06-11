@@ -7,6 +7,8 @@ use App\Models\User;
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use App\Models\History;
+use Carbon\Carbon;
 
 
 class AccountController extends Controller
@@ -92,23 +94,52 @@ class AccountController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::find($id);
+        // 防止 使用者名稱、密碼未填
+        if( $request->name == "" ){       
+            $result = [
+                'result'=>'error',
+                'message'=> '請輸入名稱',
+            ];
 
-        $user->name = $request->name;
-        $user->power = $request->power;
+        }elseif ( strlen($request->password) < 8 ){
+            $result = [
+                'result'=>'error',
+                'message'=> '請輸入8位數以上的密碼',
+            ];
 
-        if (Hash::needsRehash($request->password)) {
-            $user->password = Hash::make($request->password);
+        }elseif ( $request->power == "" ) {
+            $result = [
+                'result'=>'error',
+                'message'=> '請選擇權限',
+            ];
+
+        }else {
+        // 填寫格式正確存取資料
+
+            $user = User::find($id);
+
+            $user->name = $request->name;
+            $user->power = $request->power;
+
+            if (Hash::needsRehash($request->password)) {
+                $user->password = Hash::make($request->password);
+            }
+
+            $user->save();
+
+            // 編輯帳號歷史
+            History::insert([
+                'created_at'=> Carbon::now(),
+                'change_history'=> '已編輯帳號: '.$request->name,
+            ]);
+
+            $result = [
+                'result' => 'success',
+                'message' => '編輯完成'
+            ];
         }
 
-        $user->save();
-
-        
-        $result = [
-            'result' => 'success',
-        ];
-
-        return $result; 
+        return $result;
     }
 
     /**

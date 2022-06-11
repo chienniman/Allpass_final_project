@@ -401,6 +401,13 @@
             color: #ffffff;
         }
 
+        .goFrontEndBtn{
+            color: #ffffff;
+            background-color: #5e52ff;
+            border-radius: 25px;
+            font-size: 18px;
+        }
+
         /*---------------------------------------------- comment -------------------------------------------------*/
         .border-bottom{
             border-width: 3px !important;
@@ -478,7 +485,7 @@
                     <ul class="menu">
                         <!--選單內容-->
                         <li><a href="/dashboard"><i class="fa-solid fa-house"></i></a></li>
-                        <li><a href="/account"> <i class="fa-solid fa-user"></i></a></li>
+                        <li><a href="/account" class="adminLink"> <i class="fa-solid fa-user"></i></a></li>
                         <li>
                             <a href="" onclick="event.preventDefault(); document.querySelector('#logoutForm').submit()">登出</a>
                             <form method="POST" action="{{ route('logout') }}" hidden id="logoutForm">
@@ -499,6 +506,7 @@
                 <form method="POST" action="{{ route('logout') }}" hidden id="logout_form">
                         @csrf
                     </form>
+                <button type="button" class="goFrontEndBtn mx-3 my-2 px-4 py-2" onclick="window.open('/','_blank')">前往前台</button>
                 <div class="ms-3 avatarBox">
                     <div class="avatar rounded-circle"><img class="rounded-circle" alt="Avatar" id="avatar" title="{{ Auth::user()->name}} &#10 {{ Auth::user()->email}}" data-user_name="{{ Auth::user()->name}}" data-user_power="{{ Auth::user()->power}}"></div>
                     <ul>
@@ -833,19 +841,22 @@
         });
 
         // 沒有最高權限沒辦法進入管理者頁面
-        const adminLink = document.querySelector('.adminLink');
-        let userPower = document.getElementById("avatar").dataset.user_power;
-        if(userPower == 2){
-            adminLink.addEventListener('click', e=>{
-                e.preventDefault();
-                // sweetAlert
-                Swal.fire({
-                    title: '沒有權限訪問此連結',
-                    icon: 'warning',
-                    confirmButtonText: '是',
-                })
-            })
-        }
+        const adminLink = document.querySelectorAll('.adminLink');
+            let userPower = document.getElementById("avatar").dataset.user_power;
+            if(userPower == 2){
+
+                adminLink.forEach(element=>{
+                    element.addEventListener('click', e=>{
+                        e.preventDefault();
+                        // sweetAlert
+                        Swal.fire({
+                            title: '最高權限才能訪問此連結',
+                            icon: 'warning',
+                            confirmButtonText: '是',
+                        })
+                    }) 
+                })     
+            }
 
 
     </script>
