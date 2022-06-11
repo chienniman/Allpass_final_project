@@ -97,15 +97,15 @@
   <main id="main">
     <section id="Meals-box">
       <div class="Meals-list">
-        <div class="list-btn" onclick="all_Meals();">全部餐點<br>All</div>
-        <div class="list-btn-two" onclick="breakfast();">精選早餐／附飲品<br>Breakfast Brunch</div>
-        <div class="list-btn" onclick="salad();">沙拉／附飲品<br>Salad</div>
-        <div class="list-btn-two" onclick="dessert();">點心<br>Snack</div>
-        <div class="list-btn" onclick="afternoon_tea();">精選下午茶／附飲品<br>Afternoon tea</div>
-        <div class="list-btn-two" onclick="nchu_student();">中興大學<br>學生優惠特餐<br>NCHU Students's<br>Special Offer</div>
-        <div class="list-btn" onclick="curry_jp();">日式咖哩飯/附飲品<br>Japanese Curry</div>
-        <div class="list-btn-two" onclick="exotic_rice();">異國米飯料理/附飲品<br>Exotic Rice</div>
-        <div class="list-btn" onclick="pasta();">義大利麵／附飲品<br>Spaghetti</div>
+        <div class="list-btn" tabindex="1" onclick="all_Meals();">全部餐點<br>All</div>
+        <div class="list-btn-two" tabindex="1" onclick="breakfast();">精選早餐／附飲品<br>Breakfast Brunch</div>
+        <div class="list-btn" tabindex="1" onclick="salad();">沙拉／附飲品<br>Salad</div>
+        <div class="list-btn-two" tabindex="1" onclick="dessert();">點心<br>Snack</div>
+        <div class="list-btn" tabindex="1" onclick="afternoon_tea();">精選下午茶／附飲品<br>Afternoon tea</div>
+        <div class="list-btn-two" tabindex="1" onclick="nchu_student();">中興大學<br>學生優惠特餐<br>NCHU Students's<br>Special Offer</div>
+        <div class="list-btn" tabindex="1" onclick="curry_jp();">日式咖哩飯/附飲品<br>Japanese Curry</div>
+        <div class="list-btn-two" tabindex="1" onclick="exotic_rice();">異國米飯料理/附飲品<br>Exotic Rice</div>
+        <div class="list-btn" tabindex="1" onclick="pasta();">義大利麵／附飲品<br>Spaghetti</div>
       </div>
       <div class="Meals-project-box">
         <!-- RWD出現的餐點選擇列表 -->

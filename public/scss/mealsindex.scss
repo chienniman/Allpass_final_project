@@ -304,6 +304,19 @@ body {
           outline: 5px solid #2FBFAC;
           // outline-offset:5px;
         }
+        &:focus{
+            padding: 0;
+            margin: 10px 0px;
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px 5px;
+            color: white;
+            background-color: #2FBFAC;
+            border: 5px solid white;
+            border-radius: 10px;
+            outline: 5px solid #2FBFAC;
+        }
 
       }
 
@@ -334,6 +347,19 @@ body {
           border-radius: 10px;
           outline: 5px solid #FFAD3D;
           // outline-offset:5px;
+        }
+        &:focus{
+            padding: 0;
+            margin: 10px 0px;
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px 5px;
+            color: white;
+            background-color: #FFAD3D;
+            border: 5px solid white;
+            border-radius: 10px;
+            outline: 5px solid #FFAD3D;
         }
 
       }
