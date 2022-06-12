@@ -1,64 +1,29 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<img src="https://github.com/chienniman/Allpass_final_project/blob/main/public/pics/demo_pics/all_pass_logo%20(1).png" style="width:400px">
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 全端協作專題-歐巴斯專案
+簡介:
+坐落在興大校園的神奇時光屋，深藏在興大學生記憶深處的美好時光，提供每位認真學習的莘莘學子討論報告、吃飯的好去處。
 
-## About Laravel
+技術:
+前端開發: Vue.js、 Bootstrap5、 JavaScript、 SCSS、 jQuery<br>
+後端開發 Laravel、 PHP、 MySQL、 HeidiSQL、 XAMPP、 Node.js<br>
+系統介面設計 Figma<br>
+影像處理Photopea<br>
+多人協作 Github<br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+目標:
+開發出一個線上平台，方便對歐巴斯有興趣的訪客可以透過這個網站認識這家餐廳，包含飲品頁面、飲品推薦系統、餐點頁面、品牌故事將品牌價值深植到用戶腦海。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+行動:
+<ul>
+    <li>第一周，與業主詳談，以快速確定規格，利用Figma、Photopea進行心智圖、網站地圖、介面完稿、互動雛形的製作</li>
+    <li>第二周，分為前後端個別開發，前端部分從主頁進行、完成導覽列、頁尾等網站重複的文件，之後依序完成客製化RWD的頁面，飲料頁面、餐點頁面、品牌故事等，後端則開始撰寫路由、後臺會員系                統、顧客好評等
+    </li>
+    <li>第三周，開始逐步合併前後端程式碼，前端部分新增網頁特效，如:載入動畫、客製化滾軸、品牌故事淡入淡出等，後端則開始進行測試資料的撰寫，並協助合併串接前端頁面</li>
+</ul>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+成果:
+預計開發時程為2020/6/17(28天)完成，提早到2020/6/13(23天)完成。
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 靜態版本快速Demo
+https://chienniman.github.io/allpass_project/
