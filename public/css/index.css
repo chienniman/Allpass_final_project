@@ -391,6 +391,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 #main #news #noticias {
   padding: 5% 0;
+  background-image: url("../pics/index/bubbleback.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
 }
 
 #main #news #noticias .noticia {
