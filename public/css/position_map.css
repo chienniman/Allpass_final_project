@@ -540,6 +540,12 @@ body::-webkit-scrollbar-thumb:hover {
   height: 500px;
 }
 
+@media (max-width: 900px) {
+  #main .map {
+    padding: 50px 0px;
+  }
+}
+
 #footer {
   height: 220px;
   background-image: url("../pics/wave.png");
