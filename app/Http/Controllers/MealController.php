@@ -68,11 +68,6 @@ class MealController extends Controller
             'created_at'=> Carbon::now(),
             'change_history'=> '已新增消息 - '.$shortTitle,
         ]);
-        // 新增餐點歷史
-        History::insert([
-            'created_at'=> Carbon::now(),
-            'change_history'=> '已新增餐點-'.$request->name,
-        ]);
 
         return redirect('/meal');
     }
