@@ -411,7 +411,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-#main #news #noticias .noticia .title_of_noticia a {
+#main #news #noticias .noticia .title_of_noticia .noticia-word {
   color: #000;
 }
 

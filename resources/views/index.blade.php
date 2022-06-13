@@ -129,9 +129,9 @@
                 @foreach ( $carouselNews as $news )
                 <div class="noticia">
                     <div class="title_of_noticia">
-                        <a href="#">
+                        <div class="noticia-word">
                             {{$news->title}}
-                        </a>
+                        </div>
                     </div>
                     <div class="time">
                         {{$news->start_date}} ~ {{$news->end_date}}
