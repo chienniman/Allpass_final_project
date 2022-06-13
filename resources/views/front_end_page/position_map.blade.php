@@ -131,9 +131,9 @@
             <div class="serve">
               <p class="serve-list">WIFI</p>
               <p class="serve-list">內用座位</p>
-              <p class="serve-list">飲料</p>
               <p class="serve-list">早餐</p>
               <p class="serve-list">午餐</p>
+              <p class="serve-list">晚餐</p>
             </div>
           </div>
         </div>

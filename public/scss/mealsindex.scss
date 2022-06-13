@@ -267,9 +267,6 @@ body {
 
     // 左邊選擇清單的設定與消失斷點
     .Meals-list {
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
       // 菜單淡色背景設定
       background-color: rgba(255, 255, 255, 0.500);
       border-radius: 0px 0px 50px 50px;
@@ -285,10 +282,8 @@ body {
         font-weight: 600;
         text-align: center;
         padding: 30px 5px;
-        // height: 120px;
         border-bottom: 3px solid #2FBFAC;
         cursor: url("../pics/APmouse2.svg") , auto;
-        // transition: 1s;
 
         &:hover {
           padding: 0;
@@ -302,7 +297,7 @@ body {
           border: 5px solid white;
           border-radius: 10px;
           outline: 5px solid #2FBFAC;
-          // outline-offset:5px;
+
         }
         &:focus{
             padding: 0;
@@ -328,7 +323,6 @@ body {
         color: #FFAD3D;
         font-weight: 600;
         text-align: center;
-        // height: 120px;
         padding: 30px 5px;
         border-bottom: 3px solid #FFAD3D;
         cursor: url("../pics/APmouse2.svg") , auto;
@@ -339,14 +333,12 @@ body {
           font-size: 25px;
           font-weight: 600;
           text-align: center;
-          // height: 100px;
           padding: 20px 5px;
           color: white;
           background-color: #FFAD3D;
           border: 5px solid white;
           border-radius: 10px;
           outline: 5px solid #FFAD3D;
-          // outline-offset:5px;
         }
         &:focus{
             padding: 0;
@@ -433,10 +425,6 @@ body {
           padding: 30px 20px;
           margin-top: 20px;
           border-radius: 20px;
-          // background-image: url('../pics/ALLPASS字.png');
-          // background-position: center;
-          // background-repeat: no-repeat;
-          // background-size: cover;
           background-color: #ffffff84;
           display: flex;
           justify-content: center;
@@ -455,7 +443,6 @@ body {
         // flex: 1;
         // 餐點項目卡片
         .project-card {
-          // flex: 0 0 auto;
           width: 30%;
           min-width: 0;
           padding: 0.5rem;
@@ -465,7 +452,6 @@ body {
           flex-direction: column;
           word-wrap: break-word;
           background-color: #ffffff;
-          // margin-bottom: 50px;
 
           // 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。
           background-clip: border-box;
@@ -484,7 +470,6 @@ body {
 
           .img-box {
             text-align: center;
-            // border: 5px solid #ffa221;
           }
 
           .project-body {
@@ -522,7 +507,6 @@ body {
               // 對齊備註與價格，故設flex: 1;
               flex: 1;
               color: #363B45;
-              // line-height:5px
             }
 
             .project-price {

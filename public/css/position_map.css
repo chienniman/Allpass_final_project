@@ -391,10 +391,28 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #main .banner .position-right .right-inner .address p {
-  font-size: 30px;
+  font-size: calc(0px + (100vw / 45));
   font-weight: 600;
   color: white;
   padding-bottom: 50px;
+}
+
+@media (max-width: 1920px) {
+  #main .banner .position-right .right-inner .address p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1600px) {
+  #main .banner .position-right .right-inner .address p {
+    font-size: calc(0px + (100vw / 40));
+  }
+}
+
+@media (max-width: 900px) {
+  #main .banner .position-right .right-inner .address p {
+    font-size: 24px;
+  }
 }
 
 #main .banner .position-right .right-inner .address .open-time {
@@ -410,9 +428,27 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #main .banner .position-right .right-inner .address .open-time p {
-  font-size: 30px;
+  font-size: calc(0px + (100vw / 45));
   font-weight: 600;
   color: white;
+}
+
+@media (max-width: 1920px) {
+  #main .banner .position-right .right-inner .address .open-time p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1600px) {
+  #main .banner .position-right .right-inner .address .open-time p {
+    font-size: calc(0px + (100vw / 40));
+  }
+}
+
+@media (max-width: 900px) {
+  #main .banner .position-right .right-inner .address .open-time p {
+    font-size: 24px;
+  }
 }
 
 #main .banner .position-right .right-inner .serve {
@@ -427,9 +463,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 #main .banner .position-right .right-inner .serve .serve-list {
   text-align: center;
-  font-size: 30px;
+  font-size: calc(0px + (100vw / 40));
   font-weight: 600;
-  color: white;
 }
 
 @media (max-width: 900px) {
