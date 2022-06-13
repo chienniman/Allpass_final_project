@@ -182,7 +182,7 @@ body::-webkit-scrollbar-thumb:hover {
       -ms-flex-align: center;
           align-items: center;
   border: 5px solid #f4bd72;
-  cursor: pointer;
+  cursor: url("../pics/APmouse2.svg"), auto;
 }
 
 #header .burger_link .burger .line {
