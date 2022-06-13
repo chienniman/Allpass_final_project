@@ -265,7 +265,7 @@
                     <div v-if="predicted_result_show" class="result_text">
                       @{{predicted_result_text}}
                       <br>
-                      <a class="go_to_allpass_meals text-nowrap" v-if="predicted_result" href="./mealsindex_original.html">
+                      <a class="go_to_allpass_meals text-nowrap" v-if="predicted_result" href="./mealsindex_original">
                         前往歐巴斯餐點區逛逛
                       </a>
                     </div>
