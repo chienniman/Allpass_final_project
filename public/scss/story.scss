@@ -402,7 +402,7 @@ ul {
         margin: 0 auto;
         z-index: 1;
         position: relative;
-        animation: titleword 4s ease-in-out infinite;
+        animation: float_two 4s ease-in-out infinite;
 
 
 
@@ -670,7 +670,7 @@ ul {
             position: relative;
             left: -5%;
             top: -330px;
-            animation: float 4s ease-in-out infinite;
+            animation: float_two 4s ease-in-out infinite;
             transition: 0.5s;
 
             &:hover {
@@ -735,6 +735,27 @@ ul {
         }
     }
 
+    @keyframes float_two {
+
+        from,
+        to {
+            transform: translate(0, 2%);
+        }
+
+        30% {
+            transform: translate(-2%, 0);
+        }
+
+        55% {
+            transform: translate(0, -2%);
+        }
+
+        80% {
+            transform: translate(2%, 0);
+        }
+    }
+
+
     @keyframes titleword {
 
         from,
@@ -742,15 +763,15 @@ ul {
             transform: translate(0, 1%);
         }
 
-        25% {
+        20% {
             transform: translate(-1%, 0);
         }
 
-        50% {
+        45% {
             transform: translate(0, -1%);
         }
 
-        75% {
+        70% {
             transform: translate(1%, 0);
         }
     }

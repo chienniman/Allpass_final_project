@@ -464,8 +464,8 @@ ul .item1 {
   margin: 0 auto;
   z-index: 1;
   position: relative;
-  -webkit-animation: titleword 4s ease-in-out infinite;
-          animation: titleword 4s ease-in-out infinite;
+  -webkit-animation: float_two 4s ease-in-out infinite;
+          animation: float_two 4s ease-in-out infinite;
 }
 
 ul .item1 img {
@@ -809,8 +809,8 @@ ul .item4 img {
   position: relative;
   left: -5%;
   top: -330px;
-  -webkit-animation: float 4s ease-in-out infinite;
-          animation: float 4s ease-in-out infinite;
+  -webkit-animation: float_two 4s ease-in-out infinite;
+          animation: float_two 4s ease-in-out infinite;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -897,21 +897,61 @@ ul .item6 img {
   }
 }
 
+@-webkit-keyframes float_two {
+  from,
+  to {
+    -webkit-transform: translate(0, 2%);
+            transform: translate(0, 2%);
+  }
+  30% {
+    -webkit-transform: translate(-2%, 0);
+            transform: translate(-2%, 0);
+  }
+  55% {
+    -webkit-transform: translate(0, -2%);
+            transform: translate(0, -2%);
+  }
+  80% {
+    -webkit-transform: translate(2%, 0);
+            transform: translate(2%, 0);
+  }
+}
+
+@keyframes float_two {
+  from,
+  to {
+    -webkit-transform: translate(0, 2%);
+            transform: translate(0, 2%);
+  }
+  30% {
+    -webkit-transform: translate(-2%, 0);
+            transform: translate(-2%, 0);
+  }
+  55% {
+    -webkit-transform: translate(0, -2%);
+            transform: translate(0, -2%);
+  }
+  80% {
+    -webkit-transform: translate(2%, 0);
+            transform: translate(2%, 0);
+  }
+}
+
 @-webkit-keyframes titleword {
   from,
   to {
     -webkit-transform: translate(0, 1%);
             transform: translate(0, 1%);
   }
-  25% {
+  20% {
     -webkit-transform: translate(-1%, 0);
             transform: translate(-1%, 0);
   }
-  50% {
+  45% {
     -webkit-transform: translate(0, -1%);
             transform: translate(0, -1%);
   }
-  75% {
+  70% {
     -webkit-transform: translate(1%, 0);
             transform: translate(1%, 0);
   }
@@ -923,15 +963,15 @@ ul .item6 img {
     -webkit-transform: translate(0, 1%);
             transform: translate(0, 1%);
   }
-  25% {
+  20% {
     -webkit-transform: translate(-1%, 0);
             transform: translate(-1%, 0);
   }
-  50% {
+  45% {
     -webkit-transform: translate(0, -1%);
             transform: translate(0, -1%);
   }
-  75% {
+  70% {
     -webkit-transform: translate(1%, 0);
             transform: translate(1%, 0);
   }
