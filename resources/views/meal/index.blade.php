@@ -330,6 +330,10 @@
                 display: none;
             }
 
+            .goFrontEndBtn {
+                display: none;
+            }
+
             .burgerLinkBox {
                 display: block;
                 padding: 0 20px 0 0;
@@ -468,6 +472,7 @@
                         <!--選單內容-->
                         <li><a href="/dashboard"><i class="fa-solid fa-house"></i></a></li>
                         <li><a href="/account" class="adminLink"> <i class="fa-solid fa-user"></i></a></li>
+                        <li><a href="/" target="_blank">前往前台</a></li>
                         <li>
                             <a href="" onclick="event.preventDefault(); document.querySelector('#logoutForm').submit()">登出</a>
                             <form method="POST" action="{{ route('logout') }}" hidden id="logoutForm">
