@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="./css/index.css" />
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        {{-- 網頁小圖標icon --}}
+        <link href="./pics/logo.png" rel="shortcut icon" />
     </head>
   <body>
     <!-- 載入畫面 -->

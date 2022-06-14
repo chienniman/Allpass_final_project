@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <!-- 模板 css檔案 -->
     <link rel="stylesheet" href="../css/feedback.css" />
+    {{-- 網頁小圖標icon --}}
+    <link href="./pics/logo.png" rel="shortcut icon" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
   </head>

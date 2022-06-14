@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {{-- 網頁小圖標icon --}}
+    <link href="{{asset('/pics/logo.png')}}" rel="shortcut icon" />
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -169,7 +171,7 @@
                 border-bottom-left-radius: 0;
                 border-radius: 8px;
             }
-            
+
         }
 
         @media (max-width: 1370px) {
@@ -356,7 +358,7 @@
         .historyContent{
            min-height: 560px;
            background-color: #d0c8ff34;
-           border: 1px solid #4d44b528; 
+           border: 1px solid #4d44b528;
         }
         .historyList{
             width: 100%;
@@ -365,10 +367,10 @@
 
         .middlesize{
            font-size: 18px;
-           color: #3f3f3f; 
+           color: #3f3f3f;
         }
         .historyBox{
-            
+
             padding: 0 15px 0 15px;
         }
         @media (max-width: 1200px) {
@@ -383,9 +385,9 @@
             }
             .main_content{
                 display: block;
-            }  
+            }
         }
-        
+
         @media (max-width: 900px) {
             .mealTagBox{
                 width: 100%!important;
@@ -575,7 +577,7 @@
                         <li>
                             <ul>
                                 <a href="/personal_edit/{{ Auth::user()->id }}">設定</a>
-                            </ul>  
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -595,7 +597,7 @@
                                 <label for="">餐點名稱:</label>
                                 <input class="w-75 inputWidth form-control" type="text" name="name" required>
                             </div>
-                            
+
                             <div class="pt-3 d-flex flex-column w-75 inputWidth">
                                 <label for="">餐點類別:</label>
                                 <div class="d-flex input-group">
@@ -620,7 +622,7 @@
                                                             <input name="meal_tag_4" type="text" name='mealName' class="form-control meal_tag" placeholder="(可選填)">
                                                             <input name="meal_tag_5" type="text" name='mealName' class="form-control meal_tag" placeholder="(可選填)">
                                                         </div>
-                                                        
+
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
                                                             <button type="button" class="btn btn-primary store_meal_tag">新增完成</button>
@@ -629,7 +631,7 @@
                                                     </div>
 
                                                 </div>
-                                            
+
                                             </div>
                                         </div>
                                     </div>
@@ -640,24 +642,24 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                
+
                             </div>
 
                             <div class="pt-3">
                                 <label for="">餐點價格:</label>
                                 <input  class="w-75 form-control inputWidth" type="number" name="price" required>
                             </div>
-                            
+
                             <div class="pt-3">
                                 <label for="">餐點圖片:</label>
                                 <input class="form-control w-75 inputWidth" type="file" name="img" required accept="image/*">
                             </div>
-                            
+
                             <div class="pt-3">
                                 <label for="">餐點備註 1:</label>
                                 <input class="w-75 form-control inputWidth"  type="text" name="note">
                             </div>
-                           
+
                             <div class="pt-3">
                                 <label for="">餐點備註 2:</label>
                                 <input class="w-75 form-control inputWidth"  type="text" name="secondNote">
@@ -805,12 +807,12 @@
                             // 確認刪除將傳送刪除表單至後端
                             const deleteTagForm = document.querySelector(`#deleteForm${ tagId }`);
                             deleteTagForm.submit();
-                        }) 
-                    }              
+                        })
+                    }
                 })
             }
         });
-        
+
         // 沒有最高權限沒辦法進入管理者頁面
         const adminLink = document.querySelectorAll('.adminLink');
             let userPower = document.getElementById("avatar").dataset.user_power;
@@ -825,8 +827,8 @@
                             icon: 'warning',
                             confirmButtonText: '是',
                         })
-                    }) 
-                })     
+                    })
+                })
             }
     </script>
 </body>

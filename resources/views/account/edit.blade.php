@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {{-- 網頁小圖標icon --}}
+    <link href="{{asset('/pics/logo.png')}}" rel="shortcut icon" />
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -169,7 +171,7 @@
                 border-bottom-left-radius: 0;
                 border-radius: 8px;
             }
-            
+
         }
 
         @media (max-width: 1370px) {
@@ -355,7 +357,7 @@
         .historyContent{
            min-height: 560px;
            background-color: #d0c8ff34;
-           border: 1px solid #4d44b528; 
+           border: 1px solid #4d44b528;
         }
         .historyList{
             width: 100%;
@@ -364,10 +366,10 @@
 
         .middlesize{
            font-size: 18px;
-           color: #3f3f3f; 
+           color: #3f3f3f;
         }
         .historyBox{
-            
+
             padding: 0 15px 0 15px;
         }
         @media (max-width: 1200px) {
@@ -376,7 +378,7 @@
             }
             .historyBox{
                 padding: 0;
-            } 
+            }
         }
         @media (max-width: 900px) {
             .main_content{
@@ -464,7 +466,7 @@
             border-radius: 25px;
             font-size: 18px;
         }
-        
+
 
         /* ------------------------------------　新增餐點 ---------------------------------------------------------------- */
         @media (max-width: 768px){
@@ -544,7 +546,7 @@
                         <li>
                             <ul>
                                 <a href="/personal_edit/{{ Auth::user()->id }}">設定</a>
-                            </ul>  
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -569,12 +571,12 @@
                                 <label for="email">使用者信箱:</label>
                                 <input  class="w-100 form-control" type="email" id="email" value="{{ $user->email }}" disabled>
                             </div>
-                            
+
                             <div class="pt-3">
                                 <label for="password">使用者密碼:</label>
                                 <input class="form-control w-100" type="password" name="password" id="password" value="{{ $user->password }}" required>
                             </div>
-                           
+
                             <div class="pt-3 w-100 d-flex justify-content-center">
                                 <button class="btn btn-primary mx-2" type="submit">設定完成</button>
                                 <button type="button" class="btn btn-danger ms-2" onclick="location.href='/dashboard'">取消</button>
@@ -646,8 +648,8 @@
                             icon: 'warning',
                             confirmButtonText: '是',
                         })
-                    }) 
-                })     
+                    })
+                })
             }
     </script>
 

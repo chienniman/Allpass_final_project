@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Document</title>
+    {{-- 網頁小圖標icon --}}
+    <link href="{{asset('/pics/logo.png')}}" rel="shortcut icon" />
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
@@ -487,7 +489,7 @@
                         <li>
                             <ul>
                                 <a href="/personal_edit/{{ Auth::user()->id }}">設定</a>
-                            </ul>  
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -502,7 +504,7 @@
                         {{-- 新增餐點 --}}
                         <a href="/new/create" class="btn btn-success">新增消息</a>
                     </div>
-                    
+
                     <table class="table table-striped table-bordered dt-responsive nowrap" style="width:100%" id="information">
                         <thead>
                             <tr>
@@ -528,24 +530,24 @@
                                     @elseif ( $item->weight == 2)
                                         第二張
                                     @elseif ( $item->weight == 3)
-                                        第三張 
+                                        第三張
                                     @elseif ( $item->weight == 4)
                                         第四張
                                     @elseif ( $item->weight == 5)
-                                        第五張 
+                                        第五張
                                     @else
                                         無
                                     @endif
-                                    
+
                                 </td>
                                 <td>
                                     {{$item->start_date}}
                                 </td>
-                                <td>{{$item->end_date}}</td> 
+                                <td>{{$item->end_date}}</td>
                                 <td>
-                                   
+
                                     <button id="editBtn{{ $item->id }}" data-new_id="{{ $item->id }}" type="button" class="btn btn-success editBtn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $index }}">編輯</button>
-                                    
+
                                     <div class="modal fade" id="exampleModal{{ $index }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                         <div class="modal-content">
@@ -574,18 +576,18 @@
 
                                                 <div class="mb-3">輪播:</div>
                                                 <div class="d-flex">
-                                   
+
                                                     <div class="mb-1 w-50">
                                                         <input type="radio" name='carousel' class="notCarouselInput" id="notCarouselInput{{ $index }}" value="0">
                                                         <label for="notCarouselInput{{ $index }}" class="col-form-label">留言不加入輪播</label>
                                                     </div>
-    
+
                                                     <div class="mb-1 w-50">
                                                         <input type="radio" name='carousel' class="carouselInput" id="CarouselInput{{ $index }}" value="1">
                                                         <label for="CarouselInput{{ $index }}" class="col-form-label">留言加入輪播</label>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="mb-1">
                                                     <label for="CarouselNumInput{{ $index }}" class="col-form-label">輸入輪播順序:</label>
                                                     {{-- <input type="number" name='carouselNum' class="form-control carouselNumInput" id="carouselNumInput{{ $index }}" placeholder="輪播順序" value="{{$item->weight}}" min="1" > --}}
@@ -601,12 +603,12 @@
                                                 <div class="mb-3">
                                                     <label for="recipient-name" class="col-form-label">消息圖片:</label>
                                                     <br>
-                                     
+
                                                     <img class='w-100 meal_old_img' src="{{ $item->img_path }}" alt="" >
-                   
+
                                                     <input type="file" class='newImgInput' name="newImg">
                                                 </div>
-                                                
+
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
                                                     <button type="button" class="btn btn-primary update_btn">編輯完成</button>
@@ -615,11 +617,11 @@
                                             </form>
 
                                             </div>
-                                            
+
                                         </div>
                                         </div>
                                     </div>
-                        
+
 
                                     <button class="btn btn-danger" onclick="document.querySelector('#deleteForm{{$item->id}}').submit();">刪除</button>
                                     <form action="/new/delete/{{$item->id}}" method="post" hidden id="deleteForm{{$item->id}}">
@@ -631,7 +633,7 @@
                             @endforeach
                             </tbody>
                     </table>
-                
+
                 </div>
             </div>
         </div>
@@ -646,11 +648,11 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>        
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
 
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>        
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 
 
     <script>
@@ -694,7 +696,7 @@
                     },
                 },
             })
-                
+
         })
 
         // ---------------------------------- 使用者頭像 --------------------------------------------------------
@@ -754,7 +756,7 @@
                 maxFiles: 1,
                 // 限制只有圖檔
                 acceptedFileTypes: ['image/*'],
-            });     
+            });
         });
 
         // 設定 filepond serve
@@ -766,19 +768,19 @@
                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
                     }
                 }
-            });         
+            });
         }
- 
+
         editBtn.forEach( (e, i)=> {
             e.onclick = ()=>{
                 console.log(1)
-                // 每次點擊編輯按鈕，會對應到不同餐點 的 (Filepond的server) 
+                // 每次點擊編輯按鈕，會對應到不同餐點 的 (Filepond的server)
                 let index = e.dataset.new_id;
                 configFilePond(index);
 
                 // 點擊按鈕時判斷是否加入輪播
                 if( data[i].dataset.weight == '' | data[i].dataset.weight == 0 ){
-                
+
                     notCarouselInput[i].checked = true;
                     carouselNumInput[i].value = '';
                     carouselNumInput[i].disabled = true;
@@ -804,7 +806,7 @@
         for(let i = 0; i < data.length; i++){
 
             if( data[i].dataset.weight == '' | data[i].dataset.weight == 0 ){
-                
+
                 notCarouselInput[i].checked = true;
                 carouselNumInput[i].value = '';
                 carouselNumInput[i].disabled = true;
@@ -817,7 +819,7 @@
         // editBtn.forEach( (e, i)=> {
         //     e.onclick = ()=>{
         //         if( data[i].dataset.weight == '' | data[i].dataset.weight == 0 ){
-                
+
         //             notCarouselInput[i].checked = true;
         //             carouselNumInput[i].value = '';
         //             carouselNumInput[i].disabled = true;
@@ -851,7 +853,7 @@
         const updateBtn = document.querySelectorAll('.update_btn');
 
         updateBtn.forEach((e, index) => {
-            
+
             e.onclick = ()=>{
                 var formData = new FormData();
 
@@ -882,7 +884,7 @@
                     })
                 })
                 .then(response=>{
-                    
+
                     if(response.result == 'error'){
                         // sweetAlert
                         Swal.fire({
@@ -905,7 +907,7 @@
                         })
                     }
                 })
-            }   
+            }
         });
 
         // 沒有最高權限沒辦法進入管理者頁面
@@ -922,11 +924,11 @@
                             icon: 'warning',
                             confirmButtonText: '是',
                         })
-                    }) 
-                })     
+                    })
+                })
             }
     </script>
-    
+
 </body>
 
 </html>

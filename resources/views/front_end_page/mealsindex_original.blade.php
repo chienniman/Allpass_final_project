@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="../css/reset.css" />
   <!-- 模板 css檔案 -->
   <link rel="stylesheet" href="../css/mealsindex.css" />
+  {{-- 網頁小圖標icon --}}
+  <link href="./pics/logo.png" rel="shortcut icon" />
 </head>
 <body>
   <header id="header">

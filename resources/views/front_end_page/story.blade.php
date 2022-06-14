@@ -8,6 +8,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/story.css">
+    {{-- 網頁小圖標icon --}}
+    <link href="./pics/logo.png" rel="shortcut icon" />
   </head>
   <body>
     <header id="header">

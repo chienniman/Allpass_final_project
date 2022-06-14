@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {{-- 網頁小圖標icon --}}
+    <link href="{{asset('/pics/logo.png')}}" rel="shortcut icon" />
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -169,7 +171,7 @@
                 border-bottom-left-radius: 0;
                 border-radius: 8px;
             }
-            
+
         }
 
         @media (max-width: 1370px) {
@@ -363,10 +365,10 @@
 
         .middlesize{
            font-size: 18px;
-           color: #3f3f3f; 
+           color: #3f3f3f;
         }
         .historyBox{
-            
+
             padding: 0 15px 0 15px;
         }
         @media (max-width: 1200px) {
@@ -549,7 +551,7 @@
                         <li>
                             <ul>
                                 <a href="/personal_edit/{{ Auth::user()->id }}">設定</a>
-                            </ul>  
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -574,17 +576,17 @@
                                 <label for="">活動開始:</label>
                                 <input  class="w-100 form-control" type="date" name="startDate" required>
                             </div>
-                            
+
                             <div class="pt-3">
                                 <label for="">活動結束:</label>
                                 <input class="form-control w-100" type="date" name="endDate" required>
                             </div>
-                            
+
                             <div class="pt-3">
                                 <label for="">活動圖片</label>
                                 <input class="w-100 form-control"  type="file" name="img" required accept="image/*">
                             </div>
-                           
+
                             <div class="pt-3 w-100 d-flex justify-content-center">
                                 <button class="btn btn-primary mx-2" type="submit">新增消息</button>
                                 <button type="button" class="btn btn-danger ms-2" onclick="location.href='/new'">取消</button>
@@ -656,8 +658,8 @@
                             icon: 'warning',
                             confirmButtonText: '是',
                         })
-                    }) 
-                })     
+                    })
+                })
             }
     </script>
 

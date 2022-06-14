@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {{-- 網頁小圖標icon --}}
+    <link href="{{asset('/pics/logo.png')}}" rel="shortcut icon" />
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -432,7 +434,7 @@
             /* margin: 30px!important; */
             padding: 15px 30px 15px 30px;
             background-clip: content-box;
-        
+
         }
 
         .ball {
@@ -451,7 +453,7 @@
             font-size: 25px;
             color: #4d44b5e1 !important;
         }
-        
+
         /* history */
         .topping{
             background-color: #4D44B5;
@@ -468,7 +470,7 @@
            min-height: 560px;
            max-height: 560px;
            background-color: #d0c8ff34;
-           border: 1px solid #4d44b528; 
+           border: 1px solid #4d44b528;
 
            cursor: grab;
         }
@@ -488,18 +490,18 @@
 
         .middlesize{
            font-size: 18px;
-           color: #3f3f3f; 
+           color: #3f3f3f;
         }
         hr{
             margin: 0;
         }
         .historyBox, .featureList{
-            
+
             padding: 0 15px 0 15px;
         }
 
         /* scrollbar */
-       
+
         /* Demonstrate a "mostly customized" scrollbar
         * (won't be visible otherwise if width/height is specified) */
         .scrollbar::-webkit-scrollbar {
@@ -541,7 +543,7 @@
             .main_content{
                 display: block;
             }
-            
+
         }
         @media (max-width: 768px) {
             .featureList{
@@ -619,7 +621,7 @@
                         <li>
                             <ul>
                                 <a href="/personal_edit/{{ Auth::user()->id }}">設定</a>
-                            </ul>  
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -640,7 +642,7 @@
                                 <span class="text-center fs-6" style="color:#3f3f3f; line-height: 19px;">最新消息與<br> 主頁橫幅管理</span>
                             </div>
                         </div>
-                    </a>       
+                    </a>
                 </div>
                 <div class="bigButton">
                     <a href="/meal">
@@ -654,7 +656,7 @@
                                 <span class="fs-6" style="color:#3f3f3f">菜單管理</span>
                             </div>
                         </div>
-                    </a>  
+                    </a>
                 </div>
                 <div class="bigButton">
                     <a href="/backend/feedback">
@@ -668,7 +670,7 @@
                                 <span class="fs-6" style="color:#3f3f3f">顧客留言管理</span>
                             </div>
                         </div>
-                    </a>   
+                    </a>
                 </div>
             </div>
             <div class="pt-5 w-50 historyBox">
@@ -761,16 +763,16 @@
                             icon: 'warning',
                             confirmButtonText: '是',
                         })
-                    }) 
-                })     
+                    })
+                })
             }
 
             document.addEventListener('DOMContentLoaded', function() {
-                
+
                 // 拖動xy軸效果
                 const ele = document.querySelector('.historyContent');
                 ele.style.cursor = 'grab';
-                
+
                 let pos = { top: 0, left: 0, x: 0, y: 0 };
 
                 const mouseDownHandler = function (e) {
@@ -816,7 +818,7 @@
 
             });
 
-            
+
     </script>
 </body>
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <!-- 模板 css檔案 -->
     <link rel="stylesheet" href="../css/drink_list.css" />
+    {{-- 網頁小圖標icon --}}
+    <link href="./pics/logo.png" rel="shortcut icon" />
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
