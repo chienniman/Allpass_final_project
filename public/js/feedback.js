@@ -31,15 +31,30 @@ $( "#form" ).validate({
 		},
 	},
 
-	submitHandler: function (form) {
-		// sweetAlert
-		Swal.fire({
-			title: '謝謝您的留言',
-			icon: 'success',
-			confirmButtonText: '是',
-		}).then(function(){
-			// 送出表單
-			form.submit();
+
+	submitHandler: function (form, e) {
+		e.preventDefault();
+
+		$.ajaxSetup({
+			headers: {
+			   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		   }
+	   });
+		let formData = $('#form').serialize();
+		$.ajax({
+			url: '/store_feedback',
+			type: 'POST',
+			data: formData,
+			cache: false,
+			processData: false,
+			success: function(form) {
+				// sweetAlert
+				Swal.fire({
+					title: '謝謝您的留言',
+					icon: 'success',
+					confirmButtonText: '是',
+				})
+			},	
 		})
 	}
 });

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>意見回饋</title>
     <!-- reset css檔案 -->
     <link rel="stylesheet" href="../css/reset.css" />
@@ -96,8 +97,7 @@
       </nav>
     </header>
     <main id="main">
-      <form action="/store_feedback" method="POST" id="form">
-        @csrf
+      <form action="" method="" id="form">
         <div class="form_title text_color">意見回饋</div>
         <div class="form_text text_color">
           為了使每位顧客都有一個美好的消費體驗，提供一個更舒適的環境、更優良的服務來努力。</br>
