@@ -111,61 +111,6 @@ Route::prefix('/account')->middleware(['auth','power'])->group(function () {
     Route::post('/personal_update/{id}', [AccountController::class, 'personal_update'])->middleware(['auth']);
 
 
-// -------------------------------------------------------------- 忘記密碼 ------------------------------------------------------------------------
-// 密碼重製後將在資料表 password_resets 留下資料，可以使用指令 php artisan auth:clear-resets 將其刪除
-
-// 請求重製密碼頁面
-Route::get('/forgot-password', function () {
-    return view('auth.forgot-password');
-})->middleware('guest')->name('password.request');
-
-// 請求重製密碼表單提交
-Route::post('/forgot-password', function (Request $request) {
-    $request->validate(['email' => 'required|email']);
-
-    $status = Password::sendResetLink(
-        $request->only('email')
-    );
-
-    return $status === Password::RESET_LINK_SENT
-                ? back()->with(['status' => __($status)])
-                : back()->withErrors(['email' => __($status)]);
-})->middleware('guest')->name('password.email');
-
-// 收到電子郵件後打開的重製密碼頁面
-Route::get('/reset-password/{token}', function ($token) {
-    return view('auth.reset-password', ['token' => $token]);
-})->middleware('guest')->name('password.reset');
-
-// 重製密碼表單提交
-Route::post('/reset-password', function (Request $request) {
-    $request->validate([
-        'token' => 'required',
-        'email' => 'required|email',
-        'password' => 'required|min:8|confirmed',
-    ]);
-
-    $status = Password::reset(
-        $request->only('email', 'password', 'password_confirmation', 'token'),
-        function ($user, $password) {
-            $user->forceFill([
-                'password' => Hash::make($password)
-            ])->setRememberToken(Str::random(60));
-
-            $user->save();
-
-            event(new PasswordReset($user));
-        }
-    );
-
-    return $status === Password::PASSWORD_RESET
-                ? redirect()->route('login')->with('status', __($status))
-                : back()->withErrors(['email' => [__($status)]]);
-})->middleware('guest')->name('password.update');
-
-
-
-
 
 
 
