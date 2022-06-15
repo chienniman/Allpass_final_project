@@ -815,21 +815,7 @@
                 carouselNumInput[i].disabled = false;
             }
         }
-        // 點擊按鈕時判斷是否加入輪播
-        // editBtn.forEach( (e, i)=> {
-        //     e.onclick = ()=>{
-        //         if( data[i].dataset.weight == '' | data[i].dataset.weight == 0 ){
-
-        //             notCarouselInput[i].checked = true;
-        //             carouselNumInput[i].value = '';
-        //             carouselNumInput[i].disabled = true;
-        //         }else{
-        //             carouselInput[i].checked = true;
-        //             carouselNumInput[i].disabled = false;
-        //         }
-        //     }
-        // });
-
+        
         // 不輪播無法選擇輪播順序
         notCarouselInput.forEach( (e, index)=>{
             e.onclick = function(){
