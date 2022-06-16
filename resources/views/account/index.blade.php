@@ -17,8 +17,7 @@
     />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap5.min.css">
-    <style>
-        /*---------------------------------------- template ------------------------------------------------*/
+    {{-- <style>
         * {
             box-sizing: border-box;
             border: 0;
@@ -417,7 +416,8 @@
             height: unset;
         }
 
-    </style>
+    </style> --}}
+    <link href="{{asset('/css/backend/account_index.css')}}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
