@@ -386,6 +386,6 @@
     <!-- Swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JS -->
-    <script src="{{asset('/JS/index.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/JS/index.js')}}"></script>
   </body>
 </html>

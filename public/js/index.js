@@ -2,6 +2,7 @@ $(window).load(function () { // 確認整個頁面讀取完畢再將這三個div
   $("#status").delay(100).fadeOut(100); //delay --> 延遲幾秒才fadeOut
   $("#preloader").delay(100).fadeOut(50);
 })
+
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   effect: "fade",

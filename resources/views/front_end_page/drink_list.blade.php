@@ -318,6 +318,6 @@
     </footer>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="../JS/drink_list.js"></script>
+    <script type="text/javascript" src="{{asset('/JS/drink_list.js')}}"></script>
   </body>
 </html>
