@@ -7,9 +7,9 @@
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>首頁</title>
         <!-- reset css檔案 -->
-        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
         <!-- 模板 css檔案 -->
-        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="{{asset('/css/index.css')}}" />
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         {{-- 網頁小圖標icon --}}
@@ -386,6 +386,6 @@
     <!-- Swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JS -->
-    <script src="./JS/index.js"></script>
+    <script src="{{asset('/JS/index.js')}}"></script>
   </body>
 </html>
