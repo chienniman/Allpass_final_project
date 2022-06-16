@@ -201,7 +201,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script src="../JS/story.js"></script>
+    <script src="../js/story.js"></script>
 
 
   </body>
