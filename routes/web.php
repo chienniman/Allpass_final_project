@@ -30,23 +30,14 @@ use Illuminate\Support\Str;
 // --------------------------------------------------------- 前端頁面 ------------------------------------------------------------------------------
 
 Route::prefix('/')->group(function () {
-    Route::get('/', [Controller::class, 'index']);                         // 主頁
+    Route::get('/', [Controller::class, 'index']);                              // 主頁
     Route::get('/drink_list', [Controller::class, 'drink_list']);               // 飲品介紹
     Route::get('/mealsindex_original', [Controller::class, 'mealsindex']);      // 餐點介紹
     Route::get('/position_map', [Controller::class, 'position_map']);           // 門市據點
     Route::get('/right_of_customer', [Controller::class, 'right_of_customer']); // 顧客權益
     Route::get('/story', [Controller::class, 'story']);                         // 品牌故事
     Route::get('/feedback', [Controller::class, 'feedback']);                   // 顧客留言
-    Route::post('/store_feedback', [Controller::class, 'store_feedback']);       // 顧客留言新增
-    // swiper頁面
-    Route::get('/testswiper', [Controller::class, 'testswiper']);
-    // 餐點頁面
-    Route::get('/testmeal', [Controller::class, 'testmeal']);
-    // 顧客留言頁面
-    Route::get('/testfeedback', [Controller::class, 'testfeedback']);
-    // 顧客留言新增
-    Route::post('/add_feedback', [Controller::class, 'add_feedback']);
-
+    Route::post('/store_feedback', [Controller::class, 'store_feedback']);      // 顧客留言新增
 });
 
 // --------------------------------------------------------- 後端頁面 ------------------------------------------------------------------------------
@@ -106,7 +97,7 @@ Route::prefix('/account')->middleware(['auth','power'])->group(function () {
     Route::delete('/delete/{id}', [AccountController::class, 'delete']);
 });
     // 個人帳號編輯頁面
-    Route::get('/personal_edit/{id}', [AccountController::class, 'personal_edit']);
+    Route::get('/personal_edit/{id}', [AccountController::class, 'personal_edit'])->middleware(['auth']);
     // 個人帳號設定
     Route::post('/personal_update/{id}', [AccountController::class, 'personal_update'])->middleware(['auth']);
 

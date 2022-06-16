@@ -107,64 +107,6 @@ class Controller extends BaseController
 
         return redirect('/feedback');
     }
-
-
-    // test顧客留言頁面
-    public function testfeedback(){
-        $feedbacks = Feedback::get();
-
-        return view('testfeedback' , compact('feedbacks'));
-    }
-
-    // test新增留言
-    public function add_feedback(Request $request){
-        // 儲存留言
-        Feedback::insert([
-            'name'=> $request->name,
-            'salutation' => $request->salutation,
-            'date' => $request->date,
-            'period' => $request->period,
-            'suggestion' => $request->suggestion,
-            'phone'=> $request->phone,
-            'email'=> $request->email,
-        ]);
-
-        $result = [
-            'result' => 'success',
-        ];
-        // 返回結果
-        return $result;
-    }
-
-    // test餐點頁面
-    public function testmeal(){
-        $meal = Meal::get();
-        $mealTag = Meal_tag::get();
-
-        $breakfast = $mealTag[1]->meal->take(3);
-        $salad = $mealTag[2]->meal->take(3);
-        $snake = $mealTag[3]->meal->take(3);
-
-        return view('testmeal', compact('mealTag', 'breakfast', 'salad', 'snake'));
-
-    }
-
-    // swiper
-    public function testswiper(){
-        $allFeedbacks = Feedback::get();
-
-        // 對留言依權重由小到大排序，包含空值
-        $sorted = $allFeedbacks->sortBy('weight');
-        // 將權重給key值，再過濾掉空值與0的key
-        $keyed = $sorted->keyBy('weight');
-        $carouselFeedbacks = $keyed->forget('');
-        $carouselFeedbacks = $keyed->forget('0');
-
-        return view('testswiper', compact("carouselFeedbacks"));
-    }
-
-
-
     // :::::::::::::::::::::::::::::::::::::::::: 後台 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     // 後臺主頁
